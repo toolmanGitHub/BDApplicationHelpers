@@ -1,0 +1,716 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		EC56AC55144B7E9700D0E183 /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EC56AC56144B7E9700D0E183 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				EC56AC59144B7E9A00D0E183 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		EC657462144B4AF9002F66FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657461144B4AF9002F66FC /* UIKit.framework */; };
+		EC657464144B4AF9002F66FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657463144B4AF9002F66FC /* Foundation.framework */; };
+		EC657466144B4AF9002F66FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657465144B4AF9002F66FC /* CoreGraphics.framework */; };
+		EC65746C144B4AF9002F66FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC65746A144B4AF9002F66FC /* InfoPlist.strings */; };
+		EC65746E144B4AF9002F66FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC65746D144B4AF9002F66FC /* main.m */; };
+		EC657472144B4AF9002F66FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC657471144B4AF9002F66FC /* AppDelegate.m */; };
+		EC657475144B4AF9002F66FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC657474144B4AF9002F66FC /* ViewController.m */; };
+		EC657478144B4AF9002F66FC /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC657476144B4AF9002F66FC /* ViewController_iPhone.xib */; };
+		EC65747B144B4AF9002F66FC /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC657479144B4AF9002F66FC /* ViewController_iPad.xib */; };
+		EC6779F6144B6A25000051B2 /* appAboutiPad.html in Resources */ = {isa = PBXBuildFile; fileRef = EC6779EB144B6A25000051B2 /* appAboutiPad.html */; };
+		EC6779F7144B6A25000051B2 /* appAboutiPhone.html in Resources */ = {isa = PBXBuildFile; fileRef = EC6779EC144B6A25000051B2 /* appAboutiPhone.html */; };
+		EC6779F8144B6A25000051B2 /* appDiscussion.html in Resources */ = {isa = PBXBuildFile; fileRef = EC6779ED144B6A25000051B2 /* appDiscussion.html */; };
+		EC6779F9144B6A25000051B2 /* appHelpScreeniPad.html in Resources */ = {isa = PBXBuildFile; fileRef = EC6779EE144B6A25000051B2 /* appHelpScreeniPad.html */; };
+		EC6779FA144B6A25000051B2 /* appHelpScreeniPhone.html in Resources */ = {isa = PBXBuildFile; fileRef = EC6779EF144B6A25000051B2 /* appHelpScreeniPhone.html */; };
+		EC6779FB144B6A25000051B2 /* BDChangeLog.html in Resources */ = {isa = PBXBuildFile; fileRef = EC6779F0144B6A25000051B2 /* BDChangeLog.html */; };
+		EC6779FD144B6A25000051B2 /* BDCredits.html in Resources */ = {isa = PBXBuildFile; fileRef = EC6779F2144B6A25000051B2 /* BDCredits.html */; };
+		EC6779FE144B6A25000051B2 /* ipad.css in Resources */ = {isa = PBXBuildFile; fileRef = EC6779F4144B6A25000051B2 /* ipad.css */; };
+		EC6779FF144B6A25000051B2 /* iphone.css in Resources */ = {isa = PBXBuildFile; fileRef = EC6779F5144B6A25000051B2 /* iphone.css */; };
+		EC677A03144B6D45000051B2 /* BDClientSideInclude.js in Resources */ = {isa = PBXBuildFile; fileRef = EC6779F1144B6A25000051B2 /* BDClientSideInclude.js */; };
+		EC7997021450C60900C6344E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7997011450C60900C6344E /* MessageUI.framework */; };
+		EC7997041450C8EF00C6344E /* backgroundiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7997031450C8EF00C6344E /* backgroundiPad.png */; };
+		EC7997071450C90000C6344E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7997051450C90000C6344E /* background.png */; };
+		EC7997081450C90000C6344E /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7997061450C90000C6344E /* background@2x.png */; };
+		EC9913481453392E00F55000 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = EC9913471453392E00F55000 /* README.mdown */; };
+		EC99139D1453439800F55000 /* BDApplicationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9913991453439800F55000 /* BDApplicationHelpers.framework */; };
+		EC99139E1453439800F55000 /* BDHelpViewController.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC99139B1453439800F55000 /* BDHelpViewController.nib */; };
+		EC99139F1453439800F55000 /* BDHelpViewController_iPad.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC99139C1453439800F55000 /* BDHelpViewController_iPad.nib */; };
+		EC9D08381453CC2C006CED35 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EC9D08371453CC2C006CED35 /* Icon.png */; };
+		ECC135691451FA3400A52751 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657463144B4AF9002F66FC /* Foundation.framework */; };
+		ECC1356F1451FA3400A52751 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECC1356D1451FA3400A52751 /* InfoPlist.strings */; };
+		ECC135741451FA4600A52751 /* BDHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6574B5144B4C6C002F66FC /* BDHelpViewController.m */; };
+		ECC135751451FA4800A52751 /* BDImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6574B2144B4C6C002F66FC /* BDImageView.m */; };
+		ECC135761451FA4C00A52751 /* BDLowerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7996FE144F628900C6344E /* BDLowerToolBarView.m */; };
+		ECC135771451FA4F00A52751 /* BDHelpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6574B4144B4C6C002F66FC /* BDHelpViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECC135781451FA5200A52751 /* BDLowerToolBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC7996FD144F628900C6344E /* BDLowerToolBarView.h */; };
+		ECC135791451FA5500A52751 /* BDImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6574B1144B4C6C002F66FC /* BDImageView.h */; };
+		ECC1357A1451FA5D00A52751 /* BDHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6574B6144B4C6C002F66FC /* BDHelpViewController.xib */; };
+		ECC1357B1451FA6000A52751 /* BDHelpViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6574B3144B4C6C002F66FC /* BDHelpViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECC1357C1451FA6900A52751 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC657454144B4AF9002F66FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC56AC55144B7E9700D0E183;
+			remoteInfo = Documentation;
+		};
+		ECC1357E1451FAE400A52751 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC657454144B4AF9002F66FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECC135671451FA3400A52751;
+			remoteInfo = BDApplicationHelpers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC65745D144B4AF9002F66FC /* applicationHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = applicationHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC657461144B4AF9002F66FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EC657463144B4AF9002F66FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EC657465144B4AF9002F66FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EC657469144B4AF9002F66FC /* applicationHelpers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "applicationHelpers-Info.plist"; sourceTree = "<group>"; };
+		EC65746B144B4AF9002F66FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC65746D144B4AF9002F66FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC65746F144B4AF9002F66FC /* applicationHelpers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "applicationHelpers-Prefix.pch"; sourceTree = "<group>"; };
+		EC657470144B4AF9002F66FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EC657471144B4AF9002F66FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EC657473144B4AF9002F66FC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EC657474144B4AF9002F66FC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EC657477144B4AF9002F66FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		EC65747A144B4AF9002F66FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		EC6574A9144B4C05002F66FC /* BDApplicationHelpers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BDApplicationHelpers-Info.plist"; sourceTree = "<group>"; };
+		EC6574AB144B4C05002F66FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC6574AD144B4C05002F66FC /* BDApplicationHelpers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BDApplicationHelpers-Prefix.pch"; sourceTree = "<group>"; };
+		EC6574B1144B4C6C002F66FC /* BDImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDImageView.h; sourceTree = "<group>"; };
+		EC6574B2144B4C6C002F66FC /* BDImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDImageView.m; sourceTree = "<group>"; };
+		EC6574B3144B4C6C002F66FC /* BDHelpViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDHelpViewController_iPad.xib; sourceTree = "<group>"; };
+		EC6574B4144B4C6C002F66FC /* BDHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHelpViewController.h; sourceTree = "<group>"; };
+		EC6574B5144B4C6C002F66FC /* BDHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHelpViewController.m; sourceTree = "<group>"; };
+		EC6574B6144B4C6C002F66FC /* BDHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDHelpViewController.xib; sourceTree = "<group>"; };
+		EC6779EB144B6A25000051B2 /* appAboutiPad.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = appAboutiPad.html; sourceTree = "<group>"; };
+		EC6779EC144B6A25000051B2 /* appAboutiPhone.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = appAboutiPhone.html; sourceTree = "<group>"; };
+		EC6779ED144B6A25000051B2 /* appDiscussion.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = appDiscussion.html; sourceTree = "<group>"; };
+		EC6779EE144B6A25000051B2 /* appHelpScreeniPad.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = appHelpScreeniPad.html; sourceTree = "<group>"; };
+		EC6779EF144B6A25000051B2 /* appHelpScreeniPhone.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = appHelpScreeniPhone.html; sourceTree = "<group>"; };
+		EC6779F0144B6A25000051B2 /* BDChangeLog.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BDChangeLog.html; sourceTree = "<group>"; };
+		EC6779F1144B6A25000051B2 /* BDClientSideInclude.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = BDClientSideInclude.js; sourceTree = "<group>"; };
+		EC6779F2144B6A25000051B2 /* BDCredits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BDCredits.html; sourceTree = "<group>"; };
+		EC6779F4144B6A25000051B2 /* ipad.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = ipad.css; sourceTree = "<group>"; };
+		EC6779F5144B6A25000051B2 /* iphone.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = iphone.css; sourceTree = "<group>"; };
+		EC7996FD144F628900C6344E /* BDLowerToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDLowerToolBarView.h; sourceTree = "<group>"; };
+		EC7996FE144F628900C6344E /* BDLowerToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDLowerToolBarView.m; sourceTree = "<group>"; };
+		EC7997011450C60900C6344E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		EC7997031450C8EF00C6344E /* backgroundiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundiPad.png; sourceTree = "<group>"; };
+		EC7997051450C90000C6344E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		EC7997061450C90000C6344E /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		EC9913471453392E00F55000 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = SOURCE_ROOT; };
+		EC9913991453439800F55000 /* BDApplicationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BDApplicationHelpers.framework; sourceTree = "<group>"; };
+		EC99139B1453439800F55000 /* BDHelpViewController.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController.nib; sourceTree = "<group>"; };
+		EC99139C1453439800F55000 /* BDHelpViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController_iPad.nib; sourceTree = "<group>"; };
+		EC9D08371453CC2C006CED35 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		ECC135681451FA3400A52751 /* BDApplicationHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = BDApplicationHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC1356C1451FA3400A52751 /* BDApplicationHelpers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BDApplicationHelpers-Info.plist"; sourceTree = "<group>"; };
+		ECC1356E1451FA3400A52751 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ECC135701451FA3400A52751 /* BDApplicationHelpers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BDApplicationHelpers-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC65745A144B4AF9002F66FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC7997021450C60900C6344E /* MessageUI.framework in Frameworks */,
+				EC657462144B4AF9002F66FC /* UIKit.framework in Frameworks */,
+				EC657464144B4AF9002F66FC /* Foundation.framework in Frameworks */,
+				EC657466144B4AF9002F66FC /* CoreGraphics.framework in Frameworks */,
+				EC99139D1453439800F55000 /* BDApplicationHelpers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC135631451FA3400A52751 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC135691451FA3400A52751 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC657452144B4AF9002F66FC = {
+			isa = PBXGroup;
+			children = (
+				EC9913471453392E00F55000 /* README.mdown */,
+				EC657467144B4AF9002F66FC /* applicationHelpers */,
+				EC6574A7144B4C05002F66FC /* BDApplicationHelpers */,
+				ECC1356A1451FA3400A52751 /* BDApplicationHelpers */,
+				EC657460144B4AF9002F66FC /* Frameworks */,
+				EC65745E144B4AF9002F66FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC65745E144B4AF9002F66FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC65745D144B4AF9002F66FC /* applicationHelpers.app */,
+				ECC135681451FA3400A52751 /* BDApplicationHelpers.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC657460144B4AF9002F66FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC9913981453439800F55000 /* BDApplicationHelpers.embeddedframework */,
+				EC7997011450C60900C6344E /* MessageUI.framework */,
+				EC657461144B4AF9002F66FC /* UIKit.framework */,
+				EC657463144B4AF9002F66FC /* Foundation.framework */,
+				EC657465144B4AF9002F66FC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC657467144B4AF9002F66FC /* applicationHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				EC6779EA144B6A25000051B2 /* HTML files */,
+				EC657470144B4AF9002F66FC /* AppDelegate.h */,
+				EC657471144B4AF9002F66FC /* AppDelegate.m */,
+				EC657473144B4AF9002F66FC /* ViewController.h */,
+				EC657474144B4AF9002F66FC /* ViewController.m */,
+				EC657476144B4AF9002F66FC /* ViewController_iPhone.xib */,
+				EC657479144B4AF9002F66FC /* ViewController_iPad.xib */,
+				EC657468144B4AF9002F66FC /* Supporting Files */,
+			);
+			path = applicationHelpers;
+			sourceTree = "<group>";
+		};
+		EC657468144B4AF9002F66FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC9D08371453CC2C006CED35 /* Icon.png */,
+				EC7997051450C90000C6344E /* background.png */,
+				EC7997061450C90000C6344E /* background@2x.png */,
+				EC7997031450C8EF00C6344E /* backgroundiPad.png */,
+				EC657469144B4AF9002F66FC /* applicationHelpers-Info.plist */,
+				EC65746A144B4AF9002F66FC /* InfoPlist.strings */,
+				EC65746D144B4AF9002F66FC /* main.m */,
+				EC65746F144B4AF9002F66FC /* applicationHelpers-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC6574A7144B4C05002F66FC /* BDApplicationHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				EC6574BD144B4C74002F66FC /* BDInformationViewController */,
+				EC6574A8144B4C05002F66FC /* Supporting Files */,
+			);
+			path = BDApplicationHelpers;
+			sourceTree = "<group>";
+		};
+		EC6574A8144B4C05002F66FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC6574A9144B4C05002F66FC /* BDApplicationHelpers-Info.plist */,
+				EC6574AA144B4C05002F66FC /* InfoPlist.strings */,
+				EC6574AD144B4C05002F66FC /* BDApplicationHelpers-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC6574BD144B4C74002F66FC /* BDInformationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC7996FD144F628900C6344E /* BDLowerToolBarView.h */,
+				EC7996FE144F628900C6344E /* BDLowerToolBarView.m */,
+				EC6574B1144B4C6C002F66FC /* BDImageView.h */,
+				EC6574B2144B4C6C002F66FC /* BDImageView.m */,
+				EC6574B3144B4C6C002F66FC /* BDHelpViewController_iPad.xib */,
+				EC6574B4144B4C6C002F66FC /* BDHelpViewController.h */,
+				EC6574B5144B4C6C002F66FC /* BDHelpViewController.m */,
+				EC6574B6144B4C6C002F66FC /* BDHelpViewController.xib */,
+			);
+			name = BDInformationViewController;
+			sourceTree = "<group>";
+		};
+		EC6779EA144B6A25000051B2 /* HTML files */ = {
+			isa = PBXGroup;
+			children = (
+				EC6779EB144B6A25000051B2 /* appAboutiPad.html */,
+				EC6779EC144B6A25000051B2 /* appAboutiPhone.html */,
+				EC6779ED144B6A25000051B2 /* appDiscussion.html */,
+				EC6779EE144B6A25000051B2 /* appHelpScreeniPad.html */,
+				EC6779EF144B6A25000051B2 /* appHelpScreeniPhone.html */,
+				EC6779F0144B6A25000051B2 /* BDChangeLog.html */,
+				EC6779F1144B6A25000051B2 /* BDClientSideInclude.js */,
+				EC6779F2144B6A25000051B2 /* BDCredits.html */,
+				EC6779F4144B6A25000051B2 /* ipad.css */,
+				EC6779F5144B6A25000051B2 /* iphone.css */,
+			);
+			path = "HTML files";
+			sourceTree = "<group>";
+		};
+		EC9913981453439800F55000 /* BDApplicationHelpers.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				EC9913991453439800F55000 /* BDApplicationHelpers.framework */,
+				EC99139A1453439800F55000 /* Resources */,
+			);
+			name = BDApplicationHelpers.embeddedframework;
+			path = "../../Library/Developer/Xcode/DerivedData/applicationHelpers-bzlgxfckcftymiecgskefskxlpkx/Build/Products/Debug-iphoneos/BDApplicationHelpers.embeddedframework";
+			sourceTree = "<group>";
+		};
+		EC99139A1453439800F55000 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC99139B1453439800F55000 /* BDHelpViewController.nib */,
+				EC99139C1453439800F55000 /* BDHelpViewController_iPad.nib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ECC1356A1451FA3400A52751 /* BDApplicationHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				ECC1356B1451FA3400A52751 /* Supporting Files */,
+			);
+			path = BDApplicationHelpers;
+			sourceTree = "<group>";
+		};
+		ECC1356B1451FA3400A52751 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECC1356C1451FA3400A52751 /* BDApplicationHelpers-Info.plist */,
+				ECC1356D1451FA3400A52751 /* InfoPlist.strings */,
+				ECC135701451FA3400A52751 /* BDApplicationHelpers-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		ECC135641451FA3400A52751 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC135771451FA4F00A52751 /* BDHelpViewController.h in Headers */,
+				ECC135781451FA5200A52751 /* BDLowerToolBarView.h in Headers */,
+				ECC135791451FA5500A52751 /* BDImageView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EC65745C144B4AF9002F66FC /* applicationHelpers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC65747E144B4AF9002F66FC /* Build configuration list for PBXNativeTarget "applicationHelpers" */;
+			buildPhases = (
+				EC657459144B4AF9002F66FC /* Sources */,
+				EC65745A144B4AF9002F66FC /* Frameworks */,
+				EC65745B144B4AF9002F66FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECC1357F1451FAE400A52751 /* PBXTargetDependency */,
+			);
+			name = applicationHelpers;
+			productName = applicationHelpers;
+			productReference = EC65745D144B4AF9002F66FC /* applicationHelpers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECC135671451FA3400A52751 /* BDApplicationHelpers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC135711451FA3400A52751 /* Build configuration list for PBXNativeTarget "BDApplicationHelpers" */;
+			buildPhases = (
+				ECC135611451FA3400A52751 /* ShellScript */,
+				ECC135621451FA3400A52751 /* Sources */,
+				ECC135631451FA3400A52751 /* Frameworks */,
+				ECC135641451FA3400A52751 /* Headers */,
+				ECC135651451FA3400A52751 /* Resources */,
+				ECC135661451FA3400A52751 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECC1357D1451FA6900A52751 /* PBXTargetDependency */,
+			);
+			name = BDApplicationHelpers;
+			productName = BDApplicationHelpers;
+			productReference = ECC135681451FA3400A52751 /* BDApplicationHelpers.framework */;
+			productType = "com.apple.product-type.framework.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC657454144B4AF9002F66FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = EC657457144B4AF9002F66FC /* Build configuration list for PBXProject "applicationHelpers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EC657452144B4AF9002F66FC;
+			productRefGroup = EC65745E144B4AF9002F66FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC65745C144B4AF9002F66FC /* applicationHelpers */,
+				ECC135671451FA3400A52751 /* BDApplicationHelpers */,
+				EC56AC55144B7E9700D0E183 /* Documentation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC65745B144B4AF9002F66FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC677A03144B6D45000051B2 /* BDClientSideInclude.js in Resources */,
+				EC65746C144B4AF9002F66FC /* InfoPlist.strings in Resources */,
+				EC657478144B4AF9002F66FC /* ViewController_iPhone.xib in Resources */,
+				EC65747B144B4AF9002F66FC /* ViewController_iPad.xib in Resources */,
+				EC6779F6144B6A25000051B2 /* appAboutiPad.html in Resources */,
+				EC6779F7144B6A25000051B2 /* appAboutiPhone.html in Resources */,
+				EC6779F8144B6A25000051B2 /* appDiscussion.html in Resources */,
+				EC6779F9144B6A25000051B2 /* appHelpScreeniPad.html in Resources */,
+				EC6779FA144B6A25000051B2 /* appHelpScreeniPhone.html in Resources */,
+				EC6779FB144B6A25000051B2 /* BDChangeLog.html in Resources */,
+				EC6779FD144B6A25000051B2 /* BDCredits.html in Resources */,
+				EC6779FE144B6A25000051B2 /* ipad.css in Resources */,
+				EC6779FF144B6A25000051B2 /* iphone.css in Resources */,
+				EC7997041450C8EF00C6344E /* backgroundiPad.png in Resources */,
+				EC7997071450C90000C6344E /* background.png in Resources */,
+				EC7997081450C90000C6344E /* background@2x.png in Resources */,
+				EC9913481453392E00F55000 /* README.mdown in Resources */,
+				EC99139E1453439800F55000 /* BDHelpViewController.nib in Resources */,
+				EC99139F1453439800F55000 /* BDHelpViewController_iPad.nib in Resources */,
+				EC9D08381453CC2C006CED35 /* Icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC135651451FA3400A52751 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC1356F1451FA3400A52751 /* InfoPlist.strings in Resources */,
+				ECC1357A1451FA5D00A52751 /* BDHelpViewController.xib in Resources */,
+				ECC1357B1451FA6000A52751 /* BDHelpViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EC56AC59144B7E9A00D0E183 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"BDApplicationHelpers\" \\\n--project-company \"Big Diggy SW\" \\\n--company-id com.bigdiggy \\\n--output ~/help \\\n--logformat xcode \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--exit-threshold 2 \\\n--ignore .m \\\n--ignore AppDelegate.h \\\n--ignore BDImageView.h \\\n--ignore BDLowerToolBarView.h \\\n--ignore UnitTest \\\n--no-repeat-first-par \\\n\"${PROJECT_DIR}/BDApplicationHelpers\"";
+		};
+		ECC135611451FA3400A52751 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n";
+		};
+		ECC135661451FA3400A52751 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Make sure the other platform gets built\n\necho \"Build other platform\"\n\necho xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n\n\n# Build the fat static library binary\n\necho \"Create universal static library\"\n\necho \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\necho mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nmv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\n# Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n\necho \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n\necho rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nrm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\necho cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\ncp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC657459144B4AF9002F66FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC65746E144B4AF9002F66FC /* main.m in Sources */,
+				EC657472144B4AF9002F66FC /* AppDelegate.m in Sources */,
+				EC657475144B4AF9002F66FC /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC135621451FA3400A52751 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC135741451FA4600A52751 /* BDHelpViewController.m in Sources */,
+				ECC135751451FA4800A52751 /* BDImageView.m in Sources */,
+				ECC135761451FA4C00A52751 /* BDLowerToolBarView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECC1357D1451FA6900A52751 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC56AC55144B7E9700D0E183 /* Documentation */;
+			targetProxy = ECC1357C1451FA6900A52751 /* PBXContainerItemProxy */;
+		};
+		ECC1357F1451FAE400A52751 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECC135671451FA3400A52751 /* BDApplicationHelpers */;
+			targetProxy = ECC1357E1451FAE400A52751 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC65746A144B4AF9002F66FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC65746B144B4AF9002F66FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EC657476144B4AF9002F66FC /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC657477144B4AF9002F66FC /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		EC657479144B4AF9002F66FC /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC65747A144B4AF9002F66FC /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		EC6574AA144B4C05002F66FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC6574AB144B4C05002F66FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ECC1356D1451FA3400A52751 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECC1356E1451FA3400A52751 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC56AC57144B7E9700D0E183 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EC56AC58144B7E9700D0E183 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EC65747C144B4AF9002F66FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC65747D144B4AF9002F66FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC65747F144B4AF9002F66FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/applicationHelpers-bzlgxfckcftymiecgskefskxlpkx/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/applicationHelpers-bzlgxfckcftymiecgskefskxlpkx/Build/Products/Debug-iphoneos/BDApplicationHelpers.embeddedframework\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "applicationHelpers/applicationHelpers-Prefix.pch";
+				INFOPLIST_FILE = "applicationHelpers/applicationHelpers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EC657480144B4AF9002F66FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/applicationHelpers-bzlgxfckcftymiecgskefskxlpkx/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/applicationHelpers-bzlgxfckcftymiecgskefskxlpkx/Build/Products/Debug-iphoneos/BDApplicationHelpers.embeddedframework\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "applicationHelpers/applicationHelpers-Prefix.pch";
+				INFOPLIST_FILE = "applicationHelpers/applicationHelpers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		ECC135721451FA3400A52751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BDApplicationHelpers/BDApplicationHelpers-Prefix.pch";
+				INFOPLIST_FILE = "BDApplicationHelpers/BDApplicationHelpers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		ECC135731451FA3400A52751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BDApplicationHelpers/BDApplicationHelpers-Prefix.pch";
+				INFOPLIST_FILE = "BDApplicationHelpers/BDApplicationHelpers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC56AC56144B7E9700D0E183 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC56AC57144B7E9700D0E183 /* Debug */,
+				EC56AC58144B7E9700D0E183 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC657457144B4AF9002F66FC /* Build configuration list for PBXProject "applicationHelpers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC65747C144B4AF9002F66FC /* Debug */,
+				EC65747D144B4AF9002F66FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC65747E144B4AF9002F66FC /* Build configuration list for PBXNativeTarget "applicationHelpers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC65747F144B4AF9002F66FC /* Debug */,
+				EC657480144B4AF9002F66FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC135711451FA3400A52751 /* Build configuration list for PBXNativeTarget "BDApplicationHelpers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC135721451FA3400A52751 /* Debug */,
+				ECC135731451FA3400A52751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC657454144B4AF9002F66FC /* Project object */;
+}
