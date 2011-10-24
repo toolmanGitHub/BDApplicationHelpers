@@ -59,6 +59,7 @@
 		ECC135791451FA5500A52751 /* BDImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6574B1144B4C6C002F66FC /* BDImageView.h */; };
 		ECC1357A1451FA5D00A52751 /* BDHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6574B6144B4C6C002F66FC /* BDHelpViewController.xib */; };
 		ECC1357B1451FA6000A52751 /* BDHelpViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6574B3144B4C6C002F66FC /* BDHelpViewController_iPad.xib */; };
+		ECE677D31454E7AB00694A2A /* customIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE677D21454E7AB00694A2A /* customIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		ECC1356C1451FA3400A52751 /* BDApplicationHelpers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BDApplicationHelpers-Info.plist"; sourceTree = "<group>"; };
 		ECC1356E1451FA3400A52751 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ECC135701451FA3400A52751 /* BDApplicationHelpers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BDApplicationHelpers-Prefix.pch"; sourceTree = "<group>"; };
+		ECE677D21454E7AB00694A2A /* customIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = customIcon.png; path = ../../../Desktop/customIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 		EC657468144B4AF9002F66FC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ECE677D21454E7AB00694A2A /* customIcon.png */,
 				EC9D08371453CC2C006CED35 /* Icon.png */,
 				EC7997051450C90000C6344E /* background.png */,
 				EC7997061450C90000C6344E /* background@2x.png */,
@@ -411,6 +414,7 @@
 				EC99139E1453439800F55000 /* BDHelpViewController.nib in Resources */,
 				EC99139F1453439800F55000 /* BDHelpViewController_iPad.nib in Resources */,
 				EC9D08381453CC2C006CED35 /* Icon.png in Resources */,
+				ECE677D31454E7AB00694A2A /* customIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
