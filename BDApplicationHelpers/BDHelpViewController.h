@@ -81,6 +81,11 @@ typedef void(^buttonPushedCallbackBlock)(void);
  */
 @property (nonatomic, copy) buttonPushedCallbackBlock emailButtonPushedCallbackBlock;
 
+/** File name for the customer icon to be shown in the lower right corner when using the iPad.
+ 
+ */
+@property (nonatomic,strong) NSString *customIconFileName;
+
 /** Initializes a BDInformationViewController
  
  @return An initialized BDInformationViewController or nil if unsuccessful.

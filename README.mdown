@@ -10,7 +10,7 @@ The BDApplicationHelper framework can be built from the existing project.  Once 
 BDHelpViewContoller
 -------------------
 
-BDHelpViewController is a self contained Webkit Based HTML Help System.  There are a couple of unique features to the BDHelpViewController.  First, the bottom of the view contains a toolbar with several buttons, and on the iPad version, two image views that are populated with the apps icons.  The toolbar contains buttons that show the version, provide support options, and dismiss the BDHelpViewController.  When pushed the version button will show the build number.  To enable this, the key CFBundleVersion in the applications plist file must be used.  The "Support" button, when pressed, brings up a UIAlertSheet with buttons that will either bring up an email view controller or send the user to the app's support web page via Safari.
+BDHelpViewController is a self contained Webkit Based HTML Help System.  There are a couple of unique features to the BDHelpViewController.  First, the bottom of the view contains a toolbar with several buttons, and on the iPad version, two extra image views.  These image views will automatically load the app's icons. The right hand image view can be customized with another icon that could be used, for example, for the icon of your company.  The toolbar contains buttons that show the version, provide support options, and dismiss the BDHelpViewController.  When pushed the version button will show the build number.  To enable this, the key CFBundleVersion in the applications plist file must be used.  The "Support" button, when pressed, brings up a UIAlertSheet with buttons that will either bring up an email view controller or send the user to the app's support web page via Safari.
  
  Second, the "Done" button and "Email Support" button utilize block call backs to allow the calling viewController control over how the UIViewController is dismissed and calls an email view controller.  This allows a great deal of flexibility in that the user interface idiom is not hard coded and is completely up to the developer.
  
@@ -31,6 +31,10 @@ I prefer to create my viewControllers lazily:
        }
   
        helpViewController_=[[BDHelpViewController alloc] init];
+       
+       // Populate the right hand image view, if you want, with a custom icon.
+       // The left hand image view is the app's icon.
+       self.helpViewController.customIconFileName=@"customIcon.png";
     
        self.helpViewController.supportDictionary=[NSDictionary dictionaryWithObjectsAndKeys:@"http://bigdiggy.wordpress.com/support",BDSupportURLStringKey,
 											   @"Support for Wonderful app is provided by via email and via the support website.",BDSupportStringKey,

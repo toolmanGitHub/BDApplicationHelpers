@@ -108,8 +108,6 @@
 
 - (IBAction)showHelpViewController:(id)sender {
     
-   
-    
     __block __weak ViewController *weakSelf = self;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         // We are on an iPhone
@@ -117,16 +115,20 @@
             ViewController *strongSelf=weakSelf;
             [strongSelf dismissModalViewControllerAnimated:YES];
         };
-        self.helpViewController.emailButtonPushedCallbackBlock=^{
-            ViewController *strongSelf=weakSelf;
-            NSLog(@"emailButtonPushedCallback Block");
-            [strongSelf dismissModalViewControllerAnimated:NO];
-            [strongSelf displayMailComposer];
-        };
-        self.helpViewController.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self presentModalViewController:self.helpViewController animated:YES];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),^{
+            self.helpViewController.emailButtonPushedCallbackBlock=^{
+                ViewController *strongSelf=weakSelf;
+                NSLog(@"emailButtonPushedCallback Block");
+                [strongSelf dismissModalViewControllerAnimated:NO];
+                [strongSelf displayMailComposer];
+            };
+            self.helpViewController.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self presentModalViewController:self.helpViewController animated:YES];
+                [self.helpViewController loadDocument: @"appHelpScreeniPhone.html"];
+            });
         });
+        
         
     }else{
         // We are on an iPad
@@ -134,26 +136,30 @@
         
         // setup popoverController
         [self.popoverController setContentViewController:self.helpViewController];
-        
-        self.helpViewController.doneButtonPushedCallbackBlock=^{
-            ViewController *strongSelf=weakSelf;
-            [strongSelf.popoverController dismissPopoverAnimated:YES];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),^{
+            self.helpViewController.doneButtonPushedCallbackBlock=^{
+                ViewController *strongSelf=weakSelf;
+                [strongSelf.popoverController dismissPopoverAnimated:YES];
+                
+            };
+            self.helpViewController.emailButtonPushedCallbackBlock=^{
+                ViewController *strongSelf=weakSelf;
+                [strongSelf.popoverController dismissPopoverAnimated:YES];
+                [strongSelf displayMailComposer];
+            };
             
-        };
-        self.helpViewController.emailButtonPushedCallbackBlock=^{
-            ViewController *strongSelf=weakSelf;
-            [strongSelf.popoverController dismissPopoverAnimated:YES];
-            [strongSelf displayMailComposer];
-        };
-        
-        self.popoverController.popoverContentSize=self.helpViewController.view.frame.size;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.popoverController presentPopoverFromRect:theButton.bounds inView:theButton permittedArrowDirections: UIPopoverArrowDirectionAny animated:YES];
-            
+            self.popoverController.popoverContentSize=self.helpViewController.view.frame.size;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.popoverController presentPopoverFromRect:theButton.bounds inView:theButton permittedArrowDirections: UIPopoverArrowDirectionAny animated:YES];
+                [self.helpViewController loadDocument: @"appHelpScreeniPad.html"];
+                
+            });
+
         });
         
+                
     }
-    [self.helpViewController loadDocument: @"appHelpScreeniPhone.html"];
+    
         
 
 }
@@ -232,6 +238,10 @@
  
     
     helpViewController_=[[BDHelpViewController alloc] init];
+    
+    // Populate the right hand image view, if you want, with a custom icon.
+    // The left hand image view is the app's icon.
+    //   self.helpViewController.customIconFileName=@"customIcon.png";
     
     self.helpViewController.supportDictionary=[NSDictionary dictionaryWithObjectsAndKeys:@"http://bigdiggy.wordpress.com/support",BDSupportURLStringKey,
 											   @"Support for Wonderful app is provided by via email and via the support website.",BDSupportStringKey,

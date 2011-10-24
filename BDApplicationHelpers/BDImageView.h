@@ -50,7 +50,8 @@
 
 
 @interface BDImageView : UIView {
-		
+    
 }
+@property(nonatomic,strong) NSString *imageFileName;
 
 @end

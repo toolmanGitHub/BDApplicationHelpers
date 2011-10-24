@@ -66,6 +66,7 @@ NSString *BDURLRejectStringKey=@"BDURLRejectStringKey";
 @property (nonatomic, strong) NSString *userDefaultsDictionaryBoolKey;
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicatorView;
 @property (nonatomic, strong) IBOutlet UILabel *helpControllerVersionLabel;
+@property (strong, nonatomic) IBOutlet BDImageView *customIconView;
 
 -(IBAction)dismissInformationViewController:(id)sender;
 -(IBAction)toggleVersionBuild:(UIButton *)sender;
@@ -86,11 +87,13 @@ NSString *BDURLRejectStringKey=@"BDURLRejectStringKey";
 @synthesize userDefaultsDictionaryBoolKey;
 @synthesize activityIndicatorView;
 @synthesize helpControllerVersionLabel;
+@synthesize customIconView = customIconView_;
 
 // Public
 @synthesize supportDictionary=supportDictionary_;
 @synthesize doneButtonPushedCallbackBlock=doneButtonPushedCallbackBlock_;
 @synthesize emailButtonPushedCallbackBlock=emailButtonPushedCallbackBlock_;
+@synthesize customIconFileName = customIconFileName_;
 
 
 -(id)init{
@@ -149,6 +152,7 @@ NSString *BDURLRejectStringKey=@"BDURLRejectStringKey";
     [self.infoWebView loadRequest:request];
 }
 
+
 #pragma mark -
 #pragma mark View Management
 
@@ -170,7 +174,8 @@ NSString *BDURLRejectStringKey=@"BDURLRejectStringKey";
 	
 	self.helpControllerVersionLabel.text=[NSString stringWithFormat:@"BD Help %@",BDHelpViewControllerVersion];;
 	self.helpControllerVersionLabel.alpha=1.0;
-	
+    
+    self.customIconView.imageFileName=self.customIconFileName;
 	
 	
 }
@@ -189,6 +194,7 @@ NSString *BDURLRejectStringKey=@"BDURLRejectStringKey";
 }
 
 - (void)viewDidUnload {
+    [self setCustomIconView:nil];
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 	self.infoWebView=nil;
@@ -242,7 +248,8 @@ NSString *BDURLRejectStringKey=@"BDURLRejectStringKey";
 {
 	// open a dialog with two custom buttons
 	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:[self.supportDictionary objectForKey:BDSupportStringKey]
-															 delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel",@"") destructiveButtonTitle:nil
+															 delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel",@"")
+                                               destructiveButtonTitle:nil
 													otherButtonTitles:NSLocalizedString(@"Go to Website",@""), NSLocalizedString(@"Send Email",@""), nil];
 	actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
 	//	actionSheet.destructiveButtonIndex = 1;	// make the second button red (destructive)

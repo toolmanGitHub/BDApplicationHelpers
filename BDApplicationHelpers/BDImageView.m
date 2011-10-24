@@ -48,7 +48,7 @@
 }
 @property (nonatomic, strong) UIColor *strokeColor;
 @property (nonatomic,strong) UIColor *fillColor;
-@property (nonatomic,strong) UIImage *iconImage;
+@property (nonatomic,strong) UIImage *image;
 @property CGFloat strokeWidth;
 @property CGFloat cornerRadius;
 
@@ -60,11 +60,15 @@
 @end
 
 @implementation BDImageView
+// Public
+@synthesize imageFileName = imageFileName_;
+
+// Private
 @synthesize strokeColor = strokeColor_;
 @synthesize fillColor = fillColor_;
 @synthesize strokeWidth = strokeWidth_;
 @synthesize cornerRadius = cornerRadius_;
-@synthesize iconImage = iconImage_;
+@synthesize image = image_;
 
 
 - (id)initWithCoder:(NSCoder *)decoder
@@ -92,11 +96,8 @@
 
 - (void)clipRoundedRect:(CGRect)rect inContext:(CGContextRef)context
 {
-	
     [self drawRoundedRect:rect inContext:context];
-	//	CGContextDrawPath(context, kCGPathFillStroke);
 	CGContextClip(context);
- //   CGContextFillPath(context);
 }
 
 -(void)drawRoundedRect:(CGRect)rect inContext:(CGContextRef)context{
@@ -115,19 +116,25 @@
 	
 }
 
--(UIImage *)iconImage;
+-(UIImage *)image;
 {
-    if (iconImage_!=nil)
-        return iconImage_;
+    if (image_!=nil)
+        return image_;
+    NSString *imagePath = [[NSBundle mainBundle] pathForResource:self.imageFileName ofType:nil];
+    image_ = [UIImage imageWithContentsOfFile:imagePath];
+	return image_;
+}
 
-    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"Icon.png" ofType:nil];
-    iconImage_ = [UIImage imageWithContentsOfFile:imagePath];
-	return iconImage_;
+-(NSString *)imageFileName{
+    if (imageFileName_!=nil) {
+        return imageFileName_;
+    }
+    self.imageFileName=@"Icon.png";
+    return imageFileName_;
 }
 
 -(void)drawBevelWithRect:(CGRect)rect inContext:(CGContextRef)context{
 	CGFloat bevelSize=kDefaultBevelSize;
-	
 	
 	CGRect bevelRect=CGRectMake(rect.size.width/2-bevelSize/2, rect.size.height/2, bevelSize, bevelSize);
 	
@@ -139,9 +146,7 @@
 
 - (void)drawRect:(CGRect)rect
 {
-  //   [super drawRect:rect];
-	//NSLog(@"BDImageView drawRect Start");
-	CGContextRef context = UIGraphicsGetCurrentContext(); 
+ 	CGContextRef context = UIGraphicsGetCurrentContext(); 
 	[self clipRoundedRect:self.bounds inContext:context];
 
 	
@@ -155,7 +160,7 @@
 	
 	
 	// Draw the image
-	CGContextDrawImage(context, rect, [self.iconImage CGImage]);
+	CGContextDrawImage(context, rect, [self.image CGImage]);
 	[self drawRoundedRect:rect inContext:context];
 	CGContextDrawPath(context, kCGPathStroke);
 	CGContextSetLineWidth(context, self.strokeWidth);
