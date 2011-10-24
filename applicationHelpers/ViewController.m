@@ -241,7 +241,7 @@
     
     // Populate the right hand image view, if you want, with a custom icon.
     // The left hand image view is the app's icon.
-    //   self.helpViewController.customIconFileName=@"customIcon.png";
+       self.helpViewController.customIconFileName=@"customIcon.png";
     
     self.helpViewController.supportDictionary=[NSDictionary dictionaryWithObjectsAndKeys:@"http://bigdiggy.wordpress.com/support",BDSupportURLStringKey,
 											   @"Support for Wonderful app is provided by via email and via the support website.",BDSupportStringKey,
