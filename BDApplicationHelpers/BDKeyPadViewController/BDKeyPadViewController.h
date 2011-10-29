@@ -1,9 +1,10 @@
 //
-//  BDLowerToolBarView.m
+//  BDKeyPadViewController.h
 //  How Many Days
 //
-//  Created by Tim Taylor on 10/22/11.
-//  Copyright 2011 Big Diggy SW. All rights reserved.//
+//  Created by Tim Taylor on 8/4/10.
+//  Copyright 2010 Big Diggy SW. All rights reserved.
+//
 
 /*
  
@@ -41,40 +42,50 @@
  */
 
 
-#import "BDLowerToolBarView.h"
+#import <UIKit/UIKit.h>
+#import "BDInputViewController.h"
+
+enum  {
+	BDNumberFormatterTypeNothing=-100,
+	BDNumberFormatterTypeDecimal=100,
+	BDNumberFormatterTypeCurrency,
+	BDNumberFormatterTypePercentage,
+};
+typedef NSInteger BDNumberFormatterType;
+
+/** A View Controller that provides a calculator like keypad useful for data entry.
+ 
+ info on double zero and swipe to negafy.
+ */
 
 
-@implementation BDLowerToolBarView
-
-
-- (id)initWithFrame:(CGRect)frame {
-    
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code.
-    }
-    return self;
+@interface BDKeyPadViewController : BDInputViewController <UITextFieldDelegate>{
+   
 }
+/** The Type of number that is being manipulated.  i.e. decimal, currency or percentage.
+ 
+ */
+@property (nonatomic) BDNumberFormatterType numberFormatType;
 
+/** The callback block used to update the calling viewController's UI. This block is called when the value on the keypad has changed.
+ 
+ */
+@property (copy) stringTagOutputCallbackBlock outputCallbackBlock;
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-	CGContextRef context= UIGraphicsGetCurrentContext();
-	CGContextSetFillColorWithColor(context, [[UIColor darkGrayColor] CGColor]);
-	// Draw them with a 2.0 stroke width so they are a bit more visible.
-	CGContextSetLineWidth(context, 0.75);
-	
-	// Draw a single line from left to right
-	//CGContextMoveToPoint(context, 0, self.bounds.size.height-1.0);
-	//CGContextAddLineToPoint(context, self.bounds.size.width, self.bounds.size.height-1.0);
-	//CGContextStrokePath(context);
-	CGRect myRect=self.bounds;
-	CGContextFillRect(context,CGRectMake(0, 1.0, myRect.size.width, 1.0));
-	[super drawRect:rect];
-	
-    // Drawing code.
-}
+/** The number string that populates the keypad textfield.
+ 
+ */
+@property (nonatomic,strong) NSString *popoverTextFieldString;
 
+/** Label used to describe what the keypad is being used for.  i.e. Interest Rate or Transmit Power
+ 
+ */
+@property (nonatomic,strong) IBOutlet UILabel *keyPadTitleLabel;
+
+/** Initializes an instance of BDKeyPadViewController
+ 
+ @return An initialized BDKeyPadViewController or nil if unsuccessful.
+ */
+-(id)init;
 
 @end

@@ -1,10 +1,10 @@
 //
-//  BDImageView.h
-//  How Many Days
+//  BDInputViewController.h
+//  testInputView
 //
-//  Created by Tim Taylor on 10/22/11.
-//  Copyright 2011 Big Diggy SW. All rights reserved.//
-
+//  Created by Tim and Jennifer Taylor on 10/28/11.
+//  Copyright (c) 2011 Big Diggy SW. All rights reserved.
+//
 /*
  
  The below license is the new BSD license with the OSI recommended personalizations.
@@ -40,18 +40,24 @@
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-
 #import <UIKit/UIKit.h>
-#define kDefaultStrokeColor         [UIColor blackColor]
-#define kDefaultStrokeWidth         2.0
-#define kDefaultCornerRadius        12.5
-#define kDefaultBevelFillColor		[UIColor whiteColor]
-#define	kDefaultBevelSize			150
+#import "BDInputViewControllerProtocol.h"
+#import "blockTypes.h"
 
-
-@interface BDImageView : UIView {
-    
+/** An abstract UIViewController Subclass that adopts the BDInputViewControllerProtocol.  Other types of wouldbe viewControllers that gather input can be based off of this class.  i.e. PickerViews, KeyPads, combined view controllers, etc.  
+ 
+ All subclasses of BDInputViewControllers are meant to be used as child viewControllers that are contained in a parent viewController. Somewhat like how a subclass of UIViewController can be embedded in a UINavigationController or a UITabBarController.
+ */
+@interface BDInputViewController : UIViewController <BDInputViewControllerProtocol>
+{
+    buttonPushedCallbackBlock doneButtonPushedCallbackBlock;
 }
-@property(nonatomic,strong) NSString *imageFileName;
+
+/** Callback block used by, for example, a button's IBAction to send call the parent viewController's methods/code to dismiss this child view controller.
+ @see BDInputViewControllerProtocol
+ 
+ */
+@property (copy) buttonPushedCallbackBlock doneButtonPushedCallbackBlock;
+
 
 @end
