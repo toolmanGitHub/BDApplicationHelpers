@@ -44,15 +44,13 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
+#import "blockTypes.h"
 
 
 extern NSString *BDSupportURLStringKey;   // The Support URL for your app that will be opened in Safari when the UIActionSheet's button is pushed.
 extern NSString *BDSupportStringKey;      // The Text used to populate the UIActionSheet's title property
 extern NSString *BDSupportEmailStringKey; // The email address for app support used to populate the Mail Composer's to: address
 extern NSString *BDURLRejectStringKey;    // The text that all of you help html files must include to prevent your App from opening up the URL in Safari.
-
-
-typedef void(^buttonPushedCallbackBlock)(void);
 
 /** A View Controller that provides a WebKit Based HTML Help System.
 
