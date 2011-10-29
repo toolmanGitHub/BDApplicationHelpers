@@ -43,13 +43,21 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MFMailComposeViewController.h>
 @class BDHelpViewController;
+@class BDKeyPadViewController;
 @interface ViewController : UIViewController <UIPopoverControllerDelegate,MFMailComposeViewControllerDelegate>{
 
     
 }
 @property (nonatomic,strong) BDHelpViewController *helpViewController;
+@property (nonatomic,strong) BDKeyPadViewController *keyPadViewController;
 @property (nonatomic,strong) UIPopoverController *popoverController; 
+@property (nonatomic,strong) IBOutlet UILabel *keyPadOutputLabel;
 - (IBAction)showHelpViewController:(id)sender;
 -(void)displayMailComposer;
+
+#pragma mark -
+#pragma mark UIViewController Container Methods
+-(void)slideIntoPlaceInputViewController:(UIViewController *)viewController;
+-(void)slideOutOfPlaceInputViewController:(UIViewController *)viewController;
 
 @end

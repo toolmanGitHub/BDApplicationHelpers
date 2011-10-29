@@ -41,11 +41,13 @@
  */
 
 #import "ViewController.h"
-#import <BDApplicationHelpers/BDHelpViewController.h>
+#import <BDApplicationHelpers/BDApplicationHelpers.h>
 
 @implementation ViewController
 @synthesize helpViewController = helpViewController_;
 @synthesize popoverController = popoverController_;
+@synthesize keyPadViewController = keyPadViewController_;
+@synthesize keyPadOutputLabel;
 
 
 - (void)didReceiveMemoryWarning
@@ -105,6 +107,65 @@
         return YES;
     }
 }
+
+#pragma mark -
+#pragma mark UIViewController Container Methods
+- (BOOL)automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers{
+    return YES;
+}
+
+-(void)slideIntoPlaceInputViewController:(UIViewController *)viewController
+{
+    __weak __block ViewController *weakSelf=self;
+    [((BDInputViewController *)viewController) setDismissViewControllerCallbackBlock:^{
+        ViewController *strongSelf=weakSelf;
+        [strongSelf slideOutOfPlaceInputViewController: viewController];
+    }];
+    CGRect inputViewFrame=viewController.view.frame;
+    CGFloat inputViewHeight=inputViewFrame.size.height;
+    
+    CGRect newFrame=CGRectMake(0, self.view.frame.size.height, inputViewFrame.size.width, inputViewFrame.size.height);
+    
+    viewController.view.frame=newFrame;
+    // [viewController willMoveToParentViewController:self];
+    [self addChildViewController:viewController];
+    
+    CGRect offSetRect=CGRectOffset(newFrame, 0, -inputViewHeight);
+    
+    [self.view addSubview:viewController.view];
+    [UIView animateWithDuration:0.2 animations:^{
+        viewController.view.frame=offSetRect;
+    }
+                     completion:^(BOOL finished){
+                         [viewController didMoveToParentViewController:self];
+                     }];
+    
+    
+    
+}
+
+-(void)slideOutOfPlaceInputViewController:(UIViewController *)viewController{
+    CGRect inputViewFrame=viewController.view.frame;
+    CGFloat inputViewHeight=inputViewFrame.size.height;
+    
+    CGRect offSetRect=CGRectOffset(inputViewFrame, 0, +inputViewHeight);
+    
+    [viewController willMoveToParentViewController:nil];
+    [UIView animateWithDuration:0.2 animations:^{
+        viewController.view.frame=offSetRect;
+    }
+                     completion:^(BOOL finished){
+                         [viewController.view removeFromSuperview];
+                         [viewController removeFromParentViewController];
+                         //                    if ([viewController isKindOfClass:[BDTabBarController class]]) {
+                         //  self.tabBarController=nil;
+                         //        }
+                     }];
+    
+}
+
+#pragma mark -
+#pragma mark IBActions
 
 - (IBAction)showHelpViewController:(id)sender {
     
@@ -252,6 +313,68 @@
       helpViewController_.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
 		
 	return helpViewController_;
+}
+
+#pragma mark -
+#pragma mark BDInputViewController Related
+- (IBAction)buttonPushed:(id)sender {
+    
+    UIViewController *viewController=nil;
+    CGSize viewControllerSize=CGSizeZero;
+    
+    NSInteger buttonInputViewType=((UIButton *)sender).tag;
+    
+    switch (buttonInputViewType) {
+        case BDInputViewTypeNumberKeyPad:
+            viewController=self.keyPadViewController;
+            viewControllerSize=self.keyPadViewController.view.frame.size;
+            self.keyPadViewController.keyPadTitleLabel.text=@"KeyPad only";
+            break;
+        case BDInputViewTypePicker:
+            //          viewController=self.pickerViewController;
+            // viewControllerSize=self.pickerViewController.view.frame.size;
+            break;
+        case BDInputViewTypeCombinedViewController:
+            //  viewController=self.tabBarController;
+            // viewControllerSize=self.tabBarController.view.frame.size;
+            //  self.keyPadViewController.keyPadTitleLabel.text=@"Combined View KeyPad";
+            break;
+    }
+    
+    if (buttonInputViewType==BDInputViewTypeNumberKeyPad || buttonInputViewType==BDInputViewTypeCombinedViewController) {
+        self.keyPadViewController.popoverTextFieldString=self.keyPadOutputLabel.text;
+        __weak __block ViewController *weakSelf=self;
+        self.keyPadViewController.outputCallbackBlock=^(NSString *stringText,NSInteger tag){
+            ViewController *strongSelf=weakSelf;
+            strongSelf.keyPadOutputLabel.text=stringText;
+        };
+        
+    }
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        [self slideIntoPlaceInputViewController:viewController];
+    }else {
+        [self.popoverController setContentViewController:viewController];
+        
+        self.popoverController.popoverContentSize=viewControllerSize;
+        [self.popoverController presentPopoverFromRect:((UIButton *)sender).bounds inView:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
+    
+}
+
+#pragma mark -
+#pragma mark BDKeyPadViewController
+-(BDKeyPadViewController *)keyPadViewController{
+    if (keyPadViewController_) {
+        return keyPadViewController_;
+    }
+    
+    
+    keyPadViewController_=[[BDKeyPadViewController alloc] init];
+    keyPadViewController_.numberFormatType=BDNumberFormatterTypeDecimal;
+    keyPadViewController_.popoverTextFieldString=@"43.00";
+    return keyPadViewController_;
+    
 }
 
 #pragma mark -
