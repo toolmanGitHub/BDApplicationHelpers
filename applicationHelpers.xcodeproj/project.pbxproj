@@ -45,9 +45,6 @@
 		EC7997071450C90000C6344E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7997051450C90000C6344E /* background.png */; };
 		EC7997081450C90000C6344E /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7997061450C90000C6344E /* background@2x.png */; };
 		EC9913481453392E00F55000 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = EC9913471453392E00F55000 /* README.mdown */; };
-		EC99139D1453439800F55000 /* BDApplicationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9913991453439800F55000 /* BDApplicationHelpers.framework */; };
-		EC99139E1453439800F55000 /* BDHelpViewController.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC99139B1453439800F55000 /* BDHelpViewController.nib */; };
-		EC99139F1453439800F55000 /* BDHelpViewController_iPad.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC99139C1453439800F55000 /* BDHelpViewController_iPad.nib */; };
 		EC9D08381453CC2C006CED35 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EC9D08371453CC2C006CED35 /* Icon.png */; };
 		ECC135691451FA3400A52751 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657463144B4AF9002F66FC /* Foundation.framework */; };
 		ECC1356F1451FA3400A52751 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECC1356D1451FA3400A52751 /* InfoPlist.strings */; };
@@ -59,6 +56,34 @@
 		ECC135791451FA5500A52751 /* BDImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6574B1144B4C6C002F66FC /* BDImageView.h */; };
 		ECC1357A1451FA5D00A52751 /* BDHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6574B6144B4C6C002F66FC /* BDHelpViewController.xib */; };
 		ECC1357B1451FA6000A52751 /* BDHelpViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6574B3144B4C6C002F66FC /* BDHelpViewController_iPad.xib */; };
+		ECE0D288145CB0C400976621 /* BDInputViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D279145CB0C400976621 /* BDInputViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECE0D289145CB0C400976621 /* BDInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE0D27A145CB0C400976621 /* BDInputViewController.m */; };
+		ECE0D28A145CB0C400976621 /* BDInputViewControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D27B145CB0C400976621 /* BDInputViewControllerProtocol.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		ECE0D28B145CB0C400976621 /* backSpace.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D27D145CB0C400976621 /* backSpace.png */; };
+		ECE0D28C145CB0C400976621 /* backSpacePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D27E145CB0C400976621 /* backSpacePressed.png */; };
+		ECE0D28D145CB0C400976621 /* BDKeyPadViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D27F145CB0C400976621 /* BDKeyPadViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECE0D28E145CB0C400976621 /* BDKeyPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE0D280145CB0C400976621 /* BDKeyPadViewController.m */; };
+		ECE0D28F145CB0C400976621 /* BDKeyPadViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D281145CB0C400976621 /* BDKeyPadViewController_iPad.xib */; };
+		ECE0D290145CB0C400976621 /* BDKeyPadViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D282145CB0C400976621 /* BDKeyPadViewController_iPhone.xib */; };
+		ECE0D291145CB0C400976621 /* buttonStateDown.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D283145CB0C400976621 /* buttonStateDown.png */; };
+		ECE0D292145CB0C400976621 /* buttonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D284145CB0C400976621 /* buttonStateUp.png */; };
+		ECE0D293145CB0C400976621 /* doneButtonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D285145CB0C400976621 /* doneButtonStateUp.png */; };
+		ECE0D294145CB0C400976621 /* focusIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D286145CB0C400976621 /* focusIndicator.png */; };
+		ECE0D295145CB0C400976621 /* blockTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D287145CB0C400976621 /* blockTypes.h */; };
+		ECE0D29B145CB0E600976621 /* BDDateTimeNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D299145CB0E600976621 /* BDDateTimeNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECE0D29C145CB0E600976621 /* BDDateTimeNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE0D29A145CB0E600976621 /* BDDateTimeNumberFormatter.m */; };
+		ECE0D29E145CB14A00976621 /* BDApplicationHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D29D145CB14A00976621 /* BDApplicationHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECE0D2B0145CB66E00976621 /* BDApplicationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE0D2A4145CB66E00976621 /* BDApplicationHelpers.framework */; };
+		ECE0D2B1145CB66E00976621 /* backSpace.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2A6145CB66E00976621 /* backSpace.png */; };
+		ECE0D2B2145CB66E00976621 /* backSpacePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2A7145CB66E00976621 /* backSpacePressed.png */; };
+		ECE0D2B3145CB66E00976621 /* BDHelpViewController.nib in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2A8145CB66E00976621 /* BDHelpViewController.nib */; };
+		ECE0D2B4145CB66E00976621 /* BDHelpViewController_iPad.nib in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2A9145CB66E00976621 /* BDHelpViewController_iPad.nib */; };
+		ECE0D2B5145CB66E00976621 /* BDKeyPadViewController_iPad.nib in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2AA145CB66E00976621 /* BDKeyPadViewController_iPad.nib */; };
+		ECE0D2B6145CB66E00976621 /* BDKeyPadViewController_iPhone.nib in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2AB145CB66E00976621 /* BDKeyPadViewController_iPhone.nib */; };
+		ECE0D2B7145CB66E00976621 /* buttonStateDown.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2AC145CB66E00976621 /* buttonStateDown.png */; };
+		ECE0D2B8145CB66E00976621 /* buttonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2AD145CB66E00976621 /* buttonStateUp.png */; };
+		ECE0D2B9145CB66E00976621 /* doneButtonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2AE145CB66E00976621 /* doneButtonStateUp.png */; };
+		ECE0D2BA145CB66E00976621 /* focusIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2AF145CB66E00976621 /* focusIndicator.png */; };
 		ECE677D31454E7AB00694A2A /* customIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE677D21454E7AB00694A2A /* customIcon.png */; };
 /* End PBXBuildFile section */
 
@@ -120,14 +145,39 @@
 		EC7997051450C90000C6344E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		EC7997061450C90000C6344E /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		EC9913471453392E00F55000 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = SOURCE_ROOT; };
-		EC9913991453439800F55000 /* BDApplicationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BDApplicationHelpers.framework; sourceTree = "<group>"; };
-		EC99139B1453439800F55000 /* BDHelpViewController.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController.nib; sourceTree = "<group>"; };
-		EC99139C1453439800F55000 /* BDHelpViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController_iPad.nib; sourceTree = "<group>"; };
 		EC9D08371453CC2C006CED35 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		ECC135681451FA3400A52751 /* BDApplicationHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = BDApplicationHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC1356C1451FA3400A52751 /* BDApplicationHelpers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BDApplicationHelpers-Info.plist"; sourceTree = "<group>"; };
 		ECC1356E1451FA3400A52751 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ECC135701451FA3400A52751 /* BDApplicationHelpers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BDApplicationHelpers-Prefix.pch"; sourceTree = "<group>"; };
+		ECE0D279145CB0C400976621 /* BDInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDInputViewController.h; sourceTree = "<group>"; };
+		ECE0D27A145CB0C400976621 /* BDInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDInputViewController.m; sourceTree = "<group>"; };
+		ECE0D27B145CB0C400976621 /* BDInputViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDInputViewControllerProtocol.h; sourceTree = "<group>"; };
+		ECE0D27D145CB0C400976621 /* backSpace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backSpace.png; path = Resources/backSpace.png; sourceTree = "<group>"; };
+		ECE0D27E145CB0C400976621 /* backSpacePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backSpacePressed.png; path = Resources/backSpacePressed.png; sourceTree = "<group>"; };
+		ECE0D27F145CB0C400976621 /* BDKeyPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDKeyPadViewController.h; sourceTree = "<group>"; };
+		ECE0D280145CB0C400976621 /* BDKeyPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDKeyPadViewController.m; sourceTree = "<group>"; };
+		ECE0D281145CB0C400976621 /* BDKeyPadViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDKeyPadViewController_iPad.xib; sourceTree = "<group>"; };
+		ECE0D282145CB0C400976621 /* BDKeyPadViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDKeyPadViewController_iPhone.xib; sourceTree = "<group>"; };
+		ECE0D283145CB0C400976621 /* buttonStateDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonStateDown.png; path = Resources/buttonStateDown.png; sourceTree = "<group>"; };
+		ECE0D284145CB0C400976621 /* buttonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonStateUp.png; path = Resources/buttonStateUp.png; sourceTree = "<group>"; };
+		ECE0D285145CB0C400976621 /* doneButtonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = doneButtonStateUp.png; path = Resources/doneButtonStateUp.png; sourceTree = "<group>"; };
+		ECE0D286145CB0C400976621 /* focusIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = focusIndicator.png; path = Resources/focusIndicator.png; sourceTree = "<group>"; };
+		ECE0D287145CB0C400976621 /* blockTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blockTypes.h; sourceTree = "<group>"; };
+		ECE0D299145CB0E600976621 /* BDDateTimeNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDDateTimeNumberFormatter.h; sourceTree = "<group>"; };
+		ECE0D29A145CB0E600976621 /* BDDateTimeNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDDateTimeNumberFormatter.m; sourceTree = "<group>"; };
+		ECE0D29D145CB14A00976621 /* BDApplicationHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDApplicationHelpers.h; sourceTree = "<group>"; };
+		ECE0D2A4145CB66E00976621 /* BDApplicationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BDApplicationHelpers.framework; sourceTree = "<group>"; };
+		ECE0D2A6145CB66E00976621 /* backSpace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backSpace.png; sourceTree = "<group>"; };
+		ECE0D2A7145CB66E00976621 /* backSpacePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backSpacePressed.png; sourceTree = "<group>"; };
+		ECE0D2A8145CB66E00976621 /* BDHelpViewController.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController.nib; sourceTree = "<group>"; };
+		ECE0D2A9145CB66E00976621 /* BDHelpViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController_iPad.nib; sourceTree = "<group>"; };
+		ECE0D2AA145CB66E00976621 /* BDKeyPadViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDKeyPadViewController_iPad.nib; sourceTree = "<group>"; };
+		ECE0D2AB145CB66E00976621 /* BDKeyPadViewController_iPhone.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDKeyPadViewController_iPhone.nib; sourceTree = "<group>"; };
+		ECE0D2AC145CB66E00976621 /* buttonStateDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonStateDown.png; sourceTree = "<group>"; };
+		ECE0D2AD145CB66E00976621 /* buttonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonStateUp.png; sourceTree = "<group>"; };
+		ECE0D2AE145CB66E00976621 /* doneButtonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doneButtonStateUp.png; sourceTree = "<group>"; };
+		ECE0D2AF145CB66E00976621 /* focusIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = focusIndicator.png; sourceTree = "<group>"; };
 		ECE677D21454E7AB00694A2A /* customIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = customIcon.png; path = ../../../Desktop/customIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,7 +190,7 @@
 				EC657462144B4AF9002F66FC /* UIKit.framework in Frameworks */,
 				EC657464144B4AF9002F66FC /* Foundation.framework in Frameworks */,
 				EC657466144B4AF9002F66FC /* CoreGraphics.framework in Frameworks */,
-				EC99139D1453439800F55000 /* BDApplicationHelpers.framework in Frameworks */,
+				ECE0D2B0145CB66E00976621 /* BDApplicationHelpers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +229,7 @@
 		EC657460144B4AF9002F66FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EC9913981453439800F55000 /* BDApplicationHelpers.embeddedframework */,
+				ECE0D2A3145CB66E00976621 /* BDApplicationHelpers.embeddedframework */,
 				EC7997011450C60900C6344E /* MessageUI.framework */,
 				EC657461144B4AF9002F66FC /* UIKit.framework */,
 				EC657463144B4AF9002F66FC /* Foundation.framework */,
@@ -222,6 +272,10 @@
 		EC6574A7144B4C05002F66FC /* BDApplicationHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				ECE0D287145CB0C400976621 /* blockTypes.h */,
+				ECE0D29D145CB14A00976621 /* BDApplicationHelpers.h */,
+				ECE0D298145CB0E600976621 /* BDDateTimeNumberFormatter */,
+				ECE0D297145CB0CD00976621 /* BDInputViewController */,
 				EC6574BD144B4C74002F66FC /* BDInformationViewController */,
 				EC6574A8144B4C05002F66FC /* Supporting Files */,
 			);
@@ -271,25 +325,6 @@
 			path = "HTML files";
 			sourceTree = "<group>";
 		};
-		EC9913981453439800F55000 /* BDApplicationHelpers.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				EC9913991453439800F55000 /* BDApplicationHelpers.framework */,
-				EC99139A1453439800F55000 /* Resources */,
-			);
-			name = BDApplicationHelpers.embeddedframework;
-			path = "../../Library/Developer/Xcode/DerivedData/applicationHelpers-bzlgxfckcftymiecgskefskxlpkx/Build/Products/Debug-iphoneos/BDApplicationHelpers.embeddedframework";
-			sourceTree = "<group>";
-		};
-		EC99139A1453439800F55000 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				EC99139B1453439800F55000 /* BDHelpViewController.nib */,
-				EC99139C1453439800F55000 /* BDHelpViewController_iPad.nib */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		ECC1356A1451FA3400A52751 /* BDApplicationHelpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +343,70 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		ECE0D27C145CB0C400976621 /* BDKeyPadViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ECE0D27D145CB0C400976621 /* backSpace.png */,
+				ECE0D27E145CB0C400976621 /* backSpacePressed.png */,
+				ECE0D27F145CB0C400976621 /* BDKeyPadViewController.h */,
+				ECE0D280145CB0C400976621 /* BDKeyPadViewController.m */,
+				ECE0D281145CB0C400976621 /* BDKeyPadViewController_iPad.xib */,
+				ECE0D282145CB0C400976621 /* BDKeyPadViewController_iPhone.xib */,
+				ECE0D283145CB0C400976621 /* buttonStateDown.png */,
+				ECE0D284145CB0C400976621 /* buttonStateUp.png */,
+				ECE0D285145CB0C400976621 /* doneButtonStateUp.png */,
+				ECE0D286145CB0C400976621 /* focusIndicator.png */,
+			);
+			path = BDKeyPadViewController;
+			sourceTree = "<group>";
+		};
+		ECE0D297145CB0CD00976621 /* BDInputViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ECE0D279145CB0C400976621 /* BDInputViewController.h */,
+				ECE0D27A145CB0C400976621 /* BDInputViewController.m */,
+				ECE0D27B145CB0C400976621 /* BDInputViewControllerProtocol.h */,
+				ECE0D27C145CB0C400976621 /* BDKeyPadViewController */,
+			);
+			name = BDInputViewController;
+			sourceTree = "<group>";
+		};
+		ECE0D298145CB0E600976621 /* BDDateTimeNumberFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				ECE0D299145CB0E600976621 /* BDDateTimeNumberFormatter.h */,
+				ECE0D29A145CB0E600976621 /* BDDateTimeNumberFormatter.m */,
+			);
+			path = BDDateTimeNumberFormatter;
+			sourceTree = "<group>";
+		};
+		ECE0D2A3145CB66E00976621 /* BDApplicationHelpers.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				ECE0D2A4145CB66E00976621 /* BDApplicationHelpers.framework */,
+				ECE0D2A5145CB66E00976621 /* Resources */,
+			);
+			name = BDApplicationHelpers.embeddedframework;
+			path = "../../Library/Developer/Xcode/DerivedData/applicationHelpers-bzlgxfckcftymiecgskefskxlpkx/Build/Products/Debug-iphoneos/BDApplicationHelpers.embeddedframework";
+			sourceTree = "<group>";
+		};
+		ECE0D2A5145CB66E00976621 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ECE0D2A6145CB66E00976621 /* backSpace.png */,
+				ECE0D2A7145CB66E00976621 /* backSpacePressed.png */,
+				ECE0D2A8145CB66E00976621 /* BDHelpViewController.nib */,
+				ECE0D2A9145CB66E00976621 /* BDHelpViewController_iPad.nib */,
+				ECE0D2AA145CB66E00976621 /* BDKeyPadViewController_iPad.nib */,
+				ECE0D2AB145CB66E00976621 /* BDKeyPadViewController_iPhone.nib */,
+				ECE0D2AC145CB66E00976621 /* buttonStateDown.png */,
+				ECE0D2AD145CB66E00976621 /* buttonStateUp.png */,
+				ECE0D2AE145CB66E00976621 /* doneButtonStateUp.png */,
+				ECE0D2AF145CB66E00976621 /* focusIndicator.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -315,9 +414,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE0D29E145CB14A00976621 /* BDApplicationHelpers.h in Headers */,
 				ECC135771451FA4F00A52751 /* BDHelpViewController.h in Headers */,
+				ECE0D288145CB0C400976621 /* BDInputViewController.h in Headers */,
+				ECE0D28D145CB0C400976621 /* BDKeyPadViewController.h in Headers */,
+				ECE0D29B145CB0E600976621 /* BDDateTimeNumberFormatter.h in Headers */,
+				ECE0D28A145CB0C400976621 /* BDInputViewControllerProtocol.h in Headers */,
 				ECC135781451FA5200A52751 /* BDLowerToolBarView.h in Headers */,
 				ECC135791451FA5500A52751 /* BDImageView.h in Headers */,
+				ECE0D295145CB0C400976621 /* blockTypes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,10 +517,18 @@
 				EC7997071450C90000C6344E /* background.png in Resources */,
 				EC7997081450C90000C6344E /* background@2x.png in Resources */,
 				EC9913481453392E00F55000 /* README.mdown in Resources */,
-				EC99139E1453439800F55000 /* BDHelpViewController.nib in Resources */,
-				EC99139F1453439800F55000 /* BDHelpViewController_iPad.nib in Resources */,
 				EC9D08381453CC2C006CED35 /* Icon.png in Resources */,
 				ECE677D31454E7AB00694A2A /* customIcon.png in Resources */,
+				ECE0D2B1145CB66E00976621 /* backSpace.png in Resources */,
+				ECE0D2B2145CB66E00976621 /* backSpacePressed.png in Resources */,
+				ECE0D2B3145CB66E00976621 /* BDHelpViewController.nib in Resources */,
+				ECE0D2B4145CB66E00976621 /* BDHelpViewController_iPad.nib in Resources */,
+				ECE0D2B5145CB66E00976621 /* BDKeyPadViewController_iPad.nib in Resources */,
+				ECE0D2B6145CB66E00976621 /* BDKeyPadViewController_iPhone.nib in Resources */,
+				ECE0D2B7145CB66E00976621 /* buttonStateDown.png in Resources */,
+				ECE0D2B8145CB66E00976621 /* buttonStateUp.png in Resources */,
+				ECE0D2B9145CB66E00976621 /* doneButtonStateUp.png in Resources */,
+				ECE0D2BA145CB66E00976621 /* focusIndicator.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +539,14 @@
 				ECC1356F1451FA3400A52751 /* InfoPlist.strings in Resources */,
 				ECC1357A1451FA5D00A52751 /* BDHelpViewController.xib in Resources */,
 				ECC1357B1451FA6000A52751 /* BDHelpViewController_iPad.xib in Resources */,
+				ECE0D28B145CB0C400976621 /* backSpace.png in Resources */,
+				ECE0D28C145CB0C400976621 /* backSpacePressed.png in Resources */,
+				ECE0D28F145CB0C400976621 /* BDKeyPadViewController_iPad.xib in Resources */,
+				ECE0D290145CB0C400976621 /* BDKeyPadViewController_iPhone.xib in Resources */,
+				ECE0D291145CB0C400976621 /* buttonStateDown.png in Resources */,
+				ECE0D292145CB0C400976621 /* buttonStateUp.png in Resources */,
+				ECE0D293145CB0C400976621 /* doneButtonStateUp.png in Resources */,
+				ECE0D294145CB0C400976621 /* focusIndicator.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +612,9 @@
 				ECC135741451FA4600A52751 /* BDHelpViewController.m in Sources */,
 				ECC135751451FA4800A52751 /* BDImageView.m in Sources */,
 				ECC135761451FA4C00A52751 /* BDLowerToolBarView.m in Sources */,
+				ECE0D289145CB0C400976621 /* BDInputViewController.m in Sources */,
+				ECE0D28E145CB0C400976621 /* BDKeyPadViewController.m in Sources */,
+				ECE0D29C145CB0E600976621 /* BDDateTimeNumberFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

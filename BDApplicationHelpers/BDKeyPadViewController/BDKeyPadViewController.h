@@ -1,9 +1,10 @@
 //
-//  ViewController.h
-//  applicationHelpers
+//  BDKeyPadViewController.h
+//  How Many Days
 //
-//  Created by Tim Taylor on 5/17/11.
-//  Copyright 2011 Big Diggy SW. All rights reserved.//
+//  Created by Tim Taylor on 8/4/10.
+//  Copyright 2010 Big Diggy SW. All rights reserved.
+//
 
 /*
  
@@ -38,26 +39,53 @@
  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+ */
+
 
 #import <UIKit/UIKit.h>
-#import <MessageUI/MFMailComposeViewController.h>
-@class BDHelpViewController;
-@class BDKeyPadViewController;
-@interface ViewController : UIViewController <UIPopoverControllerDelegate,MFMailComposeViewControllerDelegate>{
+#import "BDInputViewController.h"
 
-    
+enum  {
+	BDNumberFormatterTypeNothing=-100,
+	BDNumberFormatterTypeDecimal=100,
+	BDNumberFormatterTypeCurrency,
+	BDNumberFormatterTypePercentage,
+};
+typedef NSInteger BDNumberFormatterType;
+
+/** A View Controller that provides a calculator like keypad useful for data entry.
+ 
+ info on double zero and swipe to negafy.
+ */
+
+
+@interface BDKeyPadViewController : BDInputViewController <UITextFieldDelegate>{
+   
 }
-@property (nonatomic,strong) BDHelpViewController *helpViewController;
-@property (nonatomic,strong) BDKeyPadViewController *keyPadViewController;
-@property (nonatomic,strong) UIPopoverController *popoverController; 
-@property (nonatomic,strong) IBOutlet UILabel *keyPadOutputLabel;
-- (IBAction)showHelpViewController:(id)sender;
--(void)displayMailComposer;
+/** The Type of number that is being manipulated.  i.e. decimal, currency or percentage.
+ 
+ */
+@property (nonatomic) BDNumberFormatterType numberFormatType;
 
-#pragma mark -
-#pragma mark UIViewController Container Methods
--(void)slideIntoPlaceInputViewController:(UIViewController *)viewController;
--(void)slideOutOfPlaceInputViewController:(UIViewController *)viewController;
+/** The callback block used to update the calling viewController's UI. This block is called when the value on the keypad has changed.
+ 
+ */
+@property (copy) stringTagOutputCallbackBlock outputCallbackBlock;
+
+/** The number string that populates the keypad textfield.
+ 
+ */
+@property (nonatomic,strong) NSString *popoverTextFieldString;
+
+/** Label used to describe what the keypad is being used for.  i.e. Interest Rate or Transmit Power
+ 
+ */
+@property (nonatomic,strong) IBOutlet UILabel *keyPadTitleLabel;
+
+/** Initializes an instance of BDKeyPadViewController
+ 
+ @return An initialized BDKeyPadViewController or nil if unsuccessful.
+ */
+-(id)init;
 
 @end

@@ -1,10 +1,10 @@
 //
-//  ViewController.h
-//  applicationHelpers
+//  BDInputViewController.h
+//  testInputView
 //
-//  Created by Tim Taylor on 5/17/11.
-//  Copyright 2011 Big Diggy SW. All rights reserved.//
-
+//  Created by Tim and Jennifer Taylor on 10/28/11.
+//  Copyright (c) 2011 Big Diggy SW. All rights reserved.
+//
 /*
  
  The below license is the new BSD license with the OSI recommended personalizations.
@@ -38,26 +38,26 @@
  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+ */
 
 #import <UIKit/UIKit.h>
-#import <MessageUI/MFMailComposeViewController.h>
-@class BDHelpViewController;
-@class BDKeyPadViewController;
-@interface ViewController : UIViewController <UIPopoverControllerDelegate,MFMailComposeViewControllerDelegate>{
+#import "BDInputViewControllerProtocol.h"
+#import "blockTypes.h"
 
-    
+/** An abstract UIViewController Subclass that adopts the BDInputViewControllerProtocol.  Other types of wouldbe viewControllers that gather input can be based off of this class.  i.e. PickerViews, KeyPads, combined view controllers, etc.  
+ 
+ All subclasses of BDInputViewControllers are meant to be used as child viewControllers that are contained in a parent viewController. Somewhat like how a subclass of UIViewController can be embedded in a UINavigationController or a UITabBarController.
+ */
+@interface BDInputViewController : UIViewController <BDInputViewControllerProtocol>
+{
+    buttonPushedCallbackBlock doneButtonPushedCallbackBlock;
 }
-@property (nonatomic,strong) BDHelpViewController *helpViewController;
-@property (nonatomic,strong) BDKeyPadViewController *keyPadViewController;
-@property (nonatomic,strong) UIPopoverController *popoverController; 
-@property (nonatomic,strong) IBOutlet UILabel *keyPadOutputLabel;
-- (IBAction)showHelpViewController:(id)sender;
--(void)displayMailComposer;
 
-#pragma mark -
-#pragma mark UIViewController Container Methods
--(void)slideIntoPlaceInputViewController:(UIViewController *)viewController;
--(void)slideOutOfPlaceInputViewController:(UIViewController *)viewController;
+/** Callback block used by, for example, a button's IBAction to send call the parent viewController's methods/code to dismiss this child view controller.
+ @see BDInputViewControllerProtocol
+ 
+ */
+@property (copy) buttonPushedCallbackBlock doneButtonPushedCallbackBlock;
+
 
 @end
