@@ -251,6 +251,7 @@
 				EC6574B6144B4C6C002F66FC /* BDHelpViewController.xib */,
 			);
 			name = BDInformationViewController;
+			path = BDHelpViewController;
 			sourceTree = "<group>";
 		};
 		EC6779EA144B6A25000051B2 /* HTML files */ = {
