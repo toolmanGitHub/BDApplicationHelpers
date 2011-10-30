@@ -20,7 +20,7 @@ BDHelpViewController is a self contained Webkit Based HTML Help System.  There a
 
 Adding the BDHelpViewController is easy in the UIViewController subclass from where you want to call it, first ensure that you have imported the correct header file
 
-    #import <BDApplicationHelpers/BDHelpViewController.h>
+    #import <BDApplicationHelpers/BDApplicationHelpers.h>
 
 I prefer to create my viewControllers lazily:
 
@@ -93,7 +93,14 @@ Then your IBAction method that opens up the help can look like this.
     }
 
 
-Classes that provide more functionality are on their way.
+BDKeyPadViewController
+----------------------
+
+The BDKeyPadViewController is a subclass of the abstract class BDInputViewController.  BDKeyPadViewController and other subclasses of BDInputViewController like it are used as child viewControllers that allow the user to provide input.  When using with the iPad use a UIPopoverController to show the key pad.  When using with an iPhone or iPod touch utilize UIViewController containment.  i.e. add the BDKeyPadViewController as a child view controller to a parent view controller.
+
+###BDInputViewController Protocol###
+The BDInputViewController protocol provides a means for the parent view controller to interrogate the child input view controller for certain information as well as to provide it with a call back block that is used to dismiss it.
+
 
 Credits
 -------
@@ -101,6 +108,10 @@ This project makes use of Karl Stenerud's [iOS-Universal-Framework](https://gith
 
 History
 -------
+### Version 2
+
+Second Release with the BDKeyPadViewController
+
 ### Version 1
 
 First Release with just the BDHelpViewController
