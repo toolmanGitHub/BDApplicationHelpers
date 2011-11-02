@@ -101,6 +101,97 @@ The BDKeyPadViewController is a subclass of the abstract class BDInputViewContro
 ###BDInputViewController Protocol###
 The BDInputViewController protocol provides a means for the parent view controller to interrogate the child input view controller for certain information as well as to provide it with a call back block that is used to dismiss it.
 
+###Usage###
+
+Adding a BDKeyPadViewController to your app is easy.  First ensure that the BDApplicationHelpers framework has been added to your project.  Then make sure you import it in your viewController like this:
+
+    #import <BDApplicationHelpers/BDApplicationHelpers.h>
+    
+I like to load thing lazily, so I set up my ivar getter method like this:
+
+    -(BDKeyPadViewController *)keyPadViewController{
+        if (keyPadViewController_) {
+            return keyPadViewController_;
+        }
+    
+        keyPadViewController_=[[BDKeyPadViewController alloc] init];
+        keyPadViewController_.numberFormatType=BDNumberFormatterTypeDecimal;
+        keyPadViewController_.popoverTextFieldString=@"43.00";
+        return keyPadViewController_;
+    }
+    
+A typical use case is that a user pushes a button or touches a text field which will bring up the keypad.
+
+    - (IBAction)buttonPushed:(id)sender {
+    
+        UIViewController *viewController=nil;
+        CGSize viewControllerSize=CGSizeZero;
+    
+        NSInteger buttonInputViewType=((UIButton *)sender).tag;
+    
+        viewController=self.keyPadViewController;
+        viewControllerSize=self.keyPadViewController.view.frame.size;
+        self.keyPadViewController.keyPadTitleLabel.text=@"KeyPad only";
+    
+        self.keyPadViewController.popoverTextFieldString=self.keyPadOutputLabel.text;
+        __weak __block ViewController *weakSelf=self;
+        
+        // Setup the call back block that the BDKeyPadViewController object will use to update the UI.
+        self.keyPadViewController.outputCallbackBlock=^(NSString *stringText,NSInteger tag){
+            // Make sure you use your own ViewController class.
+            ViewController *strongSelf=weakSelf;
+            strongSelf.keyPadOutputLabel.text=stringText;
+        };
+    
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+            // Call the method that will slide the BDKeyPadViewer into place on the iPhone.
+            [self slideIntoPlaceInputViewController:viewController];
+        }else {
+            // If we are using an iPad, present the BDKeyPadViewController into a UIPopoverController.
+            [self.popoverController setContentViewController:viewController];
+            self.popoverController.popoverContentSize=viewControllerSize;
+            [self.popoverController presentPopoverFromRect:((UIButton *)sender).bounds inView:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        }
+    
+    }
+
+The slideIntoPlaceInputViewController: method is implemented to take advantage of iOS's new container view methods. Because we are not using a popover, we need a way of dismissing the input viewController a "Done" button is provided.  We need to provide a block that will dismiss the viewController when the done button is pressed.
+
+    -(void)slideIntoPlaceInputViewController:(UIViewController *)viewController{
+    
+        // Provide a block that will dismiss the view controller when the "Done" is pressed.
+        __weak __block ViewController *weakSelf=self;
+        [((BDInputViewController *)viewController) setDismissViewControllerCallbackBlock:^{
+            ViewController *strongSelf=weakSelf;
+            [strongSelf slideOutOfPlaceInputViewController: viewController];
+        }];
+    
+        // Get the size of the Input ViewController so that we can first place it off screen
+        // then animate it into place.
+        CGRect inputViewFrame=viewController.view.frame;
+        CGFloat inputViewHeight=inputViewFrame.size.height;
+    
+        CGRect newFrame=CGRectMake(0, self.view.frame.size.height, inputViewFrame.size.width, inputViewFrame.size.height);
+    
+        viewController.view.frame=newFrame;
+        
+        // Utilize the container methods to put the input viewController into the parent view controller.
+        [self addChildViewController:viewController];
+    
+        // Define the offset that the input viewController will be animated to.
+        CGRect offSetRect=CGRectOffset(newFrame, 0, -inputViewHeight);
+    
+        [self.view addSubview:viewController.view];
+        [UIView animateWithDuration:0.2 animations:^{
+            viewController.view.frame=offSetRect;
+        }
+                         completion:^(BOOL finished){
+                         // one of the key things with UIViewController containment is communicating the actual
+                         // containment to the viewController.
+                             [viewController didMoveToParentViewController:self];
+                         }];
+    }   
+
 
 Credits
 -------
