@@ -193,6 +193,32 @@ The slideIntoPlaceInputViewController: method is implemented to take advantage o
     }   
 
 
+Of course, after the data input is completed, we need to be able to dismiss the input viewController.
+
+    -(void)slideOutOfPlaceInputViewController:(UIViewController *)viewController{
+        // Get the size of the Input ViewController so that we can first place it off screen
+        // then animate it into place.
+        CGRect inputViewFrame=viewController.view.frame;
+        CGFloat inputViewHeight=inputViewFrame.size.height;
+    
+        // Define the offset that the input viewController will be animated to.
+        CGRect offSetRect=CGRectOffset(inputViewFrame, 0, +inputViewHeight);
+    
+        // one of the key things with UIViewController containment is communicating that
+        // we are removing the viewController from it's parent. We use the willMoveToParentViewController:
+        // method, passing nil to signal that we are removing it from the parent viewController
+        [viewController willMoveToParentViewController:nil];
+        [UIView animateWithDuration:0.2 animations:^{
+             viewController.view.frame=offSetRect;
+        }
+                         completion:^(BOOL finished){
+                             [viewController.view removeFromSuperview];
+                             // Communicate to the viewController that it's removal from the container is complete.
+                             [viewController removeFromParentViewController];
+                         }];
+    }
+
+
 Credits
 -------
 This project makes use of Karl Stenerud's [iOS-Universal-Framework](https://github.com/kstenerud/iOS-Universal-Framework)
