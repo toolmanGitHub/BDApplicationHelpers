@@ -369,7 +369,6 @@
         return keyPadViewController_;
     }
     
-    
     keyPadViewController_=[[BDKeyPadViewController alloc] init];
     keyPadViewController_.numberFormatType=BDNumberFormatterTypeDecimal;
     keyPadViewController_.popoverTextFieldString=@"43.00";
