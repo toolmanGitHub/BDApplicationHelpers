@@ -51,6 +51,8 @@
 @property (nonatomic,strong) IBOutlet UIButton *doneButton;
 
 -(void)useDoneButton;
+-(IBAction)doneButtonPushed:(id)sender;
+
 @end
 
 @implementation BDPickerViewController

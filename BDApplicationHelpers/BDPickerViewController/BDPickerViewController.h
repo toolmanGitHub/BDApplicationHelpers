@@ -52,6 +52,9 @@ typedef CGFloat (^BDPickerWidthForComponentBlock)(UIPickerView *, NSInteger);
 typedef NSString *(^BDPickerTitleForRowBlock)(UIPickerView *, NSInteger, NSInteger);
 typedef void(^BDPickerDidSelectRowComponentBlock)(UIPickerView *, NSInteger, NSInteger);
 
+/** A PickerViewController that uses block callbacks rather than delegates.  When used on the iPhone or iPod Touch, the BDPickerViewController will show a done button that can be pressed to dismiss.  Check the header file file to see what arguments the blocks take and what, if any, values are returned by the blocks.
+ 
+ */
 @interface BDPickerViewController : BDInputViewController {
     BDPickerNumberOfRowsInComponentBlock numberOfRowsInComponentBlock;
 	BDPickerNumberOfComponentsInPickerViewBlock numberOfComponentsInPickerViewBlock;
@@ -61,14 +64,29 @@ typedef void(^BDPickerDidSelectRowComponentBlock)(UIPickerView *, NSInteger, NSI
 	BDPickerDidSelectRowComponentBlock didSelectRowComponentBlock;
 
 }
-
+/** A block callback that provides the number of components to be used in the PickerView.
+ 
+ */
 @property (nonatomic,copy) BDPickerNumberOfComponentsInPickerViewBlock numberOfComponentsInPickerViewBlock;
+/** A block that provides the number of rows for a particular component.
+ 
+ */
 @property (nonatomic,copy) BDPickerNumberOfRowsInComponentBlock numberOfRowsInComponentBlock;
+/** A block that provides the row height for a particular row and component.
+ 
+ */
 @property (nonatomic,copy) BDPickerRowHeightForComponentBlock rowHeightForComponentBlock;
+/** A block that provides the width for a particular component.
+ 
+ */
 @property (nonatomic,copy) BDPickerWidthForComponentBlock widthForComponentBlock;
+/** A block that provides the title for a particular row and component.
+ 
+ */
 @property (nonatomic,copy) BDPickerTitleForRowBlock titleForRowBlock;
+/** A block that provides the executes when a components row is selected.
+ 
+ */
 @property (nonatomic,copy) BDPickerDidSelectRowComponentBlock didSelectRowComponentBlock;
-
--(IBAction)doneButtonPushed:(id)sender;
 
 @end
