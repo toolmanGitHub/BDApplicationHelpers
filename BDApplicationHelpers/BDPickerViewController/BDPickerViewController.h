@@ -52,7 +52,7 @@ typedef CGFloat (^BDPickerWidthForComponentBlock)(UIPickerView *, NSInteger);
 typedef NSString *(^BDPickerTitleForRowBlock)(UIPickerView *, NSInteger, NSInteger);
 typedef void(^BDPickerDidSelectRowComponentBlock)(UIPickerView *, NSInteger, NSInteger);
 
-/** A PickerViewController that uses block callbacks rather than delegates.  When used on the iPhone or iPod Touch, the BDPickerViewController will show a done button that can be pressed to dismiss.  Check the header file file to see what arguments the blocks take and what, if any, values are returned by the blocks.
+/** This subclass of BDInputViewController contains a UIPickerView and optional "Done" UIButton.  The Done UIButton is only available when using the class on an iPhone or iPod touch.  The unique thing about the implementation of the BDPickerViewController is that it encapsulates the delegate and datasource protocols for UIPickerView into callback blocks. Check the header file file to see what arguments the blocks take and what, if any, values are returned by the blocks.
  
  */
 @interface BDPickerViewController : BDInputViewController {
@@ -64,27 +64,29 @@ typedef void(^BDPickerDidSelectRowComponentBlock)(UIPickerView *, NSInteger, NSI
 	BDPickerDidSelectRowComponentBlock didSelectRowComponentBlock;
 
 }
-/** A block callback that provides the number of components to be used in the PickerView.
+/** A block callback that provides the number of components to be used in the PickerView.  This block is called when the BDPickerViewController instance's of UIPickerViewDataSource Protocol implementation of numberOfComponentsInPickerView: is called.
  
  */
 @property (nonatomic,copy) BDPickerNumberOfComponentsInPickerViewBlock numberOfComponentsInPickerViewBlock;
-/** A block that provides the number of rows for a particular component.
+/** A block that provides the number of rows for a particular component.  This block is called when the BDPickerViewController instance's of UIPickerViewDataSource Protocol implementation of pickerView:numberOfRowsInComponent: is called.
+
  
  */
 @property (nonatomic,copy) BDPickerNumberOfRowsInComponentBlock numberOfRowsInComponentBlock;
-/** A block that provides the row height for a particular row and component.
+/** A block that provides the row height for a particular row and component.  This block is called when the BDPickerViewController instance's of UIPickerView Delegate implementation of pickerView:rowHeightForComponent is called.
  
  */
 @property (nonatomic,copy) BDPickerRowHeightForComponentBlock rowHeightForComponentBlock;
-/** A block that provides the width for a particular component.
+/** A block that provides the width for a particular component.  This block is called when the BDPickerViewController instance's of UIPickerView Delegate implementation of pickerView:widthForComponent is called. 
  
  */
 @property (nonatomic,copy) BDPickerWidthForComponentBlock widthForComponentBlock;
-/** A block that provides the title for a particular row and component.
+/** A block that provides the title for a particular row and component.  This block is called when the BDPickerViewController instance's of UIPickerView Delegate implementation of pickerView:titleForRow:forComponent: is called. 
  
  */
 @property (nonatomic,copy) BDPickerTitleForRowBlock titleForRowBlock;
-/** A block that provides the executes when a components row is selected.
+/** A block that provides the executes when a components row is selected. This block is called when the BDPickerViewController instance's of UIPickerView Delegate implementation of pickerView:didSelectRow:inComponent is called. 
+
  
  */
 @property (nonatomic,copy) BDPickerDidSelectRowComponentBlock didSelectRowComponentBlock;
