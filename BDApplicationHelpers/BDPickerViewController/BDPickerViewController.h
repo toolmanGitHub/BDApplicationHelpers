@@ -88,7 +88,10 @@ typedef void(^BDPickerDidSelectRowComponentBlock)(UIPickerView *, NSInteger, NSI
  
  */
 @property (nonatomic,copy) BDPickerDidSelectRowComponentBlock didSelectRowComponentBlock;
-
+/** Initializes an instance of BDPickerViewController
+ 
+ @return An initialized BDKeyPadViewController or nil if unsuccessful.
+ */
 -(id)init;
 
 @end

@@ -42,7 +42,6 @@
 
 
 #import "BDPickerViewController.h"
-#import "BDInputViewController.h"
 
 @interface BDPickerViewController () 
 
@@ -71,9 +70,7 @@
 
 #pragma mark -
 #pragma mark BDInputViewControllerProtocol methods
--(void)dismissViewControllerCallbackBlock:(dismissCallBackBlock)callback{
-    self.doneButtonPushedCallbackBlock=callback;
-}
+
 -(BDInputViewType)inputViewType{
     return BDInputViewTypePicker;
 }
