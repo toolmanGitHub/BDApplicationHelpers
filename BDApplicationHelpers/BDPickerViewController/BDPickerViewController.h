@@ -18,11 +18,7 @@ typedef NSString *(^BDPickerTitleForRowBlock)(UIPickerView *, NSInteger, NSInteg
 typedef void(^BDPickerDidSelectRowComponentBlock)(UIPickerView *, NSInteger, NSInteger);
 
 @interface BDPickerViewController : BDInputViewController {
-	UIPickerView *pickerView;
-	UILabel *pickerViewLabel;
-	UIButton *doneButton;
-		
-	BDPickerNumberOfRowsInComponentBlock numberOfRowsInComponentBlock;
+    BDPickerNumberOfRowsInComponentBlock numberOfRowsInComponentBlock;
 	BDPickerNumberOfComponentsInPickerViewBlock numberOfComponentsInPickerViewBlock;
 	BDPickerRowHeightForComponentBlock rowHeightForComponentBlock;
 	BDPickerWidthForComponentBlock widthForComponentBlock;
@@ -30,9 +26,7 @@ typedef void(^BDPickerDidSelectRowComponentBlock)(UIPickerView *, NSInteger, NSI
 	BDPickerDidSelectRowComponentBlock didSelectRowComponentBlock;
 
 }
-@property (nonatomic,strong) IBOutlet UIPickerView *pickerView;
-@property (nonatomic,strong) IBOutlet UILabel *pickerViewLabel;
-@property (nonatomic,strong) IBOutlet UIButton *doneButton;
+
 @property (nonatomic,copy) BDPickerNumberOfComponentsInPickerViewBlock numberOfComponentsInPickerViewBlock;
 @property (nonatomic,copy) BDPickerNumberOfRowsInComponentBlock numberOfRowsInComponentBlock;
 @property (nonatomic,copy) BDPickerRowHeightForComponentBlock rowHeightForComponentBlock;
@@ -41,7 +35,5 @@ typedef void(^BDPickerDidSelectRowComponentBlock)(UIPickerView *, NSInteger, NSI
 @property (nonatomic,copy) BDPickerDidSelectRowComponentBlock didSelectRowComponentBlock;
 
 -(IBAction)doneButtonPushed:(id)sender;
--(void)useDoneButton;
-
 
 @end

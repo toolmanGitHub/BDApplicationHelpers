@@ -8,10 +8,23 @@
 
 #import "BDPickerViewController.h"
 #import "BDInputViewController.h"
+
+@interface BDPickerViewController () 
+
+@property (nonatomic,strong) IBOutlet UIPickerView *pickerView;
+@property (nonatomic,strong) IBOutlet UILabel *pickerViewLabel;
+@property (nonatomic,strong) IBOutlet UIButton *doneButton;
+
+-(void)useDoneButton;
+@end
+
 @implementation BDPickerViewController
+// Private
 @synthesize pickerView;
 @synthesize pickerViewLabel;
 @synthesize doneButton;
+
+// Public
 @synthesize numberOfComponentsInPickerViewBlock;
 @synthesize numberOfRowsInComponentBlock;
 @synthesize rowHeightForComponentBlock;
