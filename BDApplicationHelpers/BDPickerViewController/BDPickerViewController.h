@@ -89,4 +89,6 @@ typedef void(^BDPickerDidSelectRowComponentBlock)(UIPickerView *, NSInteger, NSI
  */
 @property (nonatomic,copy) BDPickerDidSelectRowComponentBlock didSelectRowComponentBlock;
 
+-(id)init;
+
 @end
