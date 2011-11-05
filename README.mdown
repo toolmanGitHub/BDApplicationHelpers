@@ -92,16 +92,21 @@ Then your IBAction method that opens up the help can look like this.
       [self.helpViewController loadDocument: @"appHelpScreeniPhone.html"];
     }
 
+BDTabBarController
+------------------
 
-BDKeyPadViewController
-----------------------
+The BDTabBarController is container view controller that uses block based call backs in place of delegates.  The BDTabBarController typically is used as a container for subclasses of BDInputViewController.
+
+BDInputViewController and Protocol
+---------------------------------
+
+The BDInputViewController is an abstract class that provides the basics for an inputViewController.  The protocol provides a means for the parent view controller to interrogate the child input view controller for certain information as well as to provide it with a call back block that is used to dismiss it.
+
+###BDKeyPadViewController###
 
 The BDKeyPadViewController is a subclass of the abstract class BDInputViewController.  BDKeyPadViewController and other subclasses of BDInputViewController like it are used as child viewControllers that allow the user to provide input.  When using with the iPad use a UIPopoverController to show the key pad.  When using with an iPhone or iPod touch utilize UIViewController containment.  i.e. add the BDKeyPadViewController as a child view controller to a parent view controller.
 
-###BDInputViewController Protocol###
-The BDInputViewController protocol provides a means for the parent view controller to interrogate the child input view controller for certain information as well as to provide it with a call back block that is used to dismiss it.
-
-###Usage###
+####Usage####
 
 Adding a BDKeyPadViewController to your app is easy.  First ensure that the BDApplicationHelpers framework has been added to your project.  Then make sure you import it in your viewController like this:
 
@@ -116,9 +121,64 @@ I like to load thing lazily, so I set up my ivar getter method like this:
     
         keyPadViewController_=[[BDKeyPadViewController alloc] init];
         keyPadViewController_.numberFormatType=BDNumberFormatterTypeDecimal;
-        keyPadViewController_.popoverTextFieldString=@"43.00";
+        keyPadViewController_.popoverTextFieldString=@"3.145";
         return keyPadViewController_;
     }
+
+
+###BDPickerViewController###
+
+The BDPickerViewController is a subclass of the abstract class BDInputViewController.  Like the other subclasses of BDInputViewController, BDPickerViewController is used as a child viewController that allow the user to provide some form of input.  When used with the iPad, a UIPopoverController is used to present the picker view.  When using with an iPhone or iPod touch UIViewController containment is utilized.
+
+####Usage####
+    -(BDPickerViewController *)pickerViewController{
+         if (pickerViewController_) {
+             return pickerViewController_;
+         }
+         pickerViewController_=[[BDPickerViewController alloc] init];
+    
+         pickerViewController_.numberOfComponentsInPickerViewBlock=^(UIPickerView *thePickerView){
+              NSInteger numberOfComponents=1;
+        
+              if (thePickerView.tag==0) {
+                 numberOfComponents=1;
+              }
+        
+              return numberOfComponents;
+         };
+    
+         pickerViewController_.numberOfRowsInComponentBlock=^(UIPickerView *thePickerView,NSInteger component){
+               NSInteger numberOfRows=2;
+               return numberOfRows;
+         };
+         pickerViewController_.widthForComponentBlock=^(UIPickerView *thePickerView, NSInteger component){
+              CGFloat componentWidth=thePickerView.frame.size.width-25;
+              return componentWidth;
+         };
+    
+         pickerViewController_.titleForRowBlock=^(UIPickerView *thePickerView, NSInteger row, NSInteger component){
+              NSString *titleForRow=@"";
+              switch (row) {
+                 case 0:
+                    titleForRow=@"One";
+                    break;
+                 case 1:
+                    titleForRow=@"Two";
+                    break;
+              }
+        
+              return titleForRow;
+         };
+    
+         pickerViewController_.didSelectRowComponentBlock=^(UIPickerView *thePickerView, NSInteger row, NSInteger component){
+              NSLog(@"didselectRowCOmponentBlock");
+              NSLog(@"selected row:  %d",row);
+         };
+         return pickerViewController_;
+    
+    }
+
+###Typical Usage within the the calling ViewController###
     
 A typical use case is that a user pushes a button or touches a text field which will bring up the keypad.
 
