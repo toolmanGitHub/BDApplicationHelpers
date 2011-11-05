@@ -159,6 +159,10 @@
                      completion:^(BOOL finished){
                          [viewController.view removeFromSuperview];
                          [viewController removeFromParentViewController];
+                         // We also need to make sure that the viewControllers are no longer retained by the 
+                         // BDTabBarController because we will get an exception if they have more than
+                         // one rootViewController.  i.e. if we try to use the BDKeyPadViewController by
+                         // itself just after using the BDTabBarController
                          if ([viewController isKindOfClass:[BDTabBarController class]]) {
                              NSLog(@"setting tabBarController to nil");
                              self.tabBarController=nil;
