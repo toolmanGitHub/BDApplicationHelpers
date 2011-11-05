@@ -101,6 +101,13 @@
 			remoteGlobalIDString = EC1189351464AF6500B71798;
 			remoteInfo = BDApplicationHelpers;
 		};
+		EC42B3AB1464FE07004C4C9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC657454144B4AF9002F66FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC56AC55144B7E9700D0E183;
+			remoteInfo = Documentation;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -463,6 +470,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				EC42B3AC1464FE07004C4C9A /* PBXTargetDependency */,
 			);
 			name = BDApplicationHelpers;
 			productName = BDApplicationHelpers;
@@ -649,6 +657,11 @@
 			isa = PBXTargetDependency;
 			target = EC1189351464AF6500B71798 /* BDApplicationHelpers */;
 			targetProxy = EC11896A1464EA9C00B71798 /* PBXContainerItemProxy */;
+		};
+		EC42B3AC1464FE07004C4C9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC56AC55144B7E9700D0E183 /* Documentation */;
+			targetProxy = EC42B3AB1464FE07004C4C9A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
