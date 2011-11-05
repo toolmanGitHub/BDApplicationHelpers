@@ -49,6 +49,7 @@
 @synthesize keyPadViewController = keyPadViewController_;
 @synthesize keyPadOutputLabel;
 @synthesize pickerViewController = pickerViewController_;
+@synthesize tabBarController = tabBarController_;
 
 
 - (void)didReceiveMemoryWarning
@@ -158,9 +159,10 @@
                      completion:^(BOOL finished){
                          [viewController.view removeFromSuperview];
                          [viewController removeFromParentViewController];
-                         //                    if ([viewController isKindOfClass:[BDTabBarController class]]) {
-                         //  self.tabBarController=nil;
-                         //        }
+                         if ([viewController isKindOfClass:[BDTabBarController class]]) {
+                             NSLog(@"setting tabBarController to nil");
+                             self.tabBarController=nil;
+                         }
                      }];
     
 }
@@ -336,9 +338,9 @@
             viewControllerSize=self.pickerViewController.view.frame.size;
             break;
         case BDInputViewTypeCombinedViewController:
-            //  viewController=self.tabBarController;
-            // viewControllerSize=self.tabBarController.view.frame.size;
-            //  self.keyPadViewController.keyPadTitleLabel.text=@"Combined View KeyPad";
+            viewController=self.tabBarController;
+            viewControllerSize=self.tabBarController.view.frame.size;
+            self.keyPadViewController.keyPadTitleLabel.text=@"Combined View KeyPad";
             break;
     }
     
@@ -431,14 +433,38 @@
 }
 
 #pragma mark -
+#pragma mark BDTabBarController
+-(BDTabBarController *)tabBarController{
+    if (tabBarController_) {
+        return tabBarController_;
+    }
+    tabBarController_=[[BDTabBarController alloc] init];
+    CGSize viewControllerSize=self.keyPadViewController.view.frame.size;
+    tabBarController_.view.frame=CGRectMake(0, 0, viewControllerSize.width, viewControllerSize.height+49.0f);
+    [tabBarController_ setViewControllers:[NSArray arrayWithObjects:self.keyPadViewController,self.pickerViewController, nil] animated:NO];
+    
+    
+    
+    return tabBarController_;
+}
+
+#pragma mark -
 #pragma mark UIPopoverController
 -(UIPopoverController *)popoverController{
     if (popoverController_!=nil) {
         return popoverController_;
     }
     popoverController_=[[UIPopoverController alloc] initWithContentViewController:[[UIViewController alloc] init]];
+    self.popoverController.delegate=self;
     return popoverController_;
 }
 
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController{
+    if ([popoverController.contentViewController isKindOfClass:[BDTabBarController class]]) {
+        NSLog(@"setting tabBarController to nil");
+        self.popoverController=nil;
+        self.tabBarController=nil;
+    }
+}
 
 @end
