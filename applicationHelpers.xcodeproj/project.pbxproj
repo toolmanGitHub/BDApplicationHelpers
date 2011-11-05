@@ -21,6 +21,37 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		EC1189371464AF6500B71798 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657463144B4AF9002F66FC /* Foundation.framework */; };
+		EC11893D1464AF6500B71798 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC11893B1464AF6500B71798 /* InfoPlist.strings */; };
+		EC1189421464AFDC00B71798 /* BDDateTimeNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE0D29A145CB0E600976621 /* BDDateTimeNumberFormatter.m */; };
+		EC1189431464AFDC00B71798 /* BDPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6A4CBD1461901A0052347C /* BDPickerViewController.m */; };
+		EC1189441464AFDC00B71798 /* BDInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE0D27A145CB0C400976621 /* BDInputViewController.m */; };
+		EC1189451464AFDC00B71798 /* BDKeyPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE0D280145CB0C400976621 /* BDKeyPadViewController.m */; };
+		EC1189461464AFDC00B71798 /* BDLowerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7996FE144F628900C6344E /* BDLowerToolBarView.m */; };
+		EC1189471464AFDC00B71798 /* BDImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6574B2144B4C6C002F66FC /* BDImageView.m */; };
+		EC1189481464AFDC00B71798 /* BDHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6574B5144B4C6C002F66FC /* BDHelpViewController.m */; };
+		EC1189491464B02600B71798 /* blockTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D287145CB0C400976621 /* blockTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC11894A1464B02600B71798 /* BDApplicationHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D29D145CB14A00976621 /* BDApplicationHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC11894B1464B02600B71798 /* BDDateTimeNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D299145CB0E600976621 /* BDDateTimeNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC11894C1464B02600B71798 /* BDPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6A4CBC1461901A0052347C /* BDPickerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC11894D1464B02600B71798 /* BDInputViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D279145CB0C400976621 /* BDInputViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC11894E1464B02600B71798 /* BDKeyPadViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D27F145CB0C400976621 /* BDKeyPadViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC11894F1464B02600B71798 /* BDLowerToolBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC7996FD144F628900C6344E /* BDLowerToolBarView.h */; };
+		EC1189501464B02600B71798 /* BDImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6574B1144B4C6C002F66FC /* BDImageView.h */; };
+		EC1189511464B02600B71798 /* BDHelpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6574B4144B4C6C002F66FC /* BDHelpViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC1189521464B07A00B71798 /* BDPickerViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6A4CBE1461901A0052347C /* BDPickerViewController_iPad.xib */; };
+		EC1189531464B07A00B71798 /* BDPickerViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6A4CBF1461901A0052347C /* BDPickerViewController_iPhone.xib */; };
+		EC1189541464B07A00B71798 /* backSpace.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D27D145CB0C400976621 /* backSpace.png */; };
+		EC1189551464B07A00B71798 /* backSpacePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D27E145CB0C400976621 /* backSpacePressed.png */; };
+		EC1189561464B07A00B71798 /* BDKeyPadViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D281145CB0C400976621 /* BDKeyPadViewController_iPad.xib */; };
+		EC1189571464B07A00B71798 /* BDKeyPadViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D282145CB0C400976621 /* BDKeyPadViewController_iPhone.xib */; };
+		EC1189581464B07A00B71798 /* buttonStateDown.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D283145CB0C400976621 /* buttonStateDown.png */; };
+		EC1189591464B07A00B71798 /* buttonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D284145CB0C400976621 /* buttonStateUp.png */; };
+		EC11895A1464B07A00B71798 /* doneButtonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D285145CB0C400976621 /* doneButtonStateUp.png */; };
+		EC11895B1464B07A00B71798 /* focusIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D286145CB0C400976621 /* focusIndicator.png */; };
+		EC11895C1464B07A00B71798 /* BDHelpViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6574B3144B4C6C002F66FC /* BDHelpViewController_iPad.xib */; };
+		EC11895D1464B07A00B71798 /* BDHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6574B6144B4C6C002F66FC /* BDHelpViewController.xib */; };
+		EC11895E1464B09000B71798 /* BDInputViewControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D27B145CB0C400976621 /* BDInputViewControllerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC657462144B4AF9002F66FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657461144B4AF9002F66FC /* UIKit.framework */; };
 		EC657464144B4AF9002F66FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657463144B4AF9002F66FC /* Foundation.framework */; };
 		EC657466144B4AF9002F66FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657465144B4AF9002F66FC /* CoreGraphics.framework */; };
@@ -44,67 +75,39 @@
 		EC7997041450C8EF00C6344E /* backgroundiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7997031450C8EF00C6344E /* backgroundiPad.png */; };
 		EC7997071450C90000C6344E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7997051450C90000C6344E /* background.png */; };
 		EC7997081450C90000C6344E /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7997061450C90000C6344E /* background@2x.png */; };
+		EC8E7CA81464F5D000033E78 /* BDApplicationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8E7C9A1464F5CF00033E78 /* BDApplicationHelpers.framework */; };
+		EC8E7CA91464F5D000033E78 /* backSpace.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7C9C1464F5CF00033E78 /* backSpace.png */; };
+		EC8E7CAA1464F5D000033E78 /* backSpacePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7C9D1464F5CF00033E78 /* backSpacePressed.png */; };
+		EC8E7CAB1464F5D000033E78 /* BDHelpViewController.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7C9E1464F5D000033E78 /* BDHelpViewController.nib */; };
+		EC8E7CAC1464F5D000033E78 /* BDHelpViewController_iPad.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7C9F1464F5D000033E78 /* BDHelpViewController_iPad.nib */; };
+		EC8E7CAD1464F5D000033E78 /* BDKeyPadViewController_iPad.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA01464F5D000033E78 /* BDKeyPadViewController_iPad.nib */; };
+		EC8E7CAE1464F5D000033E78 /* BDKeyPadViewController_iPhone.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA11464F5D000033E78 /* BDKeyPadViewController_iPhone.nib */; };
+		EC8E7CAF1464F5D000033E78 /* BDPickerViewController_iPad.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA21464F5D000033E78 /* BDPickerViewController_iPad.nib */; };
+		EC8E7CB01464F5D000033E78 /* BDPickerViewController_iPhone.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA31464F5D000033E78 /* BDPickerViewController_iPhone.nib */; };
+		EC8E7CB11464F5D000033E78 /* buttonStateDown.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA41464F5D000033E78 /* buttonStateDown.png */; };
+		EC8E7CB21464F5D000033E78 /* buttonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA51464F5D000033E78 /* buttonStateUp.png */; };
+		EC8E7CB31464F5D000033E78 /* doneButtonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA61464F5D000033E78 /* doneButtonStateUp.png */; };
+		EC8E7CB41464F5D000033E78 /* focusIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA71464F5D000033E78 /* focusIndicator.png */; };
 		EC9913481453392E00F55000 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = EC9913471453392E00F55000 /* README.mdown */; };
 		EC9D08381453CC2C006CED35 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EC9D08371453CC2C006CED35 /* Icon.png */; };
-		ECC135691451FA3400A52751 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657463144B4AF9002F66FC /* Foundation.framework */; };
-		ECC1356F1451FA3400A52751 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECC1356D1451FA3400A52751 /* InfoPlist.strings */; };
-		ECC135741451FA4600A52751 /* BDHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6574B5144B4C6C002F66FC /* BDHelpViewController.m */; };
-		ECC135751451FA4800A52751 /* BDImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6574B2144B4C6C002F66FC /* BDImageView.m */; };
-		ECC135761451FA4C00A52751 /* BDLowerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7996FE144F628900C6344E /* BDLowerToolBarView.m */; };
-		ECC135771451FA4F00A52751 /* BDHelpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6574B4144B4C6C002F66FC /* BDHelpViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ECC135781451FA5200A52751 /* BDLowerToolBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC7996FD144F628900C6344E /* BDLowerToolBarView.h */; };
-		ECC135791451FA5500A52751 /* BDImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6574B1144B4C6C002F66FC /* BDImageView.h */; };
-		ECC1357A1451FA5D00A52751 /* BDHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6574B6144B4C6C002F66FC /* BDHelpViewController.xib */; };
-		ECC1357B1451FA6000A52751 /* BDHelpViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6574B3144B4C6C002F66FC /* BDHelpViewController_iPad.xib */; };
-		ECE0D288145CB0C400976621 /* BDInputViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D279145CB0C400976621 /* BDInputViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ECE0D289145CB0C400976621 /* BDInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE0D27A145CB0C400976621 /* BDInputViewController.m */; };
-		ECE0D28A145CB0C400976621 /* BDInputViewControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D27B145CB0C400976621 /* BDInputViewControllerProtocol.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		ECE0D28B145CB0C400976621 /* backSpace.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D27D145CB0C400976621 /* backSpace.png */; };
-		ECE0D28C145CB0C400976621 /* backSpacePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D27E145CB0C400976621 /* backSpacePressed.png */; };
-		ECE0D28D145CB0C400976621 /* BDKeyPadViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D27F145CB0C400976621 /* BDKeyPadViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ECE0D28E145CB0C400976621 /* BDKeyPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE0D280145CB0C400976621 /* BDKeyPadViewController.m */; };
-		ECE0D28F145CB0C400976621 /* BDKeyPadViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D281145CB0C400976621 /* BDKeyPadViewController_iPad.xib */; };
-		ECE0D290145CB0C400976621 /* BDKeyPadViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D282145CB0C400976621 /* BDKeyPadViewController_iPhone.xib */; };
-		ECE0D291145CB0C400976621 /* buttonStateDown.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D283145CB0C400976621 /* buttonStateDown.png */; };
-		ECE0D292145CB0C400976621 /* buttonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D284145CB0C400976621 /* buttonStateUp.png */; };
-		ECE0D293145CB0C400976621 /* doneButtonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D285145CB0C400976621 /* doneButtonStateUp.png */; };
-		ECE0D294145CB0C400976621 /* focusIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D286145CB0C400976621 /* focusIndicator.png */; };
-		ECE0D295145CB0C400976621 /* blockTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D287145CB0C400976621 /* blockTypes.h */; };
-		ECE0D29B145CB0E600976621 /* BDDateTimeNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D299145CB0E600976621 /* BDDateTimeNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ECE0D29C145CB0E600976621 /* BDDateTimeNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE0D29A145CB0E600976621 /* BDDateTimeNumberFormatter.m */; };
-		ECE0D29E145CB14A00976621 /* BDApplicationHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D29D145CB14A00976621 /* BDApplicationHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ECE0D2B0145CB66E00976621 /* BDApplicationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE0D2A4145CB66E00976621 /* BDApplicationHelpers.framework */; };
-		ECE0D2B1145CB66E00976621 /* backSpace.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2A6145CB66E00976621 /* backSpace.png */; };
-		ECE0D2B2145CB66E00976621 /* backSpacePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2A7145CB66E00976621 /* backSpacePressed.png */; };
-		ECE0D2B3145CB66E00976621 /* BDHelpViewController.nib in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2A8145CB66E00976621 /* BDHelpViewController.nib */; };
-		ECE0D2B4145CB66E00976621 /* BDHelpViewController_iPad.nib in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2A9145CB66E00976621 /* BDHelpViewController_iPad.nib */; };
-		ECE0D2B5145CB66E00976621 /* BDKeyPadViewController_iPad.nib in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2AA145CB66E00976621 /* BDKeyPadViewController_iPad.nib */; };
-		ECE0D2B6145CB66E00976621 /* BDKeyPadViewController_iPhone.nib in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2AB145CB66E00976621 /* BDKeyPadViewController_iPhone.nib */; };
-		ECE0D2B7145CB66E00976621 /* buttonStateDown.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2AC145CB66E00976621 /* buttonStateDown.png */; };
-		ECE0D2B8145CB66E00976621 /* buttonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2AD145CB66E00976621 /* buttonStateUp.png */; };
-		ECE0D2B9145CB66E00976621 /* doneButtonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2AE145CB66E00976621 /* doneButtonStateUp.png */; };
-		ECE0D2BA145CB66E00976621 /* focusIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE0D2AF145CB66E00976621 /* focusIndicator.png */; };
 		ECE677D31454E7AB00694A2A /* customIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE677D21454E7AB00694A2A /* customIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		ECC1357C1451FA6900A52751 /* PBXContainerItemProxy */ = {
+		EC11896A1464EA9C00B71798 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC657454144B4AF9002F66FC /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EC56AC55144B7E9700D0E183;
-			remoteInfo = Documentation;
-		};
-		ECC1357E1451FAE400A52751 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EC657454144B4AF9002F66FC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ECC135671451FA3400A52751;
+			remoteGlobalIDString = EC1189351464AF6500B71798;
 			remoteInfo = BDApplicationHelpers;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC1189361464AF6500B71798 /* BDApplicationHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = BDApplicationHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC11893A1464AF6500B71798 /* BDApplicationHelpers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BDApplicationHelpers-Info.plist"; sourceTree = "<group>"; };
+		EC11893C1464AF6500B71798 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC11893E1464AF6500B71798 /* BDApplicationHelpers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BDApplicationHelpers-Prefix.pch"; sourceTree = "<group>"; };
 		EC65745D144B4AF9002F66FC /* applicationHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = applicationHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC657461144B4AF9002F66FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EC657463144B4AF9002F66FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -138,18 +141,31 @@
 		EC6779F2144B6A25000051B2 /* BDCredits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BDCredits.html; sourceTree = "<group>"; };
 		EC6779F4144B6A25000051B2 /* ipad.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = ipad.css; sourceTree = "<group>"; };
 		EC6779F5144B6A25000051B2 /* iphone.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = iphone.css; sourceTree = "<group>"; };
+		EC6A4CBC1461901A0052347C /* BDPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPickerViewController.h; sourceTree = "<group>"; };
+		EC6A4CBD1461901A0052347C /* BDPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDPickerViewController.m; sourceTree = "<group>"; };
+		EC6A4CBE1461901A0052347C /* BDPickerViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDPickerViewController_iPad.xib; sourceTree = "<group>"; };
+		EC6A4CBF1461901A0052347C /* BDPickerViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDPickerViewController_iPhone.xib; sourceTree = "<group>"; };
 		EC7996FD144F628900C6344E /* BDLowerToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDLowerToolBarView.h; sourceTree = "<group>"; };
 		EC7996FE144F628900C6344E /* BDLowerToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDLowerToolBarView.m; sourceTree = "<group>"; };
 		EC7997011450C60900C6344E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		EC7997031450C8EF00C6344E /* backgroundiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundiPad.png; sourceTree = "<group>"; };
 		EC7997051450C90000C6344E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		EC7997061450C90000C6344E /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		EC8E7C9A1464F5CF00033E78 /* BDApplicationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BDApplicationHelpers.framework; sourceTree = "<group>"; };
+		EC8E7C9C1464F5CF00033E78 /* backSpace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backSpace.png; sourceTree = "<group>"; };
+		EC8E7C9D1464F5CF00033E78 /* backSpacePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backSpacePressed.png; sourceTree = "<group>"; };
+		EC8E7C9E1464F5D000033E78 /* BDHelpViewController.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController.nib; sourceTree = "<group>"; };
+		EC8E7C9F1464F5D000033E78 /* BDHelpViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController_iPad.nib; sourceTree = "<group>"; };
+		EC8E7CA01464F5D000033E78 /* BDKeyPadViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDKeyPadViewController_iPad.nib; sourceTree = "<group>"; };
+		EC8E7CA11464F5D000033E78 /* BDKeyPadViewController_iPhone.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDKeyPadViewController_iPhone.nib; sourceTree = "<group>"; };
+		EC8E7CA21464F5D000033E78 /* BDPickerViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDPickerViewController_iPad.nib; sourceTree = "<group>"; };
+		EC8E7CA31464F5D000033E78 /* BDPickerViewController_iPhone.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDPickerViewController_iPhone.nib; sourceTree = "<group>"; };
+		EC8E7CA41464F5D000033E78 /* buttonStateDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonStateDown.png; sourceTree = "<group>"; };
+		EC8E7CA51464F5D000033E78 /* buttonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonStateUp.png; sourceTree = "<group>"; };
+		EC8E7CA61464F5D000033E78 /* doneButtonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doneButtonStateUp.png; sourceTree = "<group>"; };
+		EC8E7CA71464F5D000033E78 /* focusIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = focusIndicator.png; sourceTree = "<group>"; };
 		EC9913471453392E00F55000 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = SOURCE_ROOT; };
 		EC9D08371453CC2C006CED35 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
-		ECC135681451FA3400A52751 /* BDApplicationHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = BDApplicationHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECC1356C1451FA3400A52751 /* BDApplicationHelpers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BDApplicationHelpers-Info.plist"; sourceTree = "<group>"; };
-		ECC1356E1451FA3400A52751 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		ECC135701451FA3400A52751 /* BDApplicationHelpers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BDApplicationHelpers-Prefix.pch"; sourceTree = "<group>"; };
 		ECE0D279145CB0C400976621 /* BDInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDInputViewController.h; sourceTree = "<group>"; };
 		ECE0D27A145CB0C400976621 /* BDInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDInputViewController.m; sourceTree = "<group>"; };
 		ECE0D27B145CB0C400976621 /* BDInputViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDInputViewControllerProtocol.h; sourceTree = "<group>"; };
@@ -167,21 +183,18 @@
 		ECE0D299145CB0E600976621 /* BDDateTimeNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDDateTimeNumberFormatter.h; sourceTree = "<group>"; };
 		ECE0D29A145CB0E600976621 /* BDDateTimeNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDDateTimeNumberFormatter.m; sourceTree = "<group>"; };
 		ECE0D29D145CB14A00976621 /* BDApplicationHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDApplicationHelpers.h; sourceTree = "<group>"; };
-		ECE0D2A4145CB66E00976621 /* BDApplicationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BDApplicationHelpers.framework; sourceTree = "<group>"; };
-		ECE0D2A6145CB66E00976621 /* backSpace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backSpace.png; sourceTree = "<group>"; };
-		ECE0D2A7145CB66E00976621 /* backSpacePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backSpacePressed.png; sourceTree = "<group>"; };
-		ECE0D2A8145CB66E00976621 /* BDHelpViewController.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController.nib; sourceTree = "<group>"; };
-		ECE0D2A9145CB66E00976621 /* BDHelpViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController_iPad.nib; sourceTree = "<group>"; };
-		ECE0D2AA145CB66E00976621 /* BDKeyPadViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDKeyPadViewController_iPad.nib; sourceTree = "<group>"; };
-		ECE0D2AB145CB66E00976621 /* BDKeyPadViewController_iPhone.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDKeyPadViewController_iPhone.nib; sourceTree = "<group>"; };
-		ECE0D2AC145CB66E00976621 /* buttonStateDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonStateDown.png; sourceTree = "<group>"; };
-		ECE0D2AD145CB66E00976621 /* buttonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonStateUp.png; sourceTree = "<group>"; };
-		ECE0D2AE145CB66E00976621 /* doneButtonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doneButtonStateUp.png; sourceTree = "<group>"; };
-		ECE0D2AF145CB66E00976621 /* focusIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = focusIndicator.png; sourceTree = "<group>"; };
 		ECE677D21454E7AB00694A2A /* customIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = customIcon.png; path = ../../../Desktop/customIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EC1189311464AF6500B71798 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1189371464AF6500B71798 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC65745A144B4AF9002F66FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,28 +203,38 @@
 				EC657462144B4AF9002F66FC /* UIKit.framework in Frameworks */,
 				EC657464144B4AF9002F66FC /* Foundation.framework in Frameworks */,
 				EC657466144B4AF9002F66FC /* CoreGraphics.framework in Frameworks */,
-				ECE0D2B0145CB66E00976621 /* BDApplicationHelpers.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ECC135631451FA3400A52751 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ECC135691451FA3400A52751 /* Foundation.framework in Frameworks */,
+				EC8E7CA81464F5D000033E78 /* BDApplicationHelpers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC1189381464AF6500B71798 /* BDApplicationHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				EC1189391464AF6500B71798 /* Supporting Files */,
+			);
+			path = BDApplicationHelpers;
+			sourceTree = "<group>";
+		};
+		EC1189391464AF6500B71798 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC11893A1464AF6500B71798 /* BDApplicationHelpers-Info.plist */,
+				EC11893B1464AF6500B71798 /* InfoPlist.strings */,
+				EC11893E1464AF6500B71798 /* BDApplicationHelpers-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		EC657452144B4AF9002F66FC = {
 			isa = PBXGroup;
 			children = (
 				EC9913471453392E00F55000 /* README.mdown */,
 				EC657467144B4AF9002F66FC /* applicationHelpers */,
 				EC6574A7144B4C05002F66FC /* BDApplicationHelpers */,
-				ECC1356A1451FA3400A52751 /* BDApplicationHelpers */,
+				EC1189381464AF6500B71798 /* BDApplicationHelpers */,
 				EC657460144B4AF9002F66FC /* Frameworks */,
 				EC65745E144B4AF9002F66FC /* Products */,
 			);
@@ -221,7 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				EC65745D144B4AF9002F66FC /* applicationHelpers.app */,
-				ECC135681451FA3400A52751 /* BDApplicationHelpers.framework */,
+				EC1189361464AF6500B71798 /* BDApplicationHelpers.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,7 +252,7 @@
 		EC657460144B4AF9002F66FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ECE0D2A3145CB66E00976621 /* BDApplicationHelpers.embeddedframework */,
+				EC8E7C991464F5CF00033E78 /* BDApplicationHelpers.embeddedframework */,
 				EC7997011450C60900C6344E /* MessageUI.framework */,
 				EC657461144B4AF9002F66FC /* UIKit.framework */,
 				EC657463144B4AF9002F66FC /* Foundation.framework */,
@@ -275,6 +298,7 @@
 				ECE0D287145CB0C400976621 /* blockTypes.h */,
 				ECE0D29D145CB14A00976621 /* BDApplicationHelpers.h */,
 				ECE0D298145CB0E600976621 /* BDDateTimeNumberFormatter */,
+				EC6A4CBB1461901A0052347C /* BDPickerViewController */,
 				ECE0D297145CB0CD00976621 /* BDInputViewController */,
 				EC6574BD144B4C74002F66FC /* BDInformationViewController */,
 				EC6574A8144B4C05002F66FC /* Supporting Files */,
@@ -325,22 +349,44 @@
 			path = "HTML files";
 			sourceTree = "<group>";
 		};
-		ECC1356A1451FA3400A52751 /* BDApplicationHelpers */ = {
+		EC6A4CBB1461901A0052347C /* BDPickerViewController */ = {
 			isa = PBXGroup;
 			children = (
-				ECC1356B1451FA3400A52751 /* Supporting Files */,
+				EC6A4CBC1461901A0052347C /* BDPickerViewController.h */,
+				EC6A4CBD1461901A0052347C /* BDPickerViewController.m */,
+				EC6A4CBE1461901A0052347C /* BDPickerViewController_iPad.xib */,
+				EC6A4CBF1461901A0052347C /* BDPickerViewController_iPhone.xib */,
 			);
-			path = BDApplicationHelpers;
+			path = BDPickerViewController;
 			sourceTree = "<group>";
 		};
-		ECC1356B1451FA3400A52751 /* Supporting Files */ = {
+		EC8E7C991464F5CF00033E78 /* BDApplicationHelpers.embeddedframework */ = {
 			isa = PBXGroup;
 			children = (
-				ECC1356C1451FA3400A52751 /* BDApplicationHelpers-Info.plist */,
-				ECC1356D1451FA3400A52751 /* InfoPlist.strings */,
-				ECC135701451FA3400A52751 /* BDApplicationHelpers-Prefix.pch */,
+				EC8E7C9A1464F5CF00033E78 /* BDApplicationHelpers.framework */,
+				EC8E7C9B1464F5CF00033E78 /* Resources */,
 			);
-			name = "Supporting Files";
+			name = BDApplicationHelpers.embeddedframework;
+			path = "../../Library/Developer/Xcode/DerivedData/applicationHelpers-bzlgxfckcftymiecgskefskxlpkx/Build/Products/Debug-iphoneos/BDApplicationHelpers.embeddedframework";
+			sourceTree = "<group>";
+		};
+		EC8E7C9B1464F5CF00033E78 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC8E7C9C1464F5CF00033E78 /* backSpace.png */,
+				EC8E7C9D1464F5CF00033E78 /* backSpacePressed.png */,
+				EC8E7C9E1464F5D000033E78 /* BDHelpViewController.nib */,
+				EC8E7C9F1464F5D000033E78 /* BDHelpViewController_iPad.nib */,
+				EC8E7CA01464F5D000033E78 /* BDKeyPadViewController_iPad.nib */,
+				EC8E7CA11464F5D000033E78 /* BDKeyPadViewController_iPhone.nib */,
+				EC8E7CA21464F5D000033E78 /* BDPickerViewController_iPad.nib */,
+				EC8E7CA31464F5D000033E78 /* BDPickerViewController_iPhone.nib */,
+				EC8E7CA41464F5D000033E78 /* buttonStateDown.png */,
+				EC8E7CA51464F5D000033E78 /* buttonStateUp.png */,
+				EC8E7CA61464F5D000033E78 /* doneButtonStateUp.png */,
+				EC8E7CA71464F5D000033E78 /* focusIndicator.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		ECE0D27C145CB0C400976621 /* BDKeyPadViewController */ = {
@@ -380,55 +426,49 @@
 			path = BDDateTimeNumberFormatter;
 			sourceTree = "<group>";
 		};
-		ECE0D2A3145CB66E00976621 /* BDApplicationHelpers.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				ECE0D2A4145CB66E00976621 /* BDApplicationHelpers.framework */,
-				ECE0D2A5145CB66E00976621 /* Resources */,
-			);
-			name = BDApplicationHelpers.embeddedframework;
-			path = "../../Library/Developer/Xcode/DerivedData/applicationHelpers-bzlgxfckcftymiecgskefskxlpkx/Build/Products/Debug-iphoneos/BDApplicationHelpers.embeddedframework";
-			sourceTree = "<group>";
-		};
-		ECE0D2A5145CB66E00976621 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				ECE0D2A6145CB66E00976621 /* backSpace.png */,
-				ECE0D2A7145CB66E00976621 /* backSpacePressed.png */,
-				ECE0D2A8145CB66E00976621 /* BDHelpViewController.nib */,
-				ECE0D2A9145CB66E00976621 /* BDHelpViewController_iPad.nib */,
-				ECE0D2AA145CB66E00976621 /* BDKeyPadViewController_iPad.nib */,
-				ECE0D2AB145CB66E00976621 /* BDKeyPadViewController_iPhone.nib */,
-				ECE0D2AC145CB66E00976621 /* buttonStateDown.png */,
-				ECE0D2AD145CB66E00976621 /* buttonStateUp.png */,
-				ECE0D2AE145CB66E00976621 /* doneButtonStateUp.png */,
-				ECE0D2AF145CB66E00976621 /* focusIndicator.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		ECC135641451FA3400A52751 /* Headers */ = {
+		EC1189321464AF6500B71798 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECE0D29E145CB14A00976621 /* BDApplicationHelpers.h in Headers */,
-				ECC135771451FA4F00A52751 /* BDHelpViewController.h in Headers */,
-				ECE0D288145CB0C400976621 /* BDInputViewController.h in Headers */,
-				ECE0D28D145CB0C400976621 /* BDKeyPadViewController.h in Headers */,
-				ECE0D29B145CB0E600976621 /* BDDateTimeNumberFormatter.h in Headers */,
-				ECE0D28A145CB0C400976621 /* BDInputViewControllerProtocol.h in Headers */,
-				ECC135781451FA5200A52751 /* BDLowerToolBarView.h in Headers */,
-				ECC135791451FA5500A52751 /* BDImageView.h in Headers */,
-				ECE0D295145CB0C400976621 /* blockTypes.h in Headers */,
+				EC1189491464B02600B71798 /* blockTypes.h in Headers */,
+				EC11894A1464B02600B71798 /* BDApplicationHelpers.h in Headers */,
+				EC11894B1464B02600B71798 /* BDDateTimeNumberFormatter.h in Headers */,
+				EC11894C1464B02600B71798 /* BDPickerViewController.h in Headers */,
+				EC11894D1464B02600B71798 /* BDInputViewController.h in Headers */,
+				EC11895E1464B09000B71798 /* BDInputViewControllerProtocol.h in Headers */,
+				EC11894E1464B02600B71798 /* BDKeyPadViewController.h in Headers */,
+				EC1189511464B02600B71798 /* BDHelpViewController.h in Headers */,
+				EC11894F1464B02600B71798 /* BDLowerToolBarView.h in Headers */,
+				EC1189501464B02600B71798 /* BDImageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		EC1189351464AF6500B71798 /* BDApplicationHelpers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC11893F1464AF6500B71798 /* Build configuration list for PBXNativeTarget "BDApplicationHelpers" */;
+			buildPhases = (
+				EC11892F1464AF6500B71798 /* ShellScript */,
+				EC1189301464AF6500B71798 /* Sources */,
+				EC1189311464AF6500B71798 /* Frameworks */,
+				EC1189321464AF6500B71798 /* Headers */,
+				EC1189331464AF6500B71798 /* Resources */,
+				EC1189341464AF6500B71798 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BDApplicationHelpers;
+			productName = BDApplicationHelpers;
+			productReference = EC1189361464AF6500B71798 /* BDApplicationHelpers.framework */;
+			productType = "com.apple.product-type.framework.static";
+		};
 		EC65745C144B4AF9002F66FC /* applicationHelpers */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC65747E144B4AF9002F66FC /* Build configuration list for PBXNativeTarget "applicationHelpers" */;
@@ -440,33 +480,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				ECC1357F1451FAE400A52751 /* PBXTargetDependency */,
+				EC11896B1464EA9C00B71798 /* PBXTargetDependency */,
 			);
 			name = applicationHelpers;
 			productName = applicationHelpers;
 			productReference = EC65745D144B4AF9002F66FC /* applicationHelpers.app */;
 			productType = "com.apple.product-type.application";
-		};
-		ECC135671451FA3400A52751 /* BDApplicationHelpers */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ECC135711451FA3400A52751 /* Build configuration list for PBXNativeTarget "BDApplicationHelpers" */;
-			buildPhases = (
-				ECC135611451FA3400A52751 /* ShellScript */,
-				ECC135621451FA3400A52751 /* Sources */,
-				ECC135631451FA3400A52751 /* Frameworks */,
-				ECC135641451FA3400A52751 /* Headers */,
-				ECC135651451FA3400A52751 /* Resources */,
-				ECC135661451FA3400A52751 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				ECC1357D1451FA6900A52751 /* PBXTargetDependency */,
-			);
-			name = BDApplicationHelpers;
-			productName = BDApplicationHelpers;
-			productReference = ECC135681451FA3400A52751 /* BDApplicationHelpers.framework */;
-			productType = "com.apple.product-type.framework.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -489,13 +508,33 @@
 			projectRoot = "";
 			targets = (
 				EC65745C144B4AF9002F66FC /* applicationHelpers */,
-				ECC135671451FA3400A52751 /* BDApplicationHelpers */,
+				EC1189351464AF6500B71798 /* BDApplicationHelpers */,
 				EC56AC55144B7E9700D0E183 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EC1189331464AF6500B71798 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1189521464B07A00B71798 /* BDPickerViewController_iPad.xib in Resources */,
+				EC1189531464B07A00B71798 /* BDPickerViewController_iPhone.xib in Resources */,
+				EC1189541464B07A00B71798 /* backSpace.png in Resources */,
+				EC1189551464B07A00B71798 /* backSpacePressed.png in Resources */,
+				EC1189561464B07A00B71798 /* BDKeyPadViewController_iPad.xib in Resources */,
+				EC1189571464B07A00B71798 /* BDKeyPadViewController_iPhone.xib in Resources */,
+				EC1189581464B07A00B71798 /* buttonStateDown.png in Resources */,
+				EC1189591464B07A00B71798 /* buttonStateUp.png in Resources */,
+				EC11895A1464B07A00B71798 /* doneButtonStateUp.png in Resources */,
+				EC11895B1464B07A00B71798 /* focusIndicator.png in Resources */,
+				EC11895C1464B07A00B71798 /* BDHelpViewController_iPad.xib in Resources */,
+				EC11895D1464B07A00B71798 /* BDHelpViewController.xib in Resources */,
+				EC11893D1464AF6500B71798 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC65745B144B4AF9002F66FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -519,40 +558,50 @@
 				EC9913481453392E00F55000 /* README.mdown in Resources */,
 				EC9D08381453CC2C006CED35 /* Icon.png in Resources */,
 				ECE677D31454E7AB00694A2A /* customIcon.png in Resources */,
-				ECE0D2B1145CB66E00976621 /* backSpace.png in Resources */,
-				ECE0D2B2145CB66E00976621 /* backSpacePressed.png in Resources */,
-				ECE0D2B3145CB66E00976621 /* BDHelpViewController.nib in Resources */,
-				ECE0D2B4145CB66E00976621 /* BDHelpViewController_iPad.nib in Resources */,
-				ECE0D2B5145CB66E00976621 /* BDKeyPadViewController_iPad.nib in Resources */,
-				ECE0D2B6145CB66E00976621 /* BDKeyPadViewController_iPhone.nib in Resources */,
-				ECE0D2B7145CB66E00976621 /* buttonStateDown.png in Resources */,
-				ECE0D2B8145CB66E00976621 /* buttonStateUp.png in Resources */,
-				ECE0D2B9145CB66E00976621 /* doneButtonStateUp.png in Resources */,
-				ECE0D2BA145CB66E00976621 /* focusIndicator.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ECC135651451FA3400A52751 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ECC1356F1451FA3400A52751 /* InfoPlist.strings in Resources */,
-				ECC1357A1451FA5D00A52751 /* BDHelpViewController.xib in Resources */,
-				ECC1357B1451FA6000A52751 /* BDHelpViewController_iPad.xib in Resources */,
-				ECE0D28B145CB0C400976621 /* backSpace.png in Resources */,
-				ECE0D28C145CB0C400976621 /* backSpacePressed.png in Resources */,
-				ECE0D28F145CB0C400976621 /* BDKeyPadViewController_iPad.xib in Resources */,
-				ECE0D290145CB0C400976621 /* BDKeyPadViewController_iPhone.xib in Resources */,
-				ECE0D291145CB0C400976621 /* buttonStateDown.png in Resources */,
-				ECE0D292145CB0C400976621 /* buttonStateUp.png in Resources */,
-				ECE0D293145CB0C400976621 /* doneButtonStateUp.png in Resources */,
-				ECE0D294145CB0C400976621 /* focusIndicator.png in Resources */,
+				EC8E7CA91464F5D000033E78 /* backSpace.png in Resources */,
+				EC8E7CAA1464F5D000033E78 /* backSpacePressed.png in Resources */,
+				EC8E7CAB1464F5D000033E78 /* BDHelpViewController.nib in Resources */,
+				EC8E7CAC1464F5D000033E78 /* BDHelpViewController_iPad.nib in Resources */,
+				EC8E7CAD1464F5D000033E78 /* BDKeyPadViewController_iPad.nib in Resources */,
+				EC8E7CAE1464F5D000033E78 /* BDKeyPadViewController_iPhone.nib in Resources */,
+				EC8E7CAF1464F5D000033E78 /* BDPickerViewController_iPad.nib in Resources */,
+				EC8E7CB01464F5D000033E78 /* BDPickerViewController_iPhone.nib in Resources */,
+				EC8E7CB11464F5D000033E78 /* buttonStateDown.png in Resources */,
+				EC8E7CB21464F5D000033E78 /* buttonStateUp.png in Resources */,
+				EC8E7CB31464F5D000033E78 /* doneButtonStateUp.png in Resources */,
+				EC8E7CB41464F5D000033E78 /* focusIndicator.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		EC11892F1464AF6500B71798 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n";
+		};
+		EC1189341464AF6500B71798 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Make sure the other platform gets built\n\necho \"Build other platform\"\n\necho xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n\n\n# Build the fat static library binary\n\necho \"Create universal static library\"\n\necho \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\necho mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nmv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\n# Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n\necho \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n\necho rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nrm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\necho cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\ncp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n";
+		};
 		EC56AC59144B7E9A00D0E183 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -566,35 +615,23 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"BDApplicationHelpers\" \\\n--project-company \"Big Diggy SW\" \\\n--company-id com.bigdiggy \\\n--output ~/help \\\n--logformat xcode \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--exit-threshold 2 \\\n--ignore .m \\\n--ignore AppDelegate.h \\\n--ignore BDImageView.h \\\n--ignore BDLowerToolBarView.h \\\n--ignore UnitTest \\\n--no-repeat-first-par \\\n\"${PROJECT_DIR}/BDApplicationHelpers\"";
 		};
-		ECC135611451FA3400A52751 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n";
-		};
-		ECC135661451FA3400A52751 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Make sure the other platform gets built\n\necho \"Build other platform\"\n\necho xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n\n\n# Build the fat static library binary\n\necho \"Create universal static library\"\n\necho \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\necho mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nmv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\n# Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n\necho \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n\necho rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nrm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\necho cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\ncp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EC1189301464AF6500B71798 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1189421464AFDC00B71798 /* BDDateTimeNumberFormatter.m in Sources */,
+				EC1189431464AFDC00B71798 /* BDPickerViewController.m in Sources */,
+				EC1189441464AFDC00B71798 /* BDInputViewController.m in Sources */,
+				EC1189451464AFDC00B71798 /* BDKeyPadViewController.m in Sources */,
+				EC1189461464AFDC00B71798 /* BDLowerToolBarView.m in Sources */,
+				EC1189471464AFDC00B71798 /* BDImageView.m in Sources */,
+				EC1189481464AFDC00B71798 /* BDHelpViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC657459144B4AF9002F66FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -605,35 +642,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ECC135621451FA3400A52751 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ECC135741451FA4600A52751 /* BDHelpViewController.m in Sources */,
-				ECC135751451FA4800A52751 /* BDImageView.m in Sources */,
-				ECC135761451FA4C00A52751 /* BDLowerToolBarView.m in Sources */,
-				ECE0D289145CB0C400976621 /* BDInputViewController.m in Sources */,
-				ECE0D28E145CB0C400976621 /* BDKeyPadViewController.m in Sources */,
-				ECE0D29C145CB0E600976621 /* BDDateTimeNumberFormatter.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		ECC1357D1451FA6900A52751 /* PBXTargetDependency */ = {
+		EC11896B1464EA9C00B71798 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EC56AC55144B7E9700D0E183 /* Documentation */;
-			targetProxy = ECC1357C1451FA6900A52751 /* PBXContainerItemProxy */;
-		};
-		ECC1357F1451FAE400A52751 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = ECC135671451FA3400A52751 /* BDApplicationHelpers */;
-			targetProxy = ECC1357E1451FAE400A52751 /* PBXContainerItemProxy */;
+			target = EC1189351464AF6500B71798 /* BDApplicationHelpers */;
+			targetProxy = EC11896A1464EA9C00B71798 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EC11893B1464AF6500B71798 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC11893C1464AF6500B71798 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		EC65746A144B4AF9002F66FC /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -666,17 +693,39 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		ECC1356D1451FA3400A52751 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECC1356E1451FA3400A52751 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EC1189401464AF6500B71798 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BDApplicationHelpers/BDApplicationHelpers-Prefix.pch";
+				INFOPLIST_FILE = "BDApplicationHelpers/BDApplicationHelpers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		EC1189411464AF6500B71798 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BDApplicationHelpers/BDApplicationHelpers-Prefix.pch";
+				INFOPLIST_FILE = "BDApplicationHelpers/BDApplicationHelpers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 		EC56AC57144B7E9700D0E183 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -770,39 +819,18 @@
 			};
 			name = Release;
 		};
-		ECC135721451FA3400A52751 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BDApplicationHelpers/BDApplicationHelpers-Prefix.pch";
-				INFOPLIST_FILE = "BDApplicationHelpers/BDApplicationHelpers-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Debug;
-		};
-		ECC135731451FA3400A52751 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BDApplicationHelpers/BDApplicationHelpers-Prefix.pch";
-				INFOPLIST_FILE = "BDApplicationHelpers/BDApplicationHelpers-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EC11893F1464AF6500B71798 /* Build configuration list for PBXNativeTarget "BDApplicationHelpers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC1189401464AF6500B71798 /* Debug */,
+				EC1189411464AF6500B71798 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EC56AC56144B7E9700D0E183 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -826,15 +854,6 @@
 			buildConfigurations = (
 				EC65747F144B4AF9002F66FC /* Debug */,
 				EC657480144B4AF9002F66FC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ECC135711451FA3400A52751 /* Build configuration list for PBXNativeTarget "BDApplicationHelpers" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ECC135721451FA3400A52751 /* Debug */,
-				ECC135731451FA3400A52751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

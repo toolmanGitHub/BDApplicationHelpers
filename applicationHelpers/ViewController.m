@@ -48,6 +48,7 @@
 @synthesize popoverController = popoverController_;
 @synthesize keyPadViewController = keyPadViewController_;
 @synthesize keyPadOutputLabel;
+@synthesize pickerViewController = pickerViewController_;
 
 
 - (void)didReceiveMemoryWarning
@@ -331,8 +332,8 @@
             self.keyPadViewController.keyPadTitleLabel.text=@"KeyPad only";
             break;
         case BDInputViewTypePicker:
-            //          viewController=self.pickerViewController;
-            // viewControllerSize=self.pickerViewController.view.frame.size;
+            viewController=self.pickerViewController;
+            viewControllerSize=self.pickerViewController.view.frame.size;
             break;
         case BDInputViewTypeCombinedViewController:
             //  viewController=self.tabBarController;
@@ -373,6 +374,59 @@
     keyPadViewController_.numberFormatType=BDNumberFormatterTypeDecimal;
     keyPadViewController_.popoverTextFieldString=@"43.00";
     return keyPadViewController_;
+    
+}
+
+#pragma mark -
+#pragma mark BDPickerViewController
+-(BDPickerViewController *)pickerViewController{
+    if (pickerViewController_) {
+        return pickerViewController_;
+    }
+    pickerViewController_=[[BDPickerViewController alloc] init];
+    
+    pickerViewController_.numberOfComponentsInPickerViewBlock=^(UIPickerView *thePickerView){
+        NSInteger numberOfComponents=1;
+        
+        if (thePickerView.tag==0) {
+            numberOfComponents=1;
+        }
+        
+        return numberOfComponents;
+    };
+    
+    pickerViewController_.numberOfRowsInComponentBlock=^(UIPickerView *thePickerView,NSInteger component){
+        NSInteger numberOfRows=2;
+        return numberOfRows;
+    };
+    pickerViewController_.widthForComponentBlock=^(UIPickerView *thePickerView, NSInteger component){
+        CGFloat componentWidth=thePickerView.frame.size.width-25;
+        
+        
+        return componentWidth;
+        
+    };
+    
+    pickerViewController_.titleForRowBlock=^(UIPickerView *thePickerView, NSInteger row, NSInteger component){
+        NSString *titleForRow=@"";
+        switch (row) {
+            case 0:
+                titleForRow=@"One";
+                break;
+            case 1:
+                titleForRow=@"Two";
+                break;
+				
+        }
+        
+        return titleForRow;
+    };
+    
+    pickerViewController_.didSelectRowComponentBlock=^(UIPickerView *thePickerView, NSInteger row, NSInteger component){
+        NSLog(@"didselectRowCOmponentBlock");
+        NSLog(@"selected row:  %d",row);
+    };
+    return pickerViewController_;
     
 }
 
