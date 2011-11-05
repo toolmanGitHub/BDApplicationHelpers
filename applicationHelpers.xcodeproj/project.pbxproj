@@ -52,6 +52,21 @@
 		EC11895C1464B07A00B71798 /* BDHelpViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6574B3144B4C6C002F66FC /* BDHelpViewController_iPad.xib */; };
 		EC11895D1464B07A00B71798 /* BDHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6574B6144B4C6C002F66FC /* BDHelpViewController.xib */; };
 		EC11895E1464B09000B71798 /* BDInputViewControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D27B145CB0C400976621 /* BDInputViewControllerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC42B3BD14650AFB004C4C9A /* BDTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = EC42B3BB14650AFB004C4C9A /* BDTabBarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC42B3BE14650AFB004C4C9A /* BDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42B3BC14650AFB004C4C9A /* BDTabBarController.m */; };
+		EC42B3CF14650E7D004C4C9A /* BDApplicationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC42B3C114650E7D004C4C9A /* BDApplicationHelpers.framework */; };
+		EC42B3D014650E7D004C4C9A /* backSpace.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42B3C314650E7D004C4C9A /* backSpace.png */; };
+		EC42B3D114650E7D004C4C9A /* backSpacePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42B3C414650E7D004C4C9A /* backSpacePressed.png */; };
+		EC42B3D214650E7D004C4C9A /* BDHelpViewController.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC42B3C514650E7D004C4C9A /* BDHelpViewController.nib */; };
+		EC42B3D314650E7D004C4C9A /* BDHelpViewController_iPad.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC42B3C614650E7D004C4C9A /* BDHelpViewController_iPad.nib */; };
+		EC42B3D414650E7D004C4C9A /* BDKeyPadViewController_iPad.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC42B3C714650E7D004C4C9A /* BDKeyPadViewController_iPad.nib */; };
+		EC42B3D514650E7D004C4C9A /* BDKeyPadViewController_iPhone.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC42B3C814650E7D004C4C9A /* BDKeyPadViewController_iPhone.nib */; };
+		EC42B3D614650E7D004C4C9A /* BDPickerViewController_iPad.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC42B3C914650E7D004C4C9A /* BDPickerViewController_iPad.nib */; };
+		EC42B3D714650E7D004C4C9A /* BDPickerViewController_iPhone.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC42B3CA14650E7D004C4C9A /* BDPickerViewController_iPhone.nib */; };
+		EC42B3D814650E7D004C4C9A /* buttonStateDown.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42B3CB14650E7D004C4C9A /* buttonStateDown.png */; };
+		EC42B3D914650E7D004C4C9A /* buttonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42B3CC14650E7D004C4C9A /* buttonStateUp.png */; };
+		EC42B3DA14650E7D004C4C9A /* doneButtonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42B3CD14650E7D004C4C9A /* doneButtonStateUp.png */; };
+		EC42B3DB14650E7D004C4C9A /* focusIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42B3CE14650E7D004C4C9A /* focusIndicator.png */; };
 		EC657462144B4AF9002F66FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657461144B4AF9002F66FC /* UIKit.framework */; };
 		EC657464144B4AF9002F66FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657463144B4AF9002F66FC /* Foundation.framework */; };
 		EC657466144B4AF9002F66FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657465144B4AF9002F66FC /* CoreGraphics.framework */; };
@@ -75,19 +90,6 @@
 		EC7997041450C8EF00C6344E /* backgroundiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7997031450C8EF00C6344E /* backgroundiPad.png */; };
 		EC7997071450C90000C6344E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7997051450C90000C6344E /* background.png */; };
 		EC7997081450C90000C6344E /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7997061450C90000C6344E /* background@2x.png */; };
-		EC8E7CA81464F5D000033E78 /* BDApplicationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8E7C9A1464F5CF00033E78 /* BDApplicationHelpers.framework */; };
-		EC8E7CA91464F5D000033E78 /* backSpace.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7C9C1464F5CF00033E78 /* backSpace.png */; };
-		EC8E7CAA1464F5D000033E78 /* backSpacePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7C9D1464F5CF00033E78 /* backSpacePressed.png */; };
-		EC8E7CAB1464F5D000033E78 /* BDHelpViewController.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7C9E1464F5D000033E78 /* BDHelpViewController.nib */; };
-		EC8E7CAC1464F5D000033E78 /* BDHelpViewController_iPad.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7C9F1464F5D000033E78 /* BDHelpViewController_iPad.nib */; };
-		EC8E7CAD1464F5D000033E78 /* BDKeyPadViewController_iPad.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA01464F5D000033E78 /* BDKeyPadViewController_iPad.nib */; };
-		EC8E7CAE1464F5D000033E78 /* BDKeyPadViewController_iPhone.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA11464F5D000033E78 /* BDKeyPadViewController_iPhone.nib */; };
-		EC8E7CAF1464F5D000033E78 /* BDPickerViewController_iPad.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA21464F5D000033E78 /* BDPickerViewController_iPad.nib */; };
-		EC8E7CB01464F5D000033E78 /* BDPickerViewController_iPhone.nib in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA31464F5D000033E78 /* BDPickerViewController_iPhone.nib */; };
-		EC8E7CB11464F5D000033E78 /* buttonStateDown.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA41464F5D000033E78 /* buttonStateDown.png */; };
-		EC8E7CB21464F5D000033E78 /* buttonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA51464F5D000033E78 /* buttonStateUp.png */; };
-		EC8E7CB31464F5D000033E78 /* doneButtonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA61464F5D000033E78 /* doneButtonStateUp.png */; };
-		EC8E7CB41464F5D000033E78 /* focusIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8E7CA71464F5D000033E78 /* focusIndicator.png */; };
 		EC9913481453392E00F55000 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = EC9913471453392E00F55000 /* README.mdown */; };
 		EC9D08381453CC2C006CED35 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EC9D08371453CC2C006CED35 /* Icon.png */; };
 		ECE677D31454E7AB00694A2A /* customIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE677D21454E7AB00694A2A /* customIcon.png */; };
@@ -115,6 +117,21 @@
 		EC11893A1464AF6500B71798 /* BDApplicationHelpers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BDApplicationHelpers-Info.plist"; sourceTree = "<group>"; };
 		EC11893C1464AF6500B71798 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC11893E1464AF6500B71798 /* BDApplicationHelpers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BDApplicationHelpers-Prefix.pch"; sourceTree = "<group>"; };
+		EC42B3BB14650AFB004C4C9A /* BDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDTabBarController.h; sourceTree = "<group>"; };
+		EC42B3BC14650AFB004C4C9A /* BDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDTabBarController.m; sourceTree = "<group>"; };
+		EC42B3C114650E7D004C4C9A /* BDApplicationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BDApplicationHelpers.framework; sourceTree = "<group>"; };
+		EC42B3C314650E7D004C4C9A /* backSpace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backSpace.png; sourceTree = "<group>"; };
+		EC42B3C414650E7D004C4C9A /* backSpacePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backSpacePressed.png; sourceTree = "<group>"; };
+		EC42B3C514650E7D004C4C9A /* BDHelpViewController.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController.nib; sourceTree = "<group>"; };
+		EC42B3C614650E7D004C4C9A /* BDHelpViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController_iPad.nib; sourceTree = "<group>"; };
+		EC42B3C714650E7D004C4C9A /* BDKeyPadViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDKeyPadViewController_iPad.nib; sourceTree = "<group>"; };
+		EC42B3C814650E7D004C4C9A /* BDKeyPadViewController_iPhone.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDKeyPadViewController_iPhone.nib; sourceTree = "<group>"; };
+		EC42B3C914650E7D004C4C9A /* BDPickerViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDPickerViewController_iPad.nib; sourceTree = "<group>"; };
+		EC42B3CA14650E7D004C4C9A /* BDPickerViewController_iPhone.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDPickerViewController_iPhone.nib; sourceTree = "<group>"; };
+		EC42B3CB14650E7D004C4C9A /* buttonStateDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonStateDown.png; sourceTree = "<group>"; };
+		EC42B3CC14650E7D004C4C9A /* buttonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonStateUp.png; sourceTree = "<group>"; };
+		EC42B3CD14650E7D004C4C9A /* doneButtonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doneButtonStateUp.png; sourceTree = "<group>"; };
+		EC42B3CE14650E7D004C4C9A /* focusIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = focusIndicator.png; sourceTree = "<group>"; };
 		EC65745D144B4AF9002F66FC /* applicationHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = applicationHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC657461144B4AF9002F66FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EC657463144B4AF9002F66FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -158,19 +175,6 @@
 		EC7997031450C8EF00C6344E /* backgroundiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundiPad.png; sourceTree = "<group>"; };
 		EC7997051450C90000C6344E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		EC7997061450C90000C6344E /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
-		EC8E7C9A1464F5CF00033E78 /* BDApplicationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BDApplicationHelpers.framework; sourceTree = "<group>"; };
-		EC8E7C9C1464F5CF00033E78 /* backSpace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backSpace.png; sourceTree = "<group>"; };
-		EC8E7C9D1464F5CF00033E78 /* backSpacePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backSpacePressed.png; sourceTree = "<group>"; };
-		EC8E7C9E1464F5D000033E78 /* BDHelpViewController.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController.nib; sourceTree = "<group>"; };
-		EC8E7C9F1464F5D000033E78 /* BDHelpViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController_iPad.nib; sourceTree = "<group>"; };
-		EC8E7CA01464F5D000033E78 /* BDKeyPadViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDKeyPadViewController_iPad.nib; sourceTree = "<group>"; };
-		EC8E7CA11464F5D000033E78 /* BDKeyPadViewController_iPhone.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDKeyPadViewController_iPhone.nib; sourceTree = "<group>"; };
-		EC8E7CA21464F5D000033E78 /* BDPickerViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDPickerViewController_iPad.nib; sourceTree = "<group>"; };
-		EC8E7CA31464F5D000033E78 /* BDPickerViewController_iPhone.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDPickerViewController_iPhone.nib; sourceTree = "<group>"; };
-		EC8E7CA41464F5D000033E78 /* buttonStateDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonStateDown.png; sourceTree = "<group>"; };
-		EC8E7CA51464F5D000033E78 /* buttonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonStateUp.png; sourceTree = "<group>"; };
-		EC8E7CA61464F5D000033E78 /* doneButtonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doneButtonStateUp.png; sourceTree = "<group>"; };
-		EC8E7CA71464F5D000033E78 /* focusIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = focusIndicator.png; sourceTree = "<group>"; };
 		EC9913471453392E00F55000 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = SOURCE_ROOT; };
 		EC9D08371453CC2C006CED35 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		ECE0D279145CB0C400976621 /* BDInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDInputViewController.h; sourceTree = "<group>"; };
@@ -210,7 +214,7 @@
 				EC657462144B4AF9002F66FC /* UIKit.framework in Frameworks */,
 				EC657464144B4AF9002F66FC /* Foundation.framework in Frameworks */,
 				EC657466144B4AF9002F66FC /* CoreGraphics.framework in Frameworks */,
-				EC8E7CA81464F5D000033E78 /* BDApplicationHelpers.framework in Frameworks */,
+				EC42B3CF14650E7D004C4C9A /* BDApplicationHelpers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +237,44 @@
 				EC11893E1464AF6500B71798 /* BDApplicationHelpers-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC42B3BA14650AFB004C4C9A /* BDTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				EC42B3BB14650AFB004C4C9A /* BDTabBarController.h */,
+				EC42B3BC14650AFB004C4C9A /* BDTabBarController.m */,
+			);
+			path = BDTabBarController;
+			sourceTree = "<group>";
+		};
+		EC42B3C014650E7D004C4C9A /* BDApplicationHelpers.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				EC42B3C114650E7D004C4C9A /* BDApplicationHelpers.framework */,
+				EC42B3C214650E7D004C4C9A /* Resources */,
+			);
+			name = BDApplicationHelpers.embeddedframework;
+			path = "../../Library/Developer/Xcode/DerivedData/applicationHelpers-bzlgxfckcftymiecgskefskxlpkx/Build/Products/Debug-iphoneos/BDApplicationHelpers.embeddedframework";
+			sourceTree = "<group>";
+		};
+		EC42B3C214650E7D004C4C9A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC42B3C314650E7D004C4C9A /* backSpace.png */,
+				EC42B3C414650E7D004C4C9A /* backSpacePressed.png */,
+				EC42B3C514650E7D004C4C9A /* BDHelpViewController.nib */,
+				EC42B3C614650E7D004C4C9A /* BDHelpViewController_iPad.nib */,
+				EC42B3C714650E7D004C4C9A /* BDKeyPadViewController_iPad.nib */,
+				EC42B3C814650E7D004C4C9A /* BDKeyPadViewController_iPhone.nib */,
+				EC42B3C914650E7D004C4C9A /* BDPickerViewController_iPad.nib */,
+				EC42B3CA14650E7D004C4C9A /* BDPickerViewController_iPhone.nib */,
+				EC42B3CB14650E7D004C4C9A /* buttonStateDown.png */,
+				EC42B3CC14650E7D004C4C9A /* buttonStateUp.png */,
+				EC42B3CD14650E7D004C4C9A /* doneButtonStateUp.png */,
+				EC42B3CE14650E7D004C4C9A /* focusIndicator.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		EC657452144B4AF9002F66FC = {
@@ -259,7 +301,7 @@
 		EC657460144B4AF9002F66FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EC8E7C991464F5CF00033E78 /* BDApplicationHelpers.embeddedframework */,
+				EC42B3C014650E7D004C4C9A /* BDApplicationHelpers.embeddedframework */,
 				EC7997011450C60900C6344E /* MessageUI.framework */,
 				EC657461144B4AF9002F66FC /* UIKit.framework */,
 				EC657463144B4AF9002F66FC /* Foundation.framework */,
@@ -306,6 +348,7 @@
 				ECE0D29D145CB14A00976621 /* BDApplicationHelpers.h */,
 				ECE0D298145CB0E600976621 /* BDDateTimeNumberFormatter */,
 				EC6A4CBB1461901A0052347C /* BDPickerViewController */,
+				EC42B3BA14650AFB004C4C9A /* BDTabBarController */,
 				ECE0D297145CB0CD00976621 /* BDInputViewController */,
 				EC6574BD144B4C74002F66FC /* BDInformationViewController */,
 				EC6574A8144B4C05002F66FC /* Supporting Files */,
@@ -367,35 +410,6 @@
 			path = BDPickerViewController;
 			sourceTree = "<group>";
 		};
-		EC8E7C991464F5CF00033E78 /* BDApplicationHelpers.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				EC8E7C9A1464F5CF00033E78 /* BDApplicationHelpers.framework */,
-				EC8E7C9B1464F5CF00033E78 /* Resources */,
-			);
-			name = BDApplicationHelpers.embeddedframework;
-			path = "../../Library/Developer/Xcode/DerivedData/applicationHelpers-bzlgxfckcftymiecgskefskxlpkx/Build/Products/Debug-iphoneos/BDApplicationHelpers.embeddedframework";
-			sourceTree = "<group>";
-		};
-		EC8E7C9B1464F5CF00033E78 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				EC8E7C9C1464F5CF00033E78 /* backSpace.png */,
-				EC8E7C9D1464F5CF00033E78 /* backSpacePressed.png */,
-				EC8E7C9E1464F5D000033E78 /* BDHelpViewController.nib */,
-				EC8E7C9F1464F5D000033E78 /* BDHelpViewController_iPad.nib */,
-				EC8E7CA01464F5D000033E78 /* BDKeyPadViewController_iPad.nib */,
-				EC8E7CA11464F5D000033E78 /* BDKeyPadViewController_iPhone.nib */,
-				EC8E7CA21464F5D000033E78 /* BDPickerViewController_iPad.nib */,
-				EC8E7CA31464F5D000033E78 /* BDPickerViewController_iPhone.nib */,
-				EC8E7CA41464F5D000033E78 /* buttonStateDown.png */,
-				EC8E7CA51464F5D000033E78 /* buttonStateUp.png */,
-				EC8E7CA61464F5D000033E78 /* doneButtonStateUp.png */,
-				EC8E7CA71464F5D000033E78 /* focusIndicator.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		ECE0D27C145CB0C400976621 /* BDKeyPadViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,6 +459,7 @@
 				EC11894B1464B02600B71798 /* BDDateTimeNumberFormatter.h in Headers */,
 				EC11894C1464B02600B71798 /* BDPickerViewController.h in Headers */,
 				EC11894D1464B02600B71798 /* BDInputViewController.h in Headers */,
+				EC42B3BD14650AFB004C4C9A /* BDTabBarController.h in Headers */,
 				EC11895E1464B09000B71798 /* BDInputViewControllerProtocol.h in Headers */,
 				EC11894E1464B02600B71798 /* BDKeyPadViewController.h in Headers */,
 				EC1189511464B02600B71798 /* BDHelpViewController.h in Headers */,
@@ -566,18 +581,18 @@
 				EC9913481453392E00F55000 /* README.mdown in Resources */,
 				EC9D08381453CC2C006CED35 /* Icon.png in Resources */,
 				ECE677D31454E7AB00694A2A /* customIcon.png in Resources */,
-				EC8E7CA91464F5D000033E78 /* backSpace.png in Resources */,
-				EC8E7CAA1464F5D000033E78 /* backSpacePressed.png in Resources */,
-				EC8E7CAB1464F5D000033E78 /* BDHelpViewController.nib in Resources */,
-				EC8E7CAC1464F5D000033E78 /* BDHelpViewController_iPad.nib in Resources */,
-				EC8E7CAD1464F5D000033E78 /* BDKeyPadViewController_iPad.nib in Resources */,
-				EC8E7CAE1464F5D000033E78 /* BDKeyPadViewController_iPhone.nib in Resources */,
-				EC8E7CAF1464F5D000033E78 /* BDPickerViewController_iPad.nib in Resources */,
-				EC8E7CB01464F5D000033E78 /* BDPickerViewController_iPhone.nib in Resources */,
-				EC8E7CB11464F5D000033E78 /* buttonStateDown.png in Resources */,
-				EC8E7CB21464F5D000033E78 /* buttonStateUp.png in Resources */,
-				EC8E7CB31464F5D000033E78 /* doneButtonStateUp.png in Resources */,
-				EC8E7CB41464F5D000033E78 /* focusIndicator.png in Resources */,
+				EC42B3D014650E7D004C4C9A /* backSpace.png in Resources */,
+				EC42B3D114650E7D004C4C9A /* backSpacePressed.png in Resources */,
+				EC42B3D214650E7D004C4C9A /* BDHelpViewController.nib in Resources */,
+				EC42B3D314650E7D004C4C9A /* BDHelpViewController_iPad.nib in Resources */,
+				EC42B3D414650E7D004C4C9A /* BDKeyPadViewController_iPad.nib in Resources */,
+				EC42B3D514650E7D004C4C9A /* BDKeyPadViewController_iPhone.nib in Resources */,
+				EC42B3D614650E7D004C4C9A /* BDPickerViewController_iPad.nib in Resources */,
+				EC42B3D714650E7D004C4C9A /* BDPickerViewController_iPhone.nib in Resources */,
+				EC42B3D814650E7D004C4C9A /* buttonStateDown.png in Resources */,
+				EC42B3D914650E7D004C4C9A /* buttonStateUp.png in Resources */,
+				EC42B3DA14650E7D004C4C9A /* doneButtonStateUp.png in Resources */,
+				EC42B3DB14650E7D004C4C9A /* focusIndicator.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +652,7 @@
 				EC1189461464AFDC00B71798 /* BDLowerToolBarView.m in Sources */,
 				EC1189471464AFDC00B71798 /* BDImageView.m in Sources */,
 				EC1189481464AFDC00B71798 /* BDHelpViewController.m in Sources */,
+				EC42B3BE14650AFB004C4C9A /* BDTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
