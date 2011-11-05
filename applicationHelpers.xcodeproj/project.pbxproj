@@ -347,8 +347,6 @@
 				ECE0D287145CB0C400976621 /* blockTypes.h */,
 				ECE0D29D145CB14A00976621 /* BDApplicationHelpers.h */,
 				ECE0D298145CB0E600976621 /* BDDateTimeNumberFormatter */,
-				EC6A4CBB1461901A0052347C /* BDPickerViewController */,
-				EC42B3BA14650AFB004C4C9A /* BDTabBarController */,
 				ECE0D297145CB0CD00976621 /* BDInputViewController */,
 				EC6574BD144B4C74002F66FC /* BDInformationViewController */,
 				EC6574A8144B4C05002F66FC /* Supporting Files */,
@@ -433,6 +431,8 @@
 				ECE0D279145CB0C400976621 /* BDInputViewController.h */,
 				ECE0D27A145CB0C400976621 /* BDInputViewController.m */,
 				ECE0D27B145CB0C400976621 /* BDInputViewControllerProtocol.h */,
+				EC6A4CBB1461901A0052347C /* BDPickerViewController */,
+				EC42B3BA14650AFB004C4C9A /* BDTabBarController */,
 				ECE0D27C145CB0C400976621 /* BDKeyPadViewController */,
 			);
 			name = BDInputViewController;
