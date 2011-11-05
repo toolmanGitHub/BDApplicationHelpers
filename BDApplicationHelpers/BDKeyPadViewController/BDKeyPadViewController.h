@@ -53,9 +53,8 @@ enum  {
 };
 typedef NSInteger BDNumberFormatterType;
 
-/** A View Controller that provides a calculator like keypad useful for data entry.
+/** A View Controller that provides a calculator like keypad useful for data entry.  When used on an iPhone or iPod touch, the keypad will have a done button in place of the double zero.  Swiping left or right over the number field applies the +/- operator.
  
- info on double zero and swipe to negafy.
  */
 
 
