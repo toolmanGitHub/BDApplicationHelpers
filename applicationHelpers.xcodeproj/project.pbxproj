@@ -221,14 +221,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EC1189381464AF6500B71798 /* BDApplicationHelpers */ = {
-			isa = PBXGroup;
-			children = (
-				EC1189391464AF6500B71798 /* Supporting Files */,
-			);
-			path = BDApplicationHelpers;
-			sourceTree = "<group>";
-		};
 		EC1189391464AF6500B71798 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,7 +275,6 @@
 				EC9913471453392E00F55000 /* README.mdown */,
 				EC657467144B4AF9002F66FC /* applicationHelpers */,
 				EC6574A7144B4C05002F66FC /* BDApplicationHelpers */,
-				EC1189381464AF6500B71798 /* BDApplicationHelpers */,
 				EC657460144B4AF9002F66FC /* Frameworks */,
 				EC65745E144B4AF9002F66FC /* Products */,
 			);
@@ -344,6 +335,7 @@
 		EC6574A7144B4C05002F66FC /* BDApplicationHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				EC1189391464AF6500B71798 /* Supporting Files */,
 				ECE0D287145CB0C400976621 /* blockTypes.h */,
 				ECE0D29D145CB14A00976621 /* BDApplicationHelpers.h */,
 				ECE0D298145CB0E600976621 /* BDDateTimeNumberFormatter */,
