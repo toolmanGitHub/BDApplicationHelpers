@@ -42,12 +42,15 @@
 
 #import "ViewController.h"
 #import <BDApplicationHelpers/BDApplicationHelpers.h>
+#import <BDApplicationHelpers/BDDateTimeNumberFormatter.h>
 
 @implementation ViewController
 @synthesize helpViewController = helpViewController_;
 @synthesize popoverController = popoverController_;
 @synthesize keyPadViewController = keyPadViewController_;
-@synthesize keyPadOutputLabel;
+@synthesize keyPadOutputDecimalLabel;
+@synthesize keyPadOutputCurrencyLabel;
+@synthesize keyPadOutputPercentageLabel;
 @synthesize pickerViewController = pickerViewController_;
 @synthesize tabBarController = tabBarController_;
 
@@ -70,6 +73,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.keyPadOutputCurrencyLabel.text=[[BDDateTimeNumberFormatter currencyDecimalFormatterWithLocal:[NSLocale currentLocale]] stringFromNumber:[NSNumber numberWithDouble: 3.16]];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -322,41 +326,107 @@
 	return helpViewController_;
 }
 
+
+- (IBAction)pickerButtonPushed:(id)sender{
+    UIViewController *viewController=nil;
+    CGSize viewControllerSize=CGSizeZero;
+    
+    viewController=self.pickerViewController;
+    viewControllerSize=self.pickerViewController.view.frame.size;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        [self slideIntoPlaceInputViewController:viewController];
+    }else {
+        [self.popoverController setContentViewController:viewController];
+        
+        self.popoverController.popoverContentSize=viewControllerSize;
+        [self.popoverController presentPopoverFromRect:((UIButton *)sender).bounds inView:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
+
+}
+
+- (IBAction)combinedViewButtonPushed:(id)sender{
+    UIViewController *viewController=nil;
+    CGSize viewControllerSize=CGSizeZero;
+    
+    viewController=self.tabBarController;
+    viewControllerSize=self.tabBarController.view.frame.size;
+    self.keyPadViewController.keyPadTitleLabel.text=@"Combined View KeyPad";
+    self.keyPadViewController.popoverTextFieldString=self.keyPadOutputDecimalLabel.text;
+    self.keyPadViewController.numberFormatType=BDNumberFormatterTypeDecimal;
+    
+    __weak __block ViewController *weakSelf=self;
+    self.keyPadViewController.outputCallbackBlock=^(NSString *stringText,NSInteger tag){
+        ViewController *strongSelf=weakSelf;
+        strongSelf.keyPadOutputDecimalLabel.text=stringText;
+                
+    };
+
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        [self slideIntoPlaceInputViewController:viewController];
+    }else {
+        [self.popoverController setContentViewController:viewController];
+        
+        self.popoverController.popoverContentSize=viewControllerSize;
+        [self.popoverController presentPopoverFromRect:((UIButton *)sender).bounds inView:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
+
+}
+
+
 #pragma mark -
 #pragma mark BDInputViewController Related
-- (IBAction)buttonPushed:(id)sender {
+- (IBAction)keyPadButtonPushed:(id)sender {
     
     UIViewController *viewController=nil;
     CGSize viewControllerSize=CGSizeZero;
     
     NSInteger buttonInputViewType=((UIButton *)sender).tag;
     
-    switch (buttonInputViewType) {
-        case BDInputViewTypeNumberKeyPad:
-            viewController=self.keyPadViewController;
-            viewControllerSize=self.keyPadViewController.view.frame.size;
-            self.keyPadViewController.keyPadTitleLabel.text=@"KeyPad only";
-            break;
-        case BDInputViewTypePicker:
-            viewController=self.pickerViewController;
-            viewControllerSize=self.pickerViewController.view.frame.size;
-            break;
-        case BDInputViewTypeCombinedViewController:
-            viewController=self.tabBarController;
-            viewControllerSize=self.tabBarController.view.frame.size;
-            self.keyPadViewController.keyPadTitleLabel.text=@"Combined View KeyPad";
-            break;
-    }
     
-    if (buttonInputViewType==BDInputViewTypeNumberKeyPad || buttonInputViewType==BDInputViewTypeCombinedViewController) {
-        self.keyPadViewController.popoverTextFieldString=self.keyPadOutputLabel.text;
-        __weak __block ViewController *weakSelf=self;
-        self.keyPadViewController.outputCallbackBlock=^(NSString *stringText,NSInteger tag){
-            ViewController *strongSelf=weakSelf;
-            strongSelf.keyPadOutputLabel.text=stringText;
-        };
-        
+    viewController=self.keyPadViewController;
+    viewControllerSize=self.keyPadViewController.view.frame.size;
+    self.keyPadViewController.keyPadTitleLabel.text=@"KeyPad only";
+
+    
+    switch (buttonInputViewType) {
+        case 100:
+            self.keyPadViewController.popoverTextFieldString=self.keyPadOutputDecimalLabel.text;
+            break;
+        case 101:
+            // Currency
+            self.keyPadViewController.popoverTextFieldString=self.keyPadOutputCurrencyLabel.text;
+            break;
+        case 102:
+            // Percentage
+            self.keyPadViewController.popoverTextFieldString=self.keyPadOutputPercentageLabel.text;
+            break;
+        default:
+            break;
     }
+    self.keyPadViewController.numberFormatType=buttonInputViewType;
+    __weak __block ViewController *weakSelf=self;
+    self.keyPadViewController.outputCallbackBlock=^(NSString *stringText,NSInteger tag){
+        ViewController *strongSelf=weakSelf;
+        switch (buttonInputViewType) {
+            case 100:
+                strongSelf.keyPadOutputDecimalLabel.text=stringText;
+                break;
+            case 101:
+                // Currency
+                strongSelf.keyPadOutputCurrencyLabel.text=stringText;
+                break;
+            case 102:
+                // Percentage
+                strongSelf.keyPadOutputPercentageLabel.text=stringText;
+            default:
+                break;
+        }
+
+    };
+        
+   
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         [self slideIntoPlaceInputViewController:viewController];

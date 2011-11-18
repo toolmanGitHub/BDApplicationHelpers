@@ -53,7 +53,9 @@
 @property (nonatomic,strong) BDHelpViewController *helpViewController;
 @property (nonatomic,strong) BDKeyPadViewController *keyPadViewController;
 @property (nonatomic,strong) UIPopoverController *popoverController; 
-@property (nonatomic,strong) IBOutlet UILabel *keyPadOutputLabel;
+@property (nonatomic,strong) IBOutlet UILabel *keyPadOutputDecimalLabel;
+@property (nonatomic,strong) IBOutlet UILabel *keyPadOutputCurrencyLabel;
+@property (nonatomic,strong) IBOutlet UILabel *keyPadOutputPercentageLabel;
 @property (nonatomic,strong) BDPickerViewController *pickerViewController;
 @property (nonatomic,strong) BDTabBarController *tabBarController;
 - (IBAction)showHelpViewController:(id)sender;
