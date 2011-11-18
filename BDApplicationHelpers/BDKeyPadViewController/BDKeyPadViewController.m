@@ -120,11 +120,12 @@ typedef NSInteger BDKeyPadButtonIdentifier;
 	CGSize theFontSize;
 	CGFloat offset=0.0;
 	CGFloat requiredFocusIndicatorLocation=0;
+    self.popoverTextField.text=self.popoverTextFieldString;
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-		requiredFocusIndicatorLocation=FOCUS_INDICATOR_NORMAL_POSITION_IPHONE;
+  		requiredFocusIndicatorLocation=FOCUS_INDICATOR_NORMAL_POSITION_IPHONE;
 	}else {
-		requiredFocusIndicatorLocation=FOCUS_INDICATOR_NORMAL_POSITION_IPAD;
+  		requiredFocusIndicatorLocation=FOCUS_INDICATOR_NORMAL_POSITION_IPAD;
 	}
 	
 	NSRange spaceRange;
@@ -146,17 +147,17 @@ typedef NSInteger BDKeyPadButtonIdentifier;
 		case BDNumberFormatterTypeCurrency:
         {
             currencySymbol=[[BDDateTimeNumberFormatter currencyDecimalFormatter] currencySymbol];
-			decimalSeparator=[[BDDateTimeNumberFormatter currencyDecimalFormatter] decimalSeparator];
-			currencySymbolRange=[self.popoverTextField.text rangeOfString:currencySymbol];
-			decimalSeparatorRange=[self.popoverTextField.text rangeOfString:decimalSeparator];
-			if (currencySymbolRange.location > decimalSeparatorRange.location) {
-				spaceRange=[self.popoverTextField.text rangeOfString:@" "];
+            decimalSeparator=[[BDDateTimeNumberFormatter currencyDecimalFormatter] decimalSeparator];
+            currencySymbolRange=[self.popoverTextField.text rangeOfString:currencySymbol];
+            decimalSeparatorRange=[self.popoverTextField.text rangeOfString:decimalSeparator];
+   		if (currencySymbolRange.location > decimalSeparatorRange.location) {
+   			spaceRange=[self.popoverTextField.text rangeOfString:@" "];
 				if (spaceRange.location==NSNotFound) {
-					theFontSize=[currencySymbol sizeWithFont:self.popoverTextField.font];
+   				theFontSize=[currencySymbol sizeWithFont:self.popoverTextField.font];
 				}else {
-					theFontSize=[[NSString stringWithFormat:@" %@",currencySymbol] sizeWithFont:self.popoverTextField.font];
+   				theFontSize=[[NSString stringWithFormat:@" %@",currencySymbol] sizeWithFont:self.popoverTextField.font];
 				}
-				requiredFocusIndicatorLocation=requiredFocusIndicatorLocation-theFontSize.width;
+            	requiredFocusIndicatorLocation=requiredFocusIndicatorLocation-theFontSize.width;
 				
 			}
             
@@ -313,7 +314,7 @@ typedef NSInteger BDKeyPadButtonIdentifier;
 	
     [self.keyStrokeTimer invalidate];
     self.keyStrokeTimer=nil;
-    self.keyStrokeTimer=[NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:NO] ;
+    
 	switch (button.tag) {
 		case BDKeyPadButtonIdentifierCancel:
 		{
@@ -331,30 +332,26 @@ typedef NSInteger BDKeyPadButtonIdentifier;
         }
         case BDKeyPadButtonIdentifierDoubleZero:
         {
-			dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
-				NSInteger j;
-				NSString *theOtherDigit=nil;
-				NSString *theNewString=nil;
-				for (j=1; j<=2; j++) {
-					theOtherDigit=[NSString stringWithFormat:@"0"];
-					theNewString=[self stringByAppendingCharacters:theOtherDigit
-															toText:self.popoverTextField.text
-													characterLimit:15];
-					dispatch_async(dispatch_get_main_queue(),^{
-                        self.popoverTextField.text=theNewString;
-						if (numberFormatType==BDNumberFormatterTypePercentage) {
-							NSNumber *percentageValue=[[BDDateTimeNumberFormatter percentageDecimalFormatterWithNumberOfFractionalDigits:2] numberFromString:theNewString];
-							if (percentageValue.doubleValue>=1) {
-								[self alertForPotentialLargeNumber];
-							}
-							percentageValue=nil;
-							
-						}
-					});
-				}
-				//		printf("%u, iCntr=%d\n", i,iCntr);
-			});
-			
+            NSInteger j;
+            NSString *theOtherDigit=nil;
+            NSString *theNewString=nil;
+            for (j=1; j<=2; j++) {
+                theOtherDigit=[NSString stringWithFormat:@"0"];
+                theNewString=[self stringByAppendingCharacters:theOtherDigit
+                                                        toText:self.popoverTextField.text
+                                                characterLimit:15];
+                self.popoverTextField.text=theNewString;
+                if (numberFormatType==BDNumberFormatterTypePercentage) {
+                    NSNumber *percentageValue=[[BDDateTimeNumberFormatter percentageDecimalFormatterWithNumberOfFractionalDigits:2] numberFromString:theNewString];
+                    if (percentageValue.doubleValue>=1) {
+                        [self alertForPotentialLargeNumber];
+                    }
+                    percentageValue=nil;
+                    
+                }
+            }
+            //		printf("%u, iCntr=%d\n", i,iCntr);
+               
 			newString=nil;
 			theDigit=nil;
 			break;
@@ -390,6 +387,7 @@ typedef NSInteger BDKeyPadButtonIdentifier;
 
         }
     }
+    self.keyStrokeTimer=[NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:NO] ;
 }
 
 -(void)textFieldSwiped:(UISwipeGestureRecognizer *)gesture{
