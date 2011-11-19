@@ -194,7 +194,7 @@
 		ECE0D299145CB0E600976621 /* BDDateTimeNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDDateTimeNumberFormatter.h; sourceTree = "<group>"; };
 		ECE0D29A145CB0E600976621 /* BDDateTimeNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDDateTimeNumberFormatter.m; sourceTree = "<group>"; };
 		ECE0D29D145CB14A00976621 /* BDApplicationHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDApplicationHelpers.h; sourceTree = "<group>"; };
-		ECE677D21454E7AB00694A2A /* customIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = customIcon.png; path = ../../../Desktop/customIcon.png; sourceTree = "<group>"; };
+		ECE677D21454E7AB00694A2A /* customIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = customIcon.png; path = ../customIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
