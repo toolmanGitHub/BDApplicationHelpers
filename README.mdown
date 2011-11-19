@@ -120,8 +120,13 @@ I like to load thing lazily, so I set up my ivar getter method like this:
         }
     
         keyPadViewController_=[[BDKeyPadViewController alloc] init];
-        keyPadViewController_.numberFormatType=BDNumberFormatterTypeDecimal;
+        
+        // Set the value of the keypad's textfield
         keyPadViewController_.popoverTextFieldString=@"3.145";
+        
+        // Set the format type for the number we are working on.
+        // There are values for decimal, currency, and percentage.
+        keyPadViewController_.numberFormatType=BDNumberFormatterTypeDecimal;
         return keyPadViewController_;
     }
 
