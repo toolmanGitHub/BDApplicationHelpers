@@ -50,6 +50,7 @@ typedef NSInteger (^BDPickerNumberOfRowsInComponentBlock)(UIPickerView *, NSInte
 typedef CGFloat (^BDPickerRowHeightForComponentBlock)(UIPickerView *, NSInteger);
 typedef CGFloat (^BDPickerWidthForComponentBlock)(UIPickerView *, NSInteger);
 typedef NSString *(^BDPickerTitleForRowBlock)(UIPickerView *, NSInteger, NSInteger);
+typedef UIView *(^BDPickerViewForRowBlock)(UIPickerView *, NSInteger, NSInteger, UIView *);
 typedef void(^BDPickerDidSelectRowComponentBlock)(UIPickerView *, NSInteger, NSInteger);
 
 /** This subclass of BDInputViewController contains a UIPickerView and optional "Done" UIButton.  The Done UIButton is only available when using the class on an iPhone or iPod touch.  The unique thing about the implementation of the BDPickerViewController is that it encapsulates the delegate and datasource protocols for UIPickerView into callback blocks. Check the header file file to see what arguments the blocks take and what, if any, values are returned by the blocks.
@@ -62,8 +63,13 @@ typedef void(^BDPickerDidSelectRowComponentBlock)(UIPickerView *, NSInteger, NSI
 	BDPickerWidthForComponentBlock widthForComponentBlock;
 	BDPickerTitleForRowBlock titleForRowBlock;
 	BDPickerDidSelectRowComponentBlock didSelectRowComponentBlock;
+    BDPickerViewForRowBlock viewForRowBlock;
 
 }
+/** A UILabel for the pickerViewController
+ 
+ */
+@property (nonatomic,strong) IBOutlet UILabel *pickerViewLabel;
 /** A block callback that provides the number of components to be used in the PickerView.  This block is called when the BDPickerViewController instance's of UIPickerViewDataSource Protocol implementation of numberOfComponentsInPickerView: is called.
  
  */
@@ -85,6 +91,11 @@ typedef void(^BDPickerDidSelectRowComponentBlock)(UIPickerView *, NSInteger, NSI
  
  */
 @property (nonatomic,copy) BDPickerTitleForRowBlock titleForRowBlock;
+
+/** A block that provides the view for a particular row and component.  This block is called when the BDPickerViewController instance's of UIPickerView Delegate implementation of pickerView:viewForRow:forComponent:reuseView is called. 
+ 
+ */
+@property (nonatomic,copy) BDPickerViewForRowBlock viewForRowBlock;
 /** A block that provides the executes when a components row is selected. This block is called when the BDPickerViewController instance's of UIPickerView Delegate implementation of pickerView:didSelectRow:inComponent is called. 
 
  

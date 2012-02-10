@@ -46,7 +46,6 @@
 @interface BDPickerViewController () 
 
 @property (nonatomic,strong) IBOutlet UIPickerView *pickerView;
-@property (nonatomic,strong) IBOutlet UILabel *pickerViewLabel;
 @property (nonatomic,strong) IBOutlet UIButton *doneButton;
 
 -(void)useDoneButton;
@@ -57,15 +56,16 @@
 @implementation BDPickerViewController
 // Private
 @synthesize pickerView;
-@synthesize pickerViewLabel;
 @synthesize doneButton;
 
 // Public
+@synthesize pickerViewLabel;
 @synthesize numberOfComponentsInPickerViewBlock;
 @synthesize numberOfRowsInComponentBlock;
 @synthesize rowHeightForComponentBlock;
 @synthesize widthForComponentBlock;
 @synthesize titleForRowBlock;
+@synthesize viewForRowBlock;
 @synthesize didSelectRowComponentBlock;
 
 #pragma mark -
@@ -185,6 +185,16 @@
 
 	return @"something is wrong";
 	
+}
+
+- (UIView *)pickerView:(UIPickerView *)thePickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+    if (viewForRowBlock!=nil) {
+		return viewForRowBlock(thePickerView, row, component,view);
+	}else {
+		[NSException raise:@"BDPickerViewController Exception" format:@"BDPickerViewForRowBlock viewForRowBlock not set"];
+	}
+    
+	return nil;
 }
 
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
