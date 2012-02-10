@@ -540,10 +540,15 @@
     }
     pickerViewControllerViewForRow_=[[BDPickerViewControllerViewForRow alloc] init];
     CGSize pickerViewSize=self.pickerViewControllerViewForRow.view.frame.size;
-    CGSize newPickerViewSize=CGSizeMake(360.0f, pickerViewSize.height);
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+       CGSize newPickerViewSize=CGSizeMake(280.0f, pickerViewSize.height);
+        CGRect pickerViewFrame=CGRectMake(0.0, 0.0f, newPickerViewSize.width, newPickerViewSize.height);
+        self.pickerViewControllerViewForRow.view.frame=pickerViewFrame;
+    }
+
+    
     self.pickerViewControllerViewForRow.pickerViewLabel.text=@"Plot Symbol";
-    CGRect pickerViewFrame=CGRectMake(0.0, 0.0f, newPickerViewSize.width, newPickerViewSize.height);
-    self.pickerViewControllerViewForRow.view.frame=pickerViewFrame;
+    
     
     pickerViewControllerViewForRow_.numberOfComponentsInPickerViewBlock=^(UIPickerView *thePickerView){
         NSInteger numberOfComponents=2;
@@ -559,9 +564,15 @@
         return numberOfRows;
     };
     pickerViewControllerViewForRow_.widthForComponentBlock=^(UIPickerView *thePickerView, NSInteger component){
-        CGFloat componentWidth=thePickerView.frame.size.width-280;
+        CGFloat componentWidthOffset=280.0f;
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            componentWidthOffset=208.0f;
+        }
+        
+        CGFloat componentWidth=thePickerView.frame.size.width-componentWidthOffset+20.0f;
+       
         if (component==1) {
-            componentWidth=280.0f;
+            componentWidth=componentWidthOffset;
         }
         
         return componentWidth;
@@ -614,7 +625,11 @@
             case 1:
             {
                 if (theView==nil) {
-                    theView=[[BDPickerViewRowView alloc] initWithFrame:CGRectMake(0.0, 0.0f, 280.0, 40.0f)];
+                    CGFloat viewWidth=280.0f;
+                    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+                        viewWidth=208.0f;
+                    }
+                    theView=[[BDPickerViewRowView alloc] initWithFrame:CGRectMake(0.0, 0.0f, viewWidth, 40.0f)];
                 }
                 
                 NSDictionary *theDict=[colors objectAtIndex:row];
