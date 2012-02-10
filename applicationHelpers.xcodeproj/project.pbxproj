@@ -104,7 +104,7 @@
 		EC8FF9D914E578D40032323C /* BDPickerViewRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8FF9D814E578D40032323C /* BDPickerViewRowView.m */; };
 		EC9913481453392E00F55000 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = EC9913471453392E00F55000 /* README.mdown */; };
 		EC9D08381453CC2C006CED35 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EC9D08371453CC2C006CED35 /* Icon.png */; };
-		ECB9D5CC14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB9D5CA14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.h */; };
+		ECB9D5CC14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB9D5CA14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECB9D5CD14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB9D5CB14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.m */; };
 		ECE677D31454E7AB00694A2A /* customIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE677D21454E7AB00694A2A /* customIcon.png */; };
 /* End PBXBuildFile section */
@@ -497,11 +497,11 @@
 				EC11894D1464B02600B71798 /* BDInputViewController.h in Headers */,
 				EC42B3BD14650AFB004C4C9A /* BDTabBarController.h in Headers */,
 				EC11895E1464B09000B71798 /* BDInputViewControllerProtocol.h in Headers */,
+				ECB9D5CC14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.h in Headers */,
 				EC11894E1464B02600B71798 /* BDKeyPadViewController.h in Headers */,
 				EC1189511464B02600B71798 /* BDHelpViewController.h in Headers */,
 				EC11894F1464B02600B71798 /* BDLowerToolBarView.h in Headers */,
 				EC1189501464B02600B71798 /* BDImageView.h in Headers */,
-				ECB9D5CC14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
