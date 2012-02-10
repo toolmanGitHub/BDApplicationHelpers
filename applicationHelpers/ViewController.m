@@ -43,6 +43,7 @@
 #import "ViewController.h"
 #import <BDApplicationHelpers/BDApplicationHelpers.h>
 #import <BDApplicationHelpers/BDDateTimeNumberFormatter.h>
+#import "BDPickerViewRowView.h"
 
 @implementation ViewController
 @synthesize helpViewController = helpViewController_;
@@ -52,6 +53,7 @@
 @synthesize keyPadOutputCurrencyLabel;
 @synthesize keyPadOutputPercentageLabel;
 @synthesize pickerViewController = pickerViewController_;
+@synthesize pickerViewControllerViewForRow = pickerViewControllerViewForRow_;
 @synthesize tabBarController = tabBarController_;
 
 
@@ -267,6 +269,8 @@
 	
 }
 
+
+
 // Dismisses the email composition interface when users tap Cancel or Send. Proceeds to update the message field with the result of the operation.
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error 
 {	
@@ -344,6 +348,29 @@
     }
 
 }
+
+- (IBAction)showPickerWithViews:(id)sender {
+   
+        
+    UIViewController *viewController=nil;
+    CGSize viewControllerSize=CGSizeZero;
+    
+    viewController=self.pickerViewControllerViewForRow;
+    viewControllerSize=self.pickerViewControllerViewForRow.view.frame.size;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        [self slideIntoPlaceInputViewController:viewController];
+    }else {
+        [self.popoverController setContentViewController:viewController];
+        
+        self.popoverController.popoverContentSize=viewControllerSize;
+        [self.popoverController presentPopoverFromRect:((UIButton *)sender).bounds inView:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
+
+
+    
+}
+
 
 - (IBAction)combinedViewButtonPushed:(id)sender{
     UIViewController *viewController=nil;
@@ -455,6 +482,8 @@
 
 #pragma mark -
 #pragma mark BDPickerViewController
+
+
 -(BDPickerViewController *)pickerViewController{
     if (pickerViewController_) {
         return pickerViewController_;
@@ -470,7 +499,6 @@
         
         return numberOfComponents;
     };
-    
     pickerViewController_.numberOfRowsInComponentBlock=^(UIPickerView *thePickerView,NSInteger component){
         NSInteger numberOfRows=2;
         return numberOfRows;
@@ -506,6 +534,141 @@
     
 }
 
+-(BDPickerViewControllerViewForRow *)pickerViewControllerViewForRow{
+    if (pickerViewControllerViewForRow_!=nil) {
+        return pickerViewControllerViewForRow_;
+    }
+    pickerViewControllerViewForRow_=[[BDPickerViewControllerViewForRow alloc] init];
+    CGSize pickerViewSize=self.pickerViewControllerViewForRow.view.frame.size;
+    CGSize newPickerViewSize=CGSizeMake(290.0f, pickerViewSize.height);
+    self.pickerViewControllerViewForRow.pickerViewLabel.text=@"Plot Symbol";
+    CGRect pickerViewFrame=CGRectMake(0.0, 0.0f, newPickerViewSize.width, newPickerViewSize.height);
+    self.pickerViewControllerViewForRow.view.frame=pickerViewFrame;
+    
+    pickerViewControllerViewForRow_.numberOfComponentsInPickerViewBlock=^(UIPickerView *thePickerView){
+        NSInteger numberOfComponents=2;
+        
+        return numberOfComponents;
+    };
+    
+    pickerViewControllerViewForRow_.numberOfRowsInComponentBlock=^(UIPickerView *thePickerView,NSInteger component){
+        NSInteger numberOfRows=11;
+        if (component==1) {
+            numberOfRows=10;
+        }
+        return numberOfRows;
+    };
+    pickerViewControllerViewForRow_.widthForComponentBlock=^(UIPickerView *thePickerView, NSInteger component){
+        CGFloat componentWidth=thePickerView.frame.size.width-200.0;
+        if (component==1) {
+            componentWidth=208.0f;
+        }
+        
+        return componentWidth;
+        
+    };
+    
+    UIImage *star=[UIImage imageNamed:@"starPlotSymbol.png"];
+    UIImage *cross=[UIImage imageNamed:@"crossPlotSymbol.png"];
+    UIImage *dash=[UIImage imageNamed:@"dashPlotSymbol.png"];
+    UIImage *diamond=[UIImage imageNamed:@"diamondPlotSymbol.png"];
+    UIImage *ellipse=[UIImage imageNamed:@"ellipsePlotSymbol.png"];
+    UIImage *hexagon=[UIImage imageNamed:@"hexagonPlotSymbol.png"];
+    UIImage *pentagon=[UIImage imageNamed:@"pentagonPlotSymbol.png"];
+    UIImage *plus=[UIImage imageNamed:@"plusPlotSymbol.png"];
+    UIImage *rectangle=[UIImage imageNamed:@"rectanglePlotSymbol.png"];
+    UIImage *snow=[UIImage imageNamed:@"snowPlotSymbol.png"];
+    UIImage *triangle=[UIImage imageNamed:@"trianglePlotSymbol.png"];
+    
+    NSArray *images=[NSArray arrayWithObjects:star,cross, dash,diamond,ellipse,hexagon,pentagon,plus,rectangle,snow,triangle, nil];
+    
+    NSMutableArray *colors=[NSMutableArray array];
+    
+    [colors addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],@"color",@"Black",@"Label", nil]];
+    [colors addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor],@"color",@"Red",@"Label", nil]];
+    [colors addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor orangeColor],@"color",@"Orange",@"Label", nil]];
+    [colors addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor],@"color",@"Yellow",@"Label", nil]];
+    
+    [colors addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor greenColor],@"color",@"Green",@"Label", nil]];
+    [colors addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blueColor],@"color",@"Blue",@"Label", nil]];
+    [colors addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor purpleColor],@"color",@"Purple",@"Label", nil]];
+    [colors addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor magentaColor],@"color",@"Magenta",@"Label", nil]];
+    [colors addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor brownColor],@"color",@"Brown",@"Label", nil]];
+    [colors addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],@"color",@"White",@"Label", nil]];
+    
+    
+    NSLog(@"colors:  %@",colors);
+    
+    pickerViewControllerViewForRow_.viewForRowBlock=^(UIPickerView *thePickerView, NSInteger row, NSInteger component, UIView *theView){
+        NSLog(@"viewForRowBlock row=%d, component=%d",row,component);
+        //    NSLog(@"    images array:  %@",images);
+        switch (component) {
+            case 0:
+            {
+                if (theView==nil) {
+                    NSLog(@"        creating new UIImageView");
+                    theView=[[UIImageView alloc] initWithImage:[images objectAtIndex:row]];
+                    return theView;
+                }else{  
+                    NSLog(@"        reusing new UIImageView");
+                    
+                }
+                ((UIImageView *)theView).image=[images objectAtIndex:row];
+                return theView;
+                break;
+                
+            }
+            case 1:
+            {
+                if (theView==nil) {
+                    NSLog(@"        creating new BDPickerViewRowView");
+                    theView=[[BDPickerViewRowView alloc] initWithFrame:CGRectMake(0.0, 0.0f, 208.0, 40.0f)];
+                }else{  
+                    NSLog(@"        reusing new BDPickerViewRowView");
+                    
+                }
+                NSDictionary *theDict=[colors objectAtIndex:row];
+                ((BDPickerViewRowView *)theView).colorLabel.text=[theDict objectForKey:@"Label"];
+                ((BDPickerViewRowView *)theView).colorWell.backgroundColor=[theDict objectForKey:@"color"];
+                
+                return theView;
+                break;
+                
+            }
+                
+        }
+        
+        return nil;
+        
+    };
+    
+    pickerViewControllerViewForRow_.titleForRowBlock=^(UIPickerView *thePickerView, NSInteger row, NSInteger component){
+        NSLog(@"titleForRowBlock");
+        NSString *titleForRow=@"";
+        if (component==1) {
+            switch (row) {
+                case 0:
+                    titleForRow=@"Star";
+                    break;
+                case 1:
+                    titleForRow=@"Cross";
+                    break;
+            }
+        }
+        NSLog(@"    titleForRow");
+        return titleForRow;
+    };
+    
+    
+    pickerViewControllerViewForRow_.didSelectRowComponentBlock=^(UIPickerView *thePickerView, NSInteger row, NSInteger component){
+        NSLog(@"didselectRowCOmponentBlock");
+        NSLog(@"selected row:  %d",row);
+    };
+    
+    return pickerViewControllerViewForRow_;
+
+}
+
 #pragma mark -
 #pragma mark BDTabBarController
 -(BDTabBarController *)tabBarController{
@@ -539,6 +702,7 @@
         self.popoverController=nil;
         self.tabBarController=nil;
     }
+    self.pickerViewController=nil;
 }
 
 @end

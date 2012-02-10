@@ -45,6 +45,7 @@
 @class BDHelpViewController;
 @class BDKeyPadViewController;
 @class BDPickerViewController;
+@class BDPickerViewControllerViewForRow;
 @class BDTabBarController;
 @interface ViewController : UIViewController <UIPopoverControllerDelegate,MFMailComposeViewControllerDelegate>{
 
@@ -57,9 +58,11 @@
 @property (nonatomic,strong) IBOutlet UILabel *keyPadOutputCurrencyLabel;
 @property (nonatomic,strong) IBOutlet UILabel *keyPadOutputPercentageLabel;
 @property (nonatomic,strong) BDPickerViewController *pickerViewController;
+@property (nonatomic,strong) BDPickerViewControllerViewForRow *pickerViewControllerViewForRow;
 @property (nonatomic,strong) BDTabBarController *tabBarController;
 - (IBAction)showHelpViewController:(id)sender;
 -(void)displayMailComposer;
+- (IBAction)showPickerWithViews:(id)sender;
 
 #pragma mark -
 #pragma mark UIViewController Container Methods
