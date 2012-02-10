@@ -540,7 +540,7 @@
     }
     pickerViewControllerViewForRow_=[[BDPickerViewControllerViewForRow alloc] init];
     CGSize pickerViewSize=self.pickerViewControllerViewForRow.view.frame.size;
-    CGSize newPickerViewSize=CGSizeMake(290.0f, pickerViewSize.height);
+    CGSize newPickerViewSize=CGSizeMake(360.0f, pickerViewSize.height);
     self.pickerViewControllerViewForRow.pickerViewLabel.text=@"Plot Symbol";
     CGRect pickerViewFrame=CGRectMake(0.0, 0.0f, newPickerViewSize.width, newPickerViewSize.height);
     self.pickerViewControllerViewForRow.view.frame=pickerViewFrame;
@@ -559,9 +559,9 @@
         return numberOfRows;
     };
     pickerViewControllerViewForRow_.widthForComponentBlock=^(UIPickerView *thePickerView, NSInteger component){
-        CGFloat componentWidth=thePickerView.frame.size.width-200.0;
+        CGFloat componentWidth=thePickerView.frame.size.width-280;
         if (component==1) {
-            componentWidth=208.0f;
+            componentWidth=280.0f;
         }
         
         return componentWidth;
@@ -597,21 +597,14 @@
     [colors addObject:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],@"color",@"White",@"Label", nil]];
     
     
-    NSLog(@"colors:  %@",colors);
-    
     pickerViewControllerViewForRow_.viewForRowBlock=^(UIPickerView *thePickerView, NSInteger row, NSInteger component, UIView *theView){
-        NSLog(@"viewForRowBlock row=%d, component=%d",row,component);
         //    NSLog(@"    images array:  %@",images);
         switch (component) {
             case 0:
             {
                 if (theView==nil) {
-                    NSLog(@"        creating new UIImageView");
                     theView=[[UIImageView alloc] initWithImage:[images objectAtIndex:row]];
                     return theView;
-                }else{  
-                    NSLog(@"        reusing new UIImageView");
-                    
                 }
                 ((UIImageView *)theView).image=[images objectAtIndex:row];
                 return theView;
@@ -621,12 +614,9 @@
             case 1:
             {
                 if (theView==nil) {
-                    NSLog(@"        creating new BDPickerViewRowView");
-                    theView=[[BDPickerViewRowView alloc] initWithFrame:CGRectMake(0.0, 0.0f, 208.0, 40.0f)];
-                }else{  
-                    NSLog(@"        reusing new BDPickerViewRowView");
-                    
+                    theView=[[BDPickerViewRowView alloc] initWithFrame:CGRectMake(0.0, 0.0f, 280.0, 40.0f)];
                 }
+                
                 NSDictionary *theDict=[colors objectAtIndex:row];
                 ((BDPickerViewRowView *)theView).colorLabel.text=[theDict objectForKey:@"Label"];
                 ((BDPickerViewRowView *)theView).colorWell.backgroundColor=[theDict objectForKey:@"color"];
@@ -642,27 +632,9 @@
         
     };
     
-    pickerViewControllerViewForRow_.titleForRowBlock=^(UIPickerView *thePickerView, NSInteger row, NSInteger component){
-        NSLog(@"titleForRowBlock");
-        NSString *titleForRow=@"";
-        if (component==1) {
-            switch (row) {
-                case 0:
-                    titleForRow=@"Star";
-                    break;
-                case 1:
-                    titleForRow=@"Cross";
-                    break;
-            }
-        }
-        NSLog(@"    titleForRow");
-        return titleForRow;
-    };
-    
-    
     pickerViewControllerViewForRow_.didSelectRowComponentBlock=^(UIPickerView *thePickerView, NSInteger row, NSInteger component){
         NSLog(@"didselectRowCOmponentBlock");
-        NSLog(@"selected row:  %d",row);
+        NSLog(@"    selected row:  %d",row);
     };
     
     return pickerViewControllerViewForRow_;
