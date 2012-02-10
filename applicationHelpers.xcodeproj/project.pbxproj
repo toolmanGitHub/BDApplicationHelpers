@@ -90,8 +90,22 @@
 		EC7997041450C8EF00C6344E /* backgroundiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7997031450C8EF00C6344E /* backgroundiPad.png */; };
 		EC7997071450C90000C6344E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7997051450C90000C6344E /* background.png */; };
 		EC7997081450C90000C6344E /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7997061450C90000C6344E /* background@2x.png */; };
+		EC8FF9CB14E5746D0032323C /* crossPlotSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8FF9C014E5746D0032323C /* crossPlotSymbol.png */; };
+		EC8FF9CC14E5746D0032323C /* dashPlotSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8FF9C114E5746D0032323C /* dashPlotSymbol.png */; };
+		EC8FF9CD14E5746D0032323C /* diamondPlotSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8FF9C214E5746D0032323C /* diamondPlotSymbol.png */; };
+		EC8FF9CE14E5746D0032323C /* ellipsePlotSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8FF9C314E5746D0032323C /* ellipsePlotSymbol.png */; };
+		EC8FF9CF14E5746D0032323C /* hexagonPlotSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8FF9C414E5746D0032323C /* hexagonPlotSymbol.png */; };
+		EC8FF9D014E5746D0032323C /* pentagonPlotSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8FF9C514E5746D0032323C /* pentagonPlotSymbol.png */; };
+		EC8FF9D114E5746D0032323C /* plusPlotSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8FF9C614E5746D0032323C /* plusPlotSymbol.png */; };
+		EC8FF9D214E5746D0032323C /* rectanglePlotSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8FF9C714E5746D0032323C /* rectanglePlotSymbol.png */; };
+		EC8FF9D314E5746D0032323C /* snowPlotSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8FF9C814E5746D0032323C /* snowPlotSymbol.png */; };
+		EC8FF9D414E5746D0032323C /* starPlotSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8FF9C914E5746D0032323C /* starPlotSymbol.png */; };
+		EC8FF9D514E5746D0032323C /* trianglePlotSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8FF9CA14E5746D0032323C /* trianglePlotSymbol.png */; };
+		EC8FF9D914E578D40032323C /* BDPickerViewRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8FF9D814E578D40032323C /* BDPickerViewRowView.m */; };
 		EC9913481453392E00F55000 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = EC9913471453392E00F55000 /* README.mdown */; };
 		EC9D08381453CC2C006CED35 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EC9D08371453CC2C006CED35 /* Icon.png */; };
+		ECB9D5CC14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB9D5CA14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.h */; };
+		ECB9D5CD14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB9D5CB14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.m */; };
 		ECE677D31454E7AB00694A2A /* customIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE677D21454E7AB00694A2A /* customIcon.png */; };
 /* End PBXBuildFile section */
 
@@ -102,13 +116,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = EC1189351464AF6500B71798;
 			remoteInfo = BDApplicationHelpers;
-		};
-		EC42B3AB1464FE07004C4C9A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EC657454144B4AF9002F66FC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EC56AC55144B7E9700D0E183;
-			remoteInfo = Documentation;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -175,8 +182,23 @@
 		EC7997031450C8EF00C6344E /* backgroundiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundiPad.png; sourceTree = "<group>"; };
 		EC7997051450C90000C6344E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		EC7997061450C90000C6344E /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		EC8FF9C014E5746D0032323C /* crossPlotSymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crossPlotSymbol.png; sourceTree = "<group>"; };
+		EC8FF9C114E5746D0032323C /* dashPlotSymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashPlotSymbol.png; sourceTree = "<group>"; };
+		EC8FF9C214E5746D0032323C /* diamondPlotSymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diamondPlotSymbol.png; sourceTree = "<group>"; };
+		EC8FF9C314E5746D0032323C /* ellipsePlotSymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ellipsePlotSymbol.png; sourceTree = "<group>"; };
+		EC8FF9C414E5746D0032323C /* hexagonPlotSymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hexagonPlotSymbol.png; sourceTree = "<group>"; };
+		EC8FF9C514E5746D0032323C /* pentagonPlotSymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pentagonPlotSymbol.png; sourceTree = "<group>"; };
+		EC8FF9C614E5746D0032323C /* plusPlotSymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusPlotSymbol.png; sourceTree = "<group>"; };
+		EC8FF9C714E5746D0032323C /* rectanglePlotSymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rectanglePlotSymbol.png; sourceTree = "<group>"; };
+		EC8FF9C814E5746D0032323C /* snowPlotSymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowPlotSymbol.png; sourceTree = "<group>"; };
+		EC8FF9C914E5746D0032323C /* starPlotSymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starPlotSymbol.png; sourceTree = "<group>"; };
+		EC8FF9CA14E5746D0032323C /* trianglePlotSymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trianglePlotSymbol.png; sourceTree = "<group>"; };
+		EC8FF9D714E578D40032323C /* BDPickerViewRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPickerViewRowView.h; sourceTree = "<group>"; };
+		EC8FF9D814E578D40032323C /* BDPickerViewRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDPickerViewRowView.m; sourceTree = "<group>"; };
 		EC9913471453392E00F55000 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = SOURCE_ROOT; };
 		EC9D08371453CC2C006CED35 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		ECB9D5CA14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPickerViewControllerViewForRow.h; sourceTree = "<group>"; };
+		ECB9D5CB14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDPickerViewControllerViewForRow.m; sourceTree = "<group>"; };
 		ECE0D279145CB0C400976621 /* BDInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDInputViewController.h; sourceTree = "<group>"; };
 		ECE0D27A145CB0C400976621 /* BDInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDInputViewController.m; sourceTree = "<group>"; };
 		ECE0D27B145CB0C400976621 /* BDInputViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDInputViewControllerProtocol.h; sourceTree = "<group>"; };
@@ -309,6 +331,8 @@
 				EC657471144B4AF9002F66FC /* AppDelegate.m */,
 				EC657473144B4AF9002F66FC /* ViewController.h */,
 				EC657474144B4AF9002F66FC /* ViewController.m */,
+				EC8FF9D714E578D40032323C /* BDPickerViewRowView.h */,
+				EC8FF9D814E578D40032323C /* BDPickerViewRowView.m */,
 				EC657476144B4AF9002F66FC /* ViewController_iPhone.xib */,
 				EC657479144B4AF9002F66FC /* ViewController_iPad.xib */,
 				EC657468144B4AF9002F66FC /* Supporting Files */,
@@ -319,6 +343,17 @@
 		EC657468144B4AF9002F66FC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EC8FF9C014E5746D0032323C /* crossPlotSymbol.png */,
+				EC8FF9C114E5746D0032323C /* dashPlotSymbol.png */,
+				EC8FF9C214E5746D0032323C /* diamondPlotSymbol.png */,
+				EC8FF9C314E5746D0032323C /* ellipsePlotSymbol.png */,
+				EC8FF9C414E5746D0032323C /* hexagonPlotSymbol.png */,
+				EC8FF9C514E5746D0032323C /* pentagonPlotSymbol.png */,
+				EC8FF9C614E5746D0032323C /* plusPlotSymbol.png */,
+				EC8FF9C714E5746D0032323C /* rectanglePlotSymbol.png */,
+				EC8FF9C814E5746D0032323C /* snowPlotSymbol.png */,
+				EC8FF9C914E5746D0032323C /* starPlotSymbol.png */,
+				EC8FF9CA14E5746D0032323C /* trianglePlotSymbol.png */,
 				ECE677D21454E7AB00694A2A /* customIcon.png */,
 				EC9D08371453CC2C006CED35 /* Icon.png */,
 				EC7997051450C90000C6344E /* background.png */,
@@ -394,6 +429,8 @@
 			children = (
 				EC6A4CBC1461901A0052347C /* BDPickerViewController.h */,
 				EC6A4CBD1461901A0052347C /* BDPickerViewController.m */,
+				ECB9D5CA14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.h */,
+				ECB9D5CB14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.m */,
 				EC6A4CBE1461901A0052347C /* BDPickerViewController_iPad.xib */,
 				EC6A4CBF1461901A0052347C /* BDPickerViewController_iPhone.xib */,
 			);
@@ -457,6 +494,7 @@
 				EC1189511464B02600B71798 /* BDHelpViewController.h in Headers */,
 				EC11894F1464B02600B71798 /* BDLowerToolBarView.h in Headers */,
 				EC1189501464B02600B71798 /* BDImageView.h in Headers */,
+				ECB9D5CC14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +515,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				EC42B3AC1464FE07004C4C9A /* PBXTargetDependency */,
 			);
 			name = BDApplicationHelpers;
 			productName = BDApplicationHelpers;
@@ -508,7 +545,7 @@
 		EC657454144B4AF9002F66FC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = EC657457144B4AF9002F66FC /* Build configuration list for PBXProject "applicationHelpers" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -585,6 +622,17 @@
 				EC42B3D914650E7D004C4C9A /* buttonStateUp.png in Resources */,
 				EC42B3DA14650E7D004C4C9A /* doneButtonStateUp.png in Resources */,
 				EC42B3DB14650E7D004C4C9A /* focusIndicator.png in Resources */,
+				EC8FF9CB14E5746D0032323C /* crossPlotSymbol.png in Resources */,
+				EC8FF9CC14E5746D0032323C /* dashPlotSymbol.png in Resources */,
+				EC8FF9CD14E5746D0032323C /* diamondPlotSymbol.png in Resources */,
+				EC8FF9CE14E5746D0032323C /* ellipsePlotSymbol.png in Resources */,
+				EC8FF9CF14E5746D0032323C /* hexagonPlotSymbol.png in Resources */,
+				EC8FF9D014E5746D0032323C /* pentagonPlotSymbol.png in Resources */,
+				EC8FF9D114E5746D0032323C /* plusPlotSymbol.png in Resources */,
+				EC8FF9D214E5746D0032323C /* rectanglePlotSymbol.png in Resources */,
+				EC8FF9D314E5746D0032323C /* snowPlotSymbol.png in Resources */,
+				EC8FF9D414E5746D0032323C /* starPlotSymbol.png in Resources */,
+				EC8FF9D514E5746D0032323C /* trianglePlotSymbol.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +693,7 @@
 				EC1189471464AFDC00B71798 /* BDImageView.m in Sources */,
 				EC1189481464AFDC00B71798 /* BDHelpViewController.m in Sources */,
 				EC42B3BE14650AFB004C4C9A /* BDTabBarController.m in Sources */,
+				ECB9D5CD14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,6 +704,7 @@
 				EC65746E144B4AF9002F66FC /* main.m in Sources */,
 				EC657472144B4AF9002F66FC /* AppDelegate.m in Sources */,
 				EC657475144B4AF9002F66FC /* ViewController.m in Sources */,
+				EC8FF9D914E578D40032323C /* BDPickerViewRowView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,11 +715,6 @@
 			isa = PBXTargetDependency;
 			target = EC1189351464AF6500B71798 /* BDApplicationHelpers */;
 			targetProxy = EC11896A1464EA9C00B71798 /* PBXContainerItemProxy */;
-		};
-		EC42B3AC1464FE07004C4C9A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EC56AC55144B7E9700D0E183 /* Documentation */;
-			targetProxy = EC42B3AB1464FE07004C4C9A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
