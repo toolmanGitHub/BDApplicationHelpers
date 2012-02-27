@@ -18,6 +18,18 @@
 			name = Documentation;
 			productName = Documentation;
 		};
+		EC713AE814FB76EC00716D06 /* Aggregate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EC713AE914FB76ED00716D06 /* Build configuration list for PBXAggregateTarget "Aggregate" */;
+			buildPhases = (
+			);
+			dependencies = (
+				EC713AED14FB76F200716D06 /* PBXTargetDependency */,
+				EC713AEF14FB76F400716D06 /* PBXTargetDependency */,
+			);
+			name = Aggregate;
+			productName = Aggregate;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
@@ -117,12 +129,19 @@
 			remoteGlobalIDString = EC1189351464AF6500B71798;
 			remoteInfo = BDApplicationHelpers;
 		};
-		ECB9D5D314E5D58C00C19F19 /* PBXContainerItemProxy */ = {
+		EC713AEC14FB76F200716D06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC657454144B4AF9002F66FC /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EC56AC55144B7E9700D0E183;
 			remoteInfo = Documentation;
+		};
+		EC713AEE14FB76F400716D06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC657454144B4AF9002F66FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC1189351464AF6500B71798;
+			remoteInfo = BDApplicationHelpers;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -136,12 +155,12 @@
 		EC42B3C114650E7D004C4C9A /* BDApplicationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BDApplicationHelpers.framework; sourceTree = "<group>"; };
 		EC42B3C314650E7D004C4C9A /* backSpace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backSpace.png; sourceTree = "<group>"; };
 		EC42B3C414650E7D004C4C9A /* backSpacePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backSpacePressed.png; sourceTree = "<group>"; };
-		EC42B3C514650E7D004C4C9A /* BDHelpViewController.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController.nib; sourceTree = "<group>"; };
-		EC42B3C614650E7D004C4C9A /* BDHelpViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDHelpViewController_iPad.nib; sourceTree = "<group>"; };
-		EC42B3C714650E7D004C4C9A /* BDKeyPadViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDKeyPadViewController_iPad.nib; sourceTree = "<group>"; };
-		EC42B3C814650E7D004C4C9A /* BDKeyPadViewController_iPhone.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDKeyPadViewController_iPhone.nib; sourceTree = "<group>"; };
-		EC42B3C914650E7D004C4C9A /* BDPickerViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDPickerViewController_iPad.nib; sourceTree = "<group>"; };
-		EC42B3CA14650E7D004C4C9A /* BDPickerViewController_iPhone.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BDPickerViewController_iPhone.nib; sourceTree = "<group>"; };
+		EC42B3C514650E7D004C4C9A /* BDHelpViewController.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BDHelpViewController.nib; sourceTree = "<group>"; };
+		EC42B3C614650E7D004C4C9A /* BDHelpViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BDHelpViewController_iPad.nib; sourceTree = "<group>"; };
+		EC42B3C714650E7D004C4C9A /* BDKeyPadViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BDKeyPadViewController_iPad.nib; sourceTree = "<group>"; };
+		EC42B3C814650E7D004C4C9A /* BDKeyPadViewController_iPhone.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BDKeyPadViewController_iPhone.nib; sourceTree = "<group>"; };
+		EC42B3C914650E7D004C4C9A /* BDPickerViewController_iPad.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BDPickerViewController_iPad.nib; sourceTree = "<group>"; };
+		EC42B3CA14650E7D004C4C9A /* BDPickerViewController_iPhone.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BDPickerViewController_iPhone.nib; sourceTree = "<group>"; };
 		EC42B3CB14650E7D004C4C9A /* buttonStateDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonStateDown.png; sourceTree = "<group>"; };
 		EC42B3CC14650E7D004C4C9A /* buttonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonStateUp.png; sourceTree = "<group>"; };
 		EC42B3CD14650E7D004C4C9A /* doneButtonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doneButtonStateUp.png; sourceTree = "<group>"; };
@@ -522,7 +541,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				ECB9D5D414E5D58C00C19F19 /* PBXTargetDependency */,
 			);
 			name = BDApplicationHelpers;
 			productName = BDApplicationHelpers;
@@ -570,6 +588,7 @@
 				EC65745C144B4AF9002F66FC /* applicationHelpers */,
 				EC1189351464AF6500B71798 /* BDApplicationHelpers */,
 				EC56AC55144B7E9700D0E183 /* Documentation */,
+				EC713AE814FB76EC00716D06 /* Aggregate */,
 			);
 		};
 /* End PBXProject section */
@@ -724,10 +743,15 @@
 			target = EC1189351464AF6500B71798 /* BDApplicationHelpers */;
 			targetProxy = EC11896A1464EA9C00B71798 /* PBXContainerItemProxy */;
 		};
-		ECB9D5D414E5D58C00C19F19 /* PBXTargetDependency */ = {
+		EC713AED14FB76F200716D06 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EC56AC55144B7E9700D0E183 /* Documentation */;
-			targetProxy = ECB9D5D314E5D58C00C19F19 /* PBXContainerItemProxy */;
+			targetProxy = EC713AEC14FB76F200716D06 /* PBXContainerItemProxy */;
+		};
+		EC713AEF14FB76F400716D06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC1189351464AF6500B71798 /* BDApplicationHelpers */;
+			targetProxy = EC713AEE14FB76F400716D06 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -898,6 +922,20 @@
 			};
 			name = Release;
 		};
+		EC713AEA14FB76ED00716D06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EC713AEB14FB76ED00716D06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -936,6 +974,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EC713AE914FB76ED00716D06 /* Build configuration list for PBXAggregateTarget "Aggregate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC713AEA14FB76ED00716D06 /* Debug */,
+				EC713AEB14FB76ED00716D06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
