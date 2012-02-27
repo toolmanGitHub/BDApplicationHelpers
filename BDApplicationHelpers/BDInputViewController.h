@@ -2,7 +2,7 @@
 //  BDInputViewController.h
 //  testInputView
 //
-//  Created by Tim and Jennifer Taylor on 10/28/11.
+//  Created by Tim on 10/28/11.
 //  Copyright (c) 2011 Big Diggy SW. All rights reserved.
 //
 /*
