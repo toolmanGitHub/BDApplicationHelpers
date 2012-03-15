@@ -61,6 +61,12 @@ typedef NSInteger BDNumberFormatterType;
 @interface BDKeyPadViewController : BDInputViewController <UITextFieldDelegate>{
    
 }
+
+/** The number of fractional digits.
+ 
+ */
+@property (nonatomic) NSUInteger numberDecimalPlaces;
+
 /** The Type of number that is being manipulated.  i.e. decimal, currency or percentage.
  
  */

@@ -381,7 +381,7 @@
     self.keyPadViewController.keyPadTitleLabel.text=@"Combined View KeyPad";
     self.keyPadViewController.popoverTextFieldString=self.keyPadOutputDecimalLabel.text;
     self.keyPadViewController.numberFormatType=BDNumberFormatterTypeDecimal;
-    
+    self.keyPadViewController.numberDecimalPlaces=3;
     __weak __block ViewController *weakSelf=self;
     self.keyPadViewController.outputCallbackBlock=^(NSString *stringText,NSInteger tag){
         ViewController *strongSelf=weakSelf;
@@ -415,11 +415,12 @@
     viewController=self.keyPadViewController;
     viewControllerSize=self.keyPadViewController.view.frame.size;
     self.keyPadViewController.keyPadTitleLabel.text=@"KeyPad only";
-
+    self.keyPadViewController.numberDecimalPlaces=2;
     
     switch (buttonInputViewType) {
         case 100:
             self.keyPadViewController.popoverTextFieldString=self.keyPadOutputDecimalLabel.text;
+            self.keyPadViewController.numberDecimalPlaces=3;
             break;
         case 101:
             // Currency

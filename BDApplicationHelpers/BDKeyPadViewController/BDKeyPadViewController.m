@@ -89,6 +89,7 @@ typedef NSInteger BDKeyPadButtonIdentifier;
 @synthesize swipeInterceptorView;
 
 //Public
+@synthesize numberDecimalPlaces=numberDecimalPlaces_;
 @synthesize outputCallbackBlock;
 @synthesize numberFormatType;
 @synthesize popoverTextFieldString;
@@ -394,11 +395,13 @@ typedef NSInteger BDKeyPadButtonIdentifier;
     NSNumberFormatter *theFormatter=nil;
 	NSDecimalNumber *minusOneDecimal=[NSDecimalNumber decimalNumberWithString:@"-1"];
     NSDecimalNumber *theDecimalNumber=nil;
+    if (self.numberFormatType==BDNumberFormatterTypeDecimal) {
+        theFormatter=[BDDateTimeNumberFormatter plainDecimalFormatterWithNumberOfFractionalDigits:3];
+        theDecimalNumber=(NSDecimalNumber *)[theFormatter numberFromString:self.popoverTextField.text];
+        self.popoverTextField.text=[theFormatter stringFromNumber: [theDecimalNumber decimalNumberByMultiplyingBy:minusOneDecimal]];
+        [self timerFireMethod:nil];
+    }
     
-    theFormatter=[BDDateTimeNumberFormatter plainDecimalFormatterWithNumberOfFractionalDigits:3];
-    theDecimalNumber=(NSDecimalNumber *)[theFormatter numberFromString:self.popoverTextField.text];
-    self.popoverTextField.text=[theFormatter stringFromNumber: [theDecimalNumber decimalNumberByMultiplyingBy:minusOneDecimal]];
-    [self timerFireMethod:nil];
 }
 
 /*
@@ -413,7 +416,7 @@ typedef NSInteger BDKeyPadButtonIdentifier;
 */
 - (NSString *)stringByAppendingCharacters:(NSString *)aCharacters toText:(NSString *)text characterLimit:(int)characterLimit{
 	
-	NSInteger numberOfDecimalPlaces=2;
+	NSInteger numberOfDecimalPlaces=numberDecimalPlaces_;
 	
 	// Assume currency is going to be the number formatter
 	NSNumberFormatter *numberFormatter=[BDDateTimeNumberFormatter currencyDecimalFormatterWithLocal:[NSLocale currentLocale]];
@@ -421,12 +424,10 @@ typedef NSInteger BDKeyPadButtonIdentifier;
     switch (self.numberFormatType){
         case BDNumberFormatterTypePercentage:
             numberFormatter=[BDDateTimeNumberFormatter percentageDecimalFormatterWithNumberOfFractionalDigits:2];
-            numberOfDecimalPlaces=4;
             roundingBehavior =[[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundPlain scale:(numberOfDecimalPlaces+1) raiseOnExactness:YES raiseOnOverflow:YES raiseOnUnderflow:YES raiseOnDivideByZero:NO];
             break;
         case BDNumberFormatterTypeDecimal:
-            numberFormatter=[BDDateTimeNumberFormatter plainDecimalFormatterWithNumberOfFractionalDigits:4];
-            numberOfDecimalPlaces=4;
+            numberFormatter=[BDDateTimeNumberFormatter plainDecimalFormatterWithNumberOfFractionalDigits:numberOfDecimalPlaces];
            roundingBehavior = [[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundDown scale:(numberOfDecimalPlaces+1) raiseOnExactness:YES raiseOnOverflow:YES raiseOnUnderflow:YES raiseOnDivideByZero:NO];
             
             break;
