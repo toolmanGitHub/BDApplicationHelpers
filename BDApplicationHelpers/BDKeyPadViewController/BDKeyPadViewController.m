@@ -396,7 +396,7 @@ typedef NSInteger BDKeyPadButtonIdentifier;
 	NSDecimalNumber *minusOneDecimal=[NSDecimalNumber decimalNumberWithString:@"-1"];
     NSDecimalNumber *theDecimalNumber=nil;
     if (self.numberFormatType==BDNumberFormatterTypeDecimal) {
-        theFormatter=[BDDateTimeNumberFormatter plainDecimalFormatterWithNumberOfFractionalDigits:3];
+        theFormatter=[BDDateTimeNumberFormatter plainDecimalFormatterWithNumberOfFractionalDigits:self.numberDecimalPlaces];
         theDecimalNumber=(NSDecimalNumber *)[theFormatter numberFromString:self.popoverTextField.text];
         self.popoverTextField.text=[theFormatter stringFromNumber: [theDecimalNumber decimalNumberByMultiplyingBy:minusOneDecimal]];
         [self timerFireMethod:nil];
