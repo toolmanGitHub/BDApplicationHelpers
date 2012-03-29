@@ -51,6 +51,7 @@ extern NSString *BDSupportURLStringKey;   // The Support URL for your app that w
 extern NSString *BDSupportStringKey;      // The Text used to populate the UIActionSheet's title property
 extern NSString *BDSupportEmailStringKey; // The email address for app support used to populate the Mail Composer's to: address
 extern NSString *BDURLRejectStringKey;    // The text that all of you help html files must include to prevent your App from opening up the URL in Safari.
+extern NSString *BDUserDefaultsBoolKey;    // The user defaults preference key used to set whether or not the help system has been shown.  
 
 /** A View Controller that provides a WebKit Based HTML Help System.
 

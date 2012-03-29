@@ -50,6 +50,7 @@ NSString *BDSupportURLStringKey=@"BDSupportURLStringKey";
 NSString *BDSupportStringKey=@"BDSupportStringKey";
 NSString *BDSupportEmailStringKey=@"BDSupportEmailStringKey";
 NSString *BDURLRejectStringKey=@"BDURLRejectStringKey";
+NSString *BDUserDefaultsBoolKey=@"BDUserDefaultsBoolKey";
 
 @interface BDHelpViewController () {
 		
@@ -63,7 +64,6 @@ NSString *BDURLRejectStringKey=@"BDURLRejectStringKey";
 @property (nonatomic, strong) IBOutlet UIView *secondTransparentButtonView;
 @property (nonatomic, strong) NSString *versionString;
 @property (nonatomic, strong) NSString *buildString;
-@property (nonatomic, strong) NSString *userDefaultsDictionaryBoolKey;
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicatorView;
 @property (nonatomic, strong) IBOutlet UILabel *helpControllerVersionLabel;
 @property (strong, nonatomic) IBOutlet BDImageView *customIconView;
@@ -83,9 +83,7 @@ NSString *BDURLRejectStringKey=@"BDURLRejectStringKey";
 @synthesize transparentButtonView;
 @synthesize secondTransparentButtonView;
 @synthesize versionString;
-@synthesize buildString;
-@synthesize userDefaultsDictionaryBoolKey;
-@synthesize activityIndicatorView;
+@synthesize buildString;@synthesize activityIndicatorView;
 @synthesize helpControllerVersionLabel;
 @synthesize customIconView = customIconView_;
 
@@ -231,8 +229,9 @@ NSString *BDURLRejectStringKey=@"BDURLRejectStringKey";
 
 -(IBAction)dismissInformationViewController:(id)sender{
 	
-	if (userDefaultsDictionaryBoolKey!=nil) {
-		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:userDefaultsDictionaryBoolKey];
+    NSString *userDefaultsBoolKey=[self.supportDictionary objectForKey:BDUserDefaultsBoolKey];
+	if (userDefaultsBoolKey!=nil) {
+		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:userDefaultsBoolKey];
 	}
     
     if (doneButtonPushedCallbackBlock_!=nil)

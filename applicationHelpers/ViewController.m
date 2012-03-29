@@ -125,9 +125,10 @@
 -(void)slideIntoPlaceInputViewController:(UIViewController *)viewController
 {
     __weak __block ViewController *weakSelf=self;
+    __weak __block UIViewController *weakViewController=viewController;
     [((BDInputViewController *)viewController) setDismissViewControllerCallbackBlock:^{
         ViewController *strongSelf=weakSelf;
-        [strongSelf slideOutOfPlaceInputViewController: viewController];
+        [strongSelf slideOutOfPlaceInputViewController: weakViewController];
     }];
     CGRect inputViewFrame=viewController.view.frame;
     CGFloat inputViewHeight=inputViewFrame.size.height;
@@ -322,7 +323,8 @@
     self.helpViewController.supportDictionary=[NSDictionary dictionaryWithObjectsAndKeys:@"http://bigdiggy.wordpress.com/support",BDSupportURLStringKey,
 											   @"Support for Wonderful app is provided by via email and via the support website.",BDSupportStringKey,
 											   @"yourSupportAddress@wonderfulapp.com",BDSupportEmailStringKey,
-											   @"app",BDURLRejectStringKey,nil];
+											   @"app",BDURLRejectStringKey,
+                                               @"keyShowingThatHelpViewControllerHasBeenShown",BDUserDefaultsBoolKey, nil];
     
     
       helpViewController_.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
