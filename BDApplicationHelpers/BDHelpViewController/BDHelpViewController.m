@@ -41,7 +41,7 @@
 
 
 #import "BDHelpViewController.h"
-#import "BDImageView.h"
+#import "BDIconImageView.h"
 #import "BDLowerToolBarView.h"
 
 
@@ -66,7 +66,7 @@ NSString *BDUserDefaultsBoolKey=@"BDUserDefaultsBoolKey";
 @property (nonatomic, strong) NSString *buildString;
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicatorView;
 @property (nonatomic, strong) IBOutlet UILabel *helpControllerVersionLabel;
-@property (strong, nonatomic) IBOutlet BDImageView *customIconView;
+@property (strong, nonatomic) IBOutlet BDIconImageView *customIconView;
 
 -(IBAction)dismissInformationViewController:(id)sender;
 -(IBAction)toggleVersionBuild:(UIButton *)sender;
@@ -157,7 +157,7 @@ NSString *BDUserDefaultsBoolKey=@"BDUserDefaultsBoolKey";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [BDLowerToolBarView class];
-    [BDImageView class];
+    [BDIconImageView class];
     
 	self.versionString=[NSString stringWithFormat:@"v%@",[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
 	self.buildString=[NSString stringWithFormat:@"Build: %@",[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
