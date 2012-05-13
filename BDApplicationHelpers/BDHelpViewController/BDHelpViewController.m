@@ -45,7 +45,7 @@
 #import "BDLowerToolBarView.h"
 
 
-static NSString *BDHelpViewControllerVersion=@"v1.8";
+static NSString *BDHelpViewControllerVersion=@"v1.9";
 NSString *BDSupportURLStringKey=@"BDSupportURLStringKey";
 NSString *BDSupportStringKey=@"BDSupportStringKey";
 NSString *BDSupportEmailStringKey=@"BDSupportEmailStringKey";
