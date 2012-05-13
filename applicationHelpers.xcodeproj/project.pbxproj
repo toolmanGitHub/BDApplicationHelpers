@@ -40,7 +40,7 @@
 		EC1189441464AFDC00B71798 /* BDInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE0D27A145CB0C400976621 /* BDInputViewController.m */; };
 		EC1189451464AFDC00B71798 /* BDKeyPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE0D280145CB0C400976621 /* BDKeyPadViewController.m */; };
 		EC1189461464AFDC00B71798 /* BDLowerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7996FE144F628900C6344E /* BDLowerToolBarView.m */; };
-		EC1189471464AFDC00B71798 /* BDImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6574B2144B4C6C002F66FC /* BDImageView.m */; };
+		EC1189471464AFDC00B71798 /* BDIconImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6574B2144B4C6C002F66FC /* BDIconImageView.m */; };
 		EC1189481464AFDC00B71798 /* BDHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6574B5144B4C6C002F66FC /* BDHelpViewController.m */; };
 		EC1189491464B02600B71798 /* blockTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D287145CB0C400976621 /* blockTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC11894A1464B02600B71798 /* BDApplicationHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D29D145CB14A00976621 /* BDApplicationHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,7 +49,7 @@
 		EC11894D1464B02600B71798 /* BDInputViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D279145CB0C400976621 /* BDInputViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC11894E1464B02600B71798 /* BDKeyPadViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE0D27F145CB0C400976621 /* BDKeyPadViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC11894F1464B02600B71798 /* BDLowerToolBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC7996FD144F628900C6344E /* BDLowerToolBarView.h */; };
-		EC1189501464B02600B71798 /* BDImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6574B1144B4C6C002F66FC /* BDImageView.h */; };
+		EC1189501464B02600B71798 /* BDIconImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6574B1144B4C6C002F66FC /* BDIconImageView.h */; };
 		EC1189511464B02600B71798 /* BDHelpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6574B4144B4C6C002F66FC /* BDHelpViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC1189521464B07A00B71798 /* BDPickerViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6A4CBE1461901A0052347C /* BDPickerViewController_iPad.xib */; };
 		EC1189531464B07A00B71798 /* BDPickerViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6A4CBF1461901A0052347C /* BDPickerViewController_iPhone.xib */; };
@@ -79,6 +79,7 @@
 		EC42B3D914650E7D004C4C9A /* buttonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42B3CC14650E7D004C4C9A /* buttonStateUp.png */; };
 		EC42B3DA14650E7D004C4C9A /* doneButtonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42B3CD14650E7D004C4C9A /* doneButtonStateUp.png */; };
 		EC42B3DB14650E7D004C4C9A /* focusIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42B3CE14650E7D004C4C9A /* focusIndicator.png */; };
+		EC455A73155F736C0085A628 /* BDIconImageView.m in Resources */ = {isa = PBXBuildFile; fileRef = EC6574B2144B4C6C002F66FC /* BDIconImageView.m */; };
 		EC657462144B4AF9002F66FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657461144B4AF9002F66FC /* UIKit.framework */; };
 		EC657464144B4AF9002F66FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657463144B4AF9002F66FC /* Foundation.framework */; };
 		EC657466144B4AF9002F66FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657465144B4AF9002F66FC /* CoreGraphics.framework */; };
@@ -122,7 +123,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EC11896A1464EA9C00B71798 /* PBXContainerItemProxy */ = {
+		EC455A74155F73DE0085A628 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC657454144B4AF9002F66FC /* Project object */;
 			proxyType = 1;
@@ -182,8 +183,8 @@
 		EC6574A9144B4C05002F66FC /* BDApplicationHelpers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BDApplicationHelpers-Info.plist"; sourceTree = "<group>"; };
 		EC6574AB144B4C05002F66FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC6574AD144B4C05002F66FC /* BDApplicationHelpers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BDApplicationHelpers-Prefix.pch"; sourceTree = "<group>"; };
-		EC6574B1144B4C6C002F66FC /* BDImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDImageView.h; sourceTree = "<group>"; };
-		EC6574B2144B4C6C002F66FC /* BDImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDImageView.m; sourceTree = "<group>"; };
+		EC6574B1144B4C6C002F66FC /* BDIconImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDIconImageView.h; sourceTree = "<group>"; };
+		EC6574B2144B4C6C002F66FC /* BDIconImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDIconImageView.m; sourceTree = "<group>"; };
 		EC6574B3144B4C6C002F66FC /* BDHelpViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDHelpViewController_iPad.xib; sourceTree = "<group>"; };
 		EC6574B4144B4C6C002F66FC /* BDHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHelpViewController.h; sourceTree = "<group>"; };
 		EC6574B5144B4C6C002F66FC /* BDHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHelpViewController.m; sourceTree = "<group>"; };
@@ -422,8 +423,8 @@
 			children = (
 				EC7996FD144F628900C6344E /* BDLowerToolBarView.h */,
 				EC7996FE144F628900C6344E /* BDLowerToolBarView.m */,
-				EC6574B1144B4C6C002F66FC /* BDImageView.h */,
-				EC6574B2144B4C6C002F66FC /* BDImageView.m */,
+				EC6574B1144B4C6C002F66FC /* BDIconImageView.h */,
+				EC6574B2144B4C6C002F66FC /* BDIconImageView.m */,
 				EC6574B3144B4C6C002F66FC /* BDHelpViewController_iPad.xib */,
 				EC6574B4144B4C6C002F66FC /* BDHelpViewController.h */,
 				EC6574B5144B4C6C002F66FC /* BDHelpViewController.m */,
@@ -520,7 +521,7 @@
 				EC11894E1464B02600B71798 /* BDKeyPadViewController.h in Headers */,
 				EC1189511464B02600B71798 /* BDHelpViewController.h in Headers */,
 				EC11894F1464B02600B71798 /* BDLowerToolBarView.h in Headers */,
-				EC1189501464B02600B71798 /* BDImageView.h in Headers */,
+				EC1189501464B02600B71798 /* BDIconImageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,7 +559,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				EC11896B1464EA9C00B71798 /* PBXTargetDependency */,
+				EC455A75155F73DE0085A628 /* PBXTargetDependency */,
 			);
 			name = applicationHelpers;
 			productName = applicationHelpers;
@@ -603,6 +604,7 @@
 				EC1189541464B07A00B71798 /* backSpace.png in Resources */,
 				EC1189551464B07A00B71798 /* backSpacePressed.png in Resources */,
 				EC1189561464B07A00B71798 /* BDKeyPadViewController_iPad.xib in Resources */,
+				EC455A73155F736C0085A628 /* BDIconImageView.m in Resources */,
 				EC1189571464B07A00B71798 /* BDKeyPadViewController_iPhone.xib in Resources */,
 				EC1189581464B07A00B71798 /* buttonStateDown.png in Resources */,
 				EC1189591464B07A00B71798 /* buttonStateUp.png in Resources */,
@@ -717,7 +719,7 @@
 				EC1189441464AFDC00B71798 /* BDInputViewController.m in Sources */,
 				EC1189451464AFDC00B71798 /* BDKeyPadViewController.m in Sources */,
 				EC1189461464AFDC00B71798 /* BDLowerToolBarView.m in Sources */,
-				EC1189471464AFDC00B71798 /* BDImageView.m in Sources */,
+				EC1189471464AFDC00B71798 /* BDIconImageView.m in Sources */,
 				EC1189481464AFDC00B71798 /* BDHelpViewController.m in Sources */,
 				EC42B3BE14650AFB004C4C9A /* BDTabBarController.m in Sources */,
 				ECB9D5CD14E5C7D300C19F19 /* BDPickerViewControllerViewForRow.m in Sources */,
@@ -738,10 +740,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EC11896B1464EA9C00B71798 /* PBXTargetDependency */ = {
+		EC455A75155F73DE0085A628 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EC1189351464AF6500B71798 /* BDApplicationHelpers */;
-			targetProxy = EC11896A1464EA9C00B71798 /* PBXContainerItemProxy */;
+			targetProxy = EC455A74155F73DE0085A628 /* PBXContainerItemProxy */;
 		};
 		EC713AED14FB76F200716D06 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -982,6 +984,7 @@
 				EC713AEB14FB76ED00716D06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
