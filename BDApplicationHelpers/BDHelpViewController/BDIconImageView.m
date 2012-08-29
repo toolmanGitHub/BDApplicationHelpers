@@ -120,8 +120,7 @@
 {
     if (image_!=nil)
         return image_;
-    NSString *imagePath = [[NSBundle mainBundle] pathForResource:self.imageFileName ofType:nil];
-    image_ = [UIImage imageWithContentsOfFile:imagePath];
+    image_ = [UIImage imageNamed:self.imageFileName];
 	return image_;
 }
 
@@ -129,7 +128,7 @@
     if (imageFileName_!=nil) {
         return imageFileName_;
     }
-    self.imageFileName=@"Icon.png";
+    self.imageFileName=@"Icon";
     return imageFileName_;
 }
 

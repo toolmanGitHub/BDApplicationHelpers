@@ -208,9 +208,9 @@ NSString *BDUserDefaultsBoolKey=@"BDUserDefaultsBoolKey";
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-		return UIInterfaceOrientationIsPortrait(interfaceOrientation);
-	}
+//	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+//		return UIInterfaceOrientationIsPortrait(interfaceOrientation);
+//	}
 	return YES;
 	
 }
