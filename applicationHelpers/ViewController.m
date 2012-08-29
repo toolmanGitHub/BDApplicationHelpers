@@ -646,7 +646,7 @@
                 
         }
         
-        return nil;
+        return (UIView *)nil;
         
     };
     
