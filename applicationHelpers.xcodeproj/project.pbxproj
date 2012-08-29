@@ -32,41 +32,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		EC5FAC8915EECB39003768F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657463144B4AF9002F66FC /* Foundation.framework */; };
-		EC5FACBF15EECB88003768F5 /* BDApplicationHelpers-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = EC5FAC9615EECB88003768F5 /* BDApplicationHelpers-Prefix.pch */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC5FACC015EECB88003768F5 /* BDApplicationHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5FAC9715EECB88003768F5 /* BDApplicationHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC5FACC115EECB88003768F5 /* BDDateTimeNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5FAC9915EECB88003768F5 /* BDDateTimeNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC5FACC215EECB88003768F5 /* BDDateTimeNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5FAC9A15EECB88003768F5 /* BDDateTimeNumberFormatter.m */; };
-		EC5FACC315EECB88003768F5 /* BDHelpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5FAC9C15EECB88003768F5 /* BDHelpViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC5FACC415EECB88003768F5 /* BDHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5FAC9D15EECB88003768F5 /* BDHelpViewController.m */; };
-		EC5FACC515EECB88003768F5 /* BDHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC5FAC9E15EECB88003768F5 /* BDHelpViewController.xib */; };
-		EC5FACC615EECB88003768F5 /* BDHelpViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC5FAC9F15EECB88003768F5 /* BDHelpViewController_iPad.xib */; };
-		EC5FACC715EECB88003768F5 /* BDIconImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5FACA015EECB88003768F5 /* BDIconImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC5FACC815EECB88003768F5 /* BDIconImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5FACA115EECB88003768F5 /* BDIconImageView.m */; };
-		EC5FACC915EECB88003768F5 /* BDLowerToolBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5FACA215EECB88003768F5 /* BDLowerToolBarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC5FACCA15EECB88003768F5 /* BDLowerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5FACA315EECB88003768F5 /* BDLowerToolBarView.m */; };
-		EC5FACCB15EECB88003768F5 /* BDInputViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5FACA415EECB88003768F5 /* BDInputViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC5FACCC15EECB88003768F5 /* BDInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5FACA515EECB88003768F5 /* BDInputViewController.m */; };
-		EC5FACCD15EECB88003768F5 /* BDInputViewControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5FACA615EECB88003768F5 /* BDInputViewControllerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC5FACCE15EECB88003768F5 /* BDKeyPadViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5FACA815EECB88003768F5 /* BDKeyPadViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC5FACCF15EECB88003768F5 /* BDKeyPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5FACA915EECB88003768F5 /* BDKeyPadViewController.m */; };
-		EC5FACD015EECB88003768F5 /* BDKeyPadViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC5FACAA15EECB88003768F5 /* BDKeyPadViewController_iPad.xib */; };
-		EC5FACD115EECB88003768F5 /* BDKeyPadViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC5FACAB15EECB88003768F5 /* BDKeyPadViewController_iPhone.xib */; };
-		EC5FACD215EECB88003768F5 /* backSpace.png in Resources */ = {isa = PBXBuildFile; fileRef = EC5FACAD15EECB88003768F5 /* backSpace.png */; };
-		EC5FACD315EECB88003768F5 /* backSpacePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EC5FACAE15EECB88003768F5 /* backSpacePressed.png */; };
-		EC5FACD415EECB88003768F5 /* buttonStateDown.png in Resources */ = {isa = PBXBuildFile; fileRef = EC5FACAF15EECB88003768F5 /* buttonStateDown.png */; };
-		EC5FACD515EECB88003768F5 /* buttonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = EC5FACB015EECB88003768F5 /* buttonStateUp.png */; };
-		EC5FACD615EECB88003768F5 /* doneButtonStateUp.png in Resources */ = {isa = PBXBuildFile; fileRef = EC5FACB115EECB88003768F5 /* doneButtonStateUp.png */; };
-		EC5FACD715EECB88003768F5 /* focusIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = EC5FACB215EECB88003768F5 /* focusIndicator.png */; };
-		EC5FACD815EECB88003768F5 /* BDPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5FACB415EECB88003768F5 /* BDPickerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC5FACD915EECB88003768F5 /* BDPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5FACB515EECB88003768F5 /* BDPickerViewController.m */; };
-		EC5FACDA15EECB88003768F5 /* BDPickerViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC5FACB615EECB88003768F5 /* BDPickerViewController_iPad.xib */; };
-		EC5FACDB15EECB88003768F5 /* BDPickerViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC5FACB715EECB88003768F5 /* BDPickerViewController_iPhone.xib */; };
-		EC5FACDC15EECB88003768F5 /* BDPickerViewControllerViewForRow.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5FACB815EECB88003768F5 /* BDPickerViewControllerViewForRow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC5FACDD15EECB88003768F5 /* BDPickerViewControllerViewForRow.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5FACB915EECB88003768F5 /* BDPickerViewControllerViewForRow.m */; };
-		EC5FACDE15EECB88003768F5 /* BDTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5FACBB15EECB88003768F5 /* BDTabBarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC5FACDF15EECB88003768F5 /* BDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5FACBC15EECB88003768F5 /* BDTabBarController.m */; };
-		EC5FACE015EECB88003768F5 /* blockTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5FACBD15EECB88003768F5 /* blockTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC5FAD1115EECF68003768F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657463144B4AF9002F66FC /* Foundation.framework */; };
+		EC5FAD1715EECF69003768F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC5FAD1515EECF69003768F5 /* InfoPlist.strings */; };
 		EC657462144B4AF9002F66FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657461144B4AF9002F66FC /* UIKit.framework */; };
 		EC657464144B4AF9002F66FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657463144B4AF9002F66FC /* Foundation.framework */; };
 		EC657466144B4AF9002F66FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657465144B4AF9002F66FC /* CoreGraphics.framework */; };
@@ -118,44 +85,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EC5FAC8815EECB39003768F5 /* BDApplicationHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = BDApplicationHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC5FAC8C15EECB3A003768F5 /* BDApplicationHelpers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BDApplicationHelpers-Info.plist"; sourceTree = "<group>"; };
-		EC5FAC9015EECB3A003768F5 /* BDApplicationHelpers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BDApplicationHelpers-Prefix.pch"; sourceTree = "<group>"; };
-		EC5FAC9515EECB88003768F5 /* BDApplicationHelpers-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BDApplicationHelpers-Info.plist"; sourceTree = "<group>"; };
-		EC5FAC9615EECB88003768F5 /* BDApplicationHelpers-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BDApplicationHelpers-Prefix.pch"; sourceTree = "<group>"; };
-		EC5FAC9715EECB88003768F5 /* BDApplicationHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDApplicationHelpers.h; sourceTree = "<group>"; };
-		EC5FAC9915EECB88003768F5 /* BDDateTimeNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDDateTimeNumberFormatter.h; sourceTree = "<group>"; };
-		EC5FAC9A15EECB88003768F5 /* BDDateTimeNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDDateTimeNumberFormatter.m; sourceTree = "<group>"; };
-		EC5FAC9C15EECB88003768F5 /* BDHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHelpViewController.h; sourceTree = "<group>"; };
-		EC5FAC9D15EECB88003768F5 /* BDHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHelpViewController.m; sourceTree = "<group>"; };
-		EC5FAC9E15EECB88003768F5 /* BDHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDHelpViewController.xib; sourceTree = "<group>"; };
-		EC5FAC9F15EECB88003768F5 /* BDHelpViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDHelpViewController_iPad.xib; sourceTree = "<group>"; };
-		EC5FACA015EECB88003768F5 /* BDIconImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDIconImageView.h; sourceTree = "<group>"; };
-		EC5FACA115EECB88003768F5 /* BDIconImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDIconImageView.m; sourceTree = "<group>"; };
-		EC5FACA215EECB88003768F5 /* BDLowerToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDLowerToolBarView.h; sourceTree = "<group>"; };
-		EC5FACA315EECB88003768F5 /* BDLowerToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDLowerToolBarView.m; sourceTree = "<group>"; };
-		EC5FACA415EECB88003768F5 /* BDInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDInputViewController.h; sourceTree = "<group>"; };
-		EC5FACA515EECB88003768F5 /* BDInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDInputViewController.m; sourceTree = "<group>"; };
-		EC5FACA615EECB88003768F5 /* BDInputViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDInputViewControllerProtocol.h; sourceTree = "<group>"; };
-		EC5FACA815EECB88003768F5 /* BDKeyPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDKeyPadViewController.h; sourceTree = "<group>"; };
-		EC5FACA915EECB88003768F5 /* BDKeyPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDKeyPadViewController.m; sourceTree = "<group>"; };
-		EC5FACAA15EECB88003768F5 /* BDKeyPadViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDKeyPadViewController_iPad.xib; sourceTree = "<group>"; };
-		EC5FACAB15EECB88003768F5 /* BDKeyPadViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDKeyPadViewController_iPhone.xib; sourceTree = "<group>"; };
-		EC5FACAD15EECB88003768F5 /* backSpace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backSpace.png; sourceTree = "<group>"; };
-		EC5FACAE15EECB88003768F5 /* backSpacePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backSpacePressed.png; sourceTree = "<group>"; };
-		EC5FACAF15EECB88003768F5 /* buttonStateDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonStateDown.png; sourceTree = "<group>"; };
-		EC5FACB015EECB88003768F5 /* buttonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonStateUp.png; sourceTree = "<group>"; };
-		EC5FACB115EECB88003768F5 /* doneButtonStateUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doneButtonStateUp.png; sourceTree = "<group>"; };
-		EC5FACB215EECB88003768F5 /* focusIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = focusIndicator.png; sourceTree = "<group>"; };
-		EC5FACB415EECB88003768F5 /* BDPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPickerViewController.h; sourceTree = "<group>"; };
-		EC5FACB515EECB88003768F5 /* BDPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDPickerViewController.m; sourceTree = "<group>"; };
-		EC5FACB615EECB88003768F5 /* BDPickerViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDPickerViewController_iPad.xib; sourceTree = "<group>"; };
-		EC5FACB715EECB88003768F5 /* BDPickerViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDPickerViewController_iPhone.xib; sourceTree = "<group>"; };
-		EC5FACB815EECB88003768F5 /* BDPickerViewControllerViewForRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPickerViewControllerViewForRow.h; sourceTree = "<group>"; };
-		EC5FACB915EECB88003768F5 /* BDPickerViewControllerViewForRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDPickerViewControllerViewForRow.m; sourceTree = "<group>"; };
-		EC5FACBB15EECB88003768F5 /* BDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDTabBarController.h; sourceTree = "<group>"; };
-		EC5FACBC15EECB88003768F5 /* BDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDTabBarController.m; sourceTree = "<group>"; };
-		EC5FACBD15EECB88003768F5 /* blockTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blockTypes.h; sourceTree = "<group>"; };
+		EC5FAD1015EECF68003768F5 /* BDApplicationHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = BDApplicationHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC5FAD1415EECF69003768F5 /* BDApplicationHelpers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BDApplicationHelpers-Info.plist"; sourceTree = "<group>"; };
+		EC5FAD1615EECF69003768F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC5FAD1815EECF69003768F5 /* BDApplicationHelpers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BDApplicationHelpers-Prefix.pch"; sourceTree = "<group>"; };
 		EC65745D144B4AF9002F66FC /* applicationHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = applicationHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC657461144B4AF9002F66FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EC657463144B4AF9002F66FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -203,11 +136,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EC5FAC8215EECB39003768F5 /* Frameworks */ = {
+		EC5FAD0A15EECF68003768F5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC5FAC8915EECB39003768F5 /* Foundation.framework in Frameworks */,
+				EC5FAD1115EECF68003768F5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,112 +158,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EC5FAC8A15EECB3A003768F5 /* BDApplicationHelpers */ = {
+		EC5FAD1215EECF68003768F5 /* BDApplicationHelpers */ = {
 			isa = PBXGroup;
 			children = (
-				EC5FAC9415EECB88003768F5 /* BDApplicationHelpers */,
-				EC5FAC8B15EECB3A003768F5 /* Supporting Files */,
+				EC5FAD1315EECF69003768F5 /* Supporting Files */,
 			);
 			path = BDApplicationHelpers;
 			sourceTree = "<group>";
 		};
-		EC5FAC8B15EECB3A003768F5 /* Supporting Files */ = {
+		EC5FAD1315EECF69003768F5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EC5FAC8C15EECB3A003768F5 /* BDApplicationHelpers-Info.plist */,
-				EC5FAC9015EECB3A003768F5 /* BDApplicationHelpers-Prefix.pch */,
+				EC5FAD1415EECF69003768F5 /* BDApplicationHelpers-Info.plist */,
+				EC5FAD1515EECF69003768F5 /* InfoPlist.strings */,
+				EC5FAD1815EECF69003768F5 /* BDApplicationHelpers-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		EC5FAC9415EECB88003768F5 /* BDApplicationHelpers */ = {
-			isa = PBXGroup;
-			children = (
-				EC5FAC9515EECB88003768F5 /* BDApplicationHelpers-Info.plist */,
-				EC5FAC9615EECB88003768F5 /* BDApplicationHelpers-Prefix.pch */,
-				EC5FAC9715EECB88003768F5 /* BDApplicationHelpers.h */,
-				EC5FAC9815EECB88003768F5 /* BDDateTimeNumberFormatter */,
-				EC5FAC9B15EECB88003768F5 /* BDHelpViewController */,
-				EC5FACA415EECB88003768F5 /* BDInputViewController.h */,
-				EC5FACA515EECB88003768F5 /* BDInputViewController.m */,
-				EC5FACA615EECB88003768F5 /* BDInputViewControllerProtocol.h */,
-				EC5FACA715EECB88003768F5 /* BDKeyPadViewController */,
-				EC5FACB315EECB88003768F5 /* BDPickerViewController */,
-				EC5FACBA15EECB88003768F5 /* BDTabBarController */,
-				EC5FACBD15EECB88003768F5 /* blockTypes.h */,
-			);
-			name = BDApplicationHelpers;
-			sourceTree = "<group>";
-		};
-		EC5FAC9815EECB88003768F5 /* BDDateTimeNumberFormatter */ = {
-			isa = PBXGroup;
-			children = (
-				EC5FAC9915EECB88003768F5 /* BDDateTimeNumberFormatter.h */,
-				EC5FAC9A15EECB88003768F5 /* BDDateTimeNumberFormatter.m */,
-			);
-			path = BDDateTimeNumberFormatter;
-			sourceTree = "<group>";
-		};
-		EC5FAC9B15EECB88003768F5 /* BDHelpViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EC5FAC9C15EECB88003768F5 /* BDHelpViewController.h */,
-				EC5FAC9D15EECB88003768F5 /* BDHelpViewController.m */,
-				EC5FAC9E15EECB88003768F5 /* BDHelpViewController.xib */,
-				EC5FAC9F15EECB88003768F5 /* BDHelpViewController_iPad.xib */,
-				EC5FACA015EECB88003768F5 /* BDIconImageView.h */,
-				EC5FACA115EECB88003768F5 /* BDIconImageView.m */,
-				EC5FACA215EECB88003768F5 /* BDLowerToolBarView.h */,
-				EC5FACA315EECB88003768F5 /* BDLowerToolBarView.m */,
-			);
-			path = BDHelpViewController;
-			sourceTree = "<group>";
-		};
-		EC5FACA715EECB88003768F5 /* BDKeyPadViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EC5FACA815EECB88003768F5 /* BDKeyPadViewController.h */,
-				EC5FACA915EECB88003768F5 /* BDKeyPadViewController.m */,
-				EC5FACAA15EECB88003768F5 /* BDKeyPadViewController_iPad.xib */,
-				EC5FACAB15EECB88003768F5 /* BDKeyPadViewController_iPhone.xib */,
-				EC5FACAC15EECB88003768F5 /* Resources */,
-			);
-			path = BDKeyPadViewController;
-			sourceTree = "<group>";
-		};
-		EC5FACAC15EECB88003768F5 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				EC5FACAD15EECB88003768F5 /* backSpace.png */,
-				EC5FACAE15EECB88003768F5 /* backSpacePressed.png */,
-				EC5FACAF15EECB88003768F5 /* buttonStateDown.png */,
-				EC5FACB015EECB88003768F5 /* buttonStateUp.png */,
-				EC5FACB115EECB88003768F5 /* doneButtonStateUp.png */,
-				EC5FACB215EECB88003768F5 /* focusIndicator.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		EC5FACB315EECB88003768F5 /* BDPickerViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EC5FACB415EECB88003768F5 /* BDPickerViewController.h */,
-				EC5FACB515EECB88003768F5 /* BDPickerViewController.m */,
-				EC5FACB615EECB88003768F5 /* BDPickerViewController_iPad.xib */,
-				EC5FACB715EECB88003768F5 /* BDPickerViewController_iPhone.xib */,
-				EC5FACB815EECB88003768F5 /* BDPickerViewControllerViewForRow.h */,
-				EC5FACB915EECB88003768F5 /* BDPickerViewControllerViewForRow.m */,
-			);
-			path = BDPickerViewController;
-			sourceTree = "<group>";
-		};
-		EC5FACBA15EECB88003768F5 /* BDTabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				EC5FACBB15EECB88003768F5 /* BDTabBarController.h */,
-				EC5FACBC15EECB88003768F5 /* BDTabBarController.m */,
-			);
-			path = BDTabBarController;
 			sourceTree = "<group>";
 		};
 		EC657452144B4AF9002F66FC = {
@@ -338,7 +181,7 @@
 			children = (
 				EC9913471453392E00F55000 /* README.mdown */,
 				EC657467144B4AF9002F66FC /* applicationHelpers */,
-				EC5FAC8A15EECB3A003768F5 /* BDApplicationHelpers */,
+				EC5FAD1215EECF68003768F5 /* BDApplicationHelpers */,
 				EC657460144B4AF9002F66FC /* Frameworks */,
 				EC65745E144B4AF9002F66FC /* Products */,
 			);
@@ -348,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				EC65745D144B4AF9002F66FC /* applicationHelpers.app */,
-				EC5FAC8815EECB39003768F5 /* BDApplicationHelpers.framework */,
+				EC5FAD1015EECF68003768F5 /* BDApplicationHelpers.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -428,40 +271,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		EC5FAC8315EECB39003768F5 /* Headers */ = {
+		EC5FAD0B15EECF68003768F5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC5FACBF15EECB88003768F5 /* BDApplicationHelpers-Prefix.pch in Headers */,
-				EC5FACC015EECB88003768F5 /* BDApplicationHelpers.h in Headers */,
-				EC5FACC115EECB88003768F5 /* BDDateTimeNumberFormatter.h in Headers */,
-				EC5FACC315EECB88003768F5 /* BDHelpViewController.h in Headers */,
-				EC5FACC715EECB88003768F5 /* BDIconImageView.h in Headers */,
-				EC5FACC915EECB88003768F5 /* BDLowerToolBarView.h in Headers */,
-				EC5FACCB15EECB88003768F5 /* BDInputViewController.h in Headers */,
-				EC5FACCD15EECB88003768F5 /* BDInputViewControllerProtocol.h in Headers */,
-				EC5FACCE15EECB88003768F5 /* BDKeyPadViewController.h in Headers */,
-				EC5FACD815EECB88003768F5 /* BDPickerViewController.h in Headers */,
-				EC5FACDC15EECB88003768F5 /* BDPickerViewControllerViewForRow.h in Headers */,
-				EC5FACDE15EECB88003768F5 /* BDTabBarController.h in Headers */,
-				EC5FACE015EECB88003768F5 /* blockTypes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		EC5FAC8715EECB39003768F5 /* BDApplicationHelpers */ = {
+		EC5FAD0F15EECF68003768F5 /* BDApplicationHelpers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC5FAC9115EECB3A003768F5 /* Build configuration list for PBXNativeTarget "BDApplicationHelpers" */;
+			buildConfigurationList = EC5FAD1915EECF69003768F5 /* Build configuration list for PBXNativeTarget "BDApplicationHelpers" */;
 			buildPhases = (
-				EC5FAC8015EECB39003768F5 /* ShellScript */,
-				EC5FAC8115EECB39003768F5 /* Sources */,
-				EC5FAC8215EECB39003768F5 /* Frameworks */,
-				EC5FAC8315EECB39003768F5 /* Headers */,
-				EC5FAC8415EECB39003768F5 /* Resources */,
-				EC5FAC8515EECB39003768F5 /* ShellScript */,
-				EC5FAC8615EECB39003768F5 /* ShellScript */,
+				EC5FAD0815EECF68003768F5 /* ShellScript */,
+				EC5FAD0915EECF68003768F5 /* Sources */,
+				EC5FAD0A15EECF68003768F5 /* Frameworks */,
+				EC5FAD0B15EECF68003768F5 /* Headers */,
+				EC5FAD0C15EECF68003768F5 /* Resources */,
+				EC5FAD0D15EECF68003768F5 /* ShellScript */,
+				EC5FAD0E15EECF68003768F5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -469,7 +299,7 @@
 			);
 			name = BDApplicationHelpers;
 			productName = BDApplicationHelpers;
-			productReference = EC5FAC8815EECB39003768F5 /* BDApplicationHelpers.framework */;
+			productReference = EC5FAD1015EECF68003768F5 /* BDApplicationHelpers.framework */;
 			productType = "com.apple.product-type.framework.static";
 		};
 		EC65745C144B4AF9002F66FC /* applicationHelpers */ = {
@@ -512,28 +342,17 @@
 				EC65745C144B4AF9002F66FC /* applicationHelpers */,
 				EC56AC55144B7E9700D0E183 /* Documentation */,
 				EC713AE814FB76EC00716D06 /* Aggregate */,
-				EC5FAC8715EECB39003768F5 /* BDApplicationHelpers */,
+				EC5FAD0F15EECF68003768F5 /* BDApplicationHelpers */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EC5FAC8415EECB39003768F5 /* Resources */ = {
+		EC5FAD0C15EECF68003768F5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC5FACC515EECB88003768F5 /* BDHelpViewController.xib in Resources */,
-				EC5FACC615EECB88003768F5 /* BDHelpViewController_iPad.xib in Resources */,
-				EC5FACD015EECB88003768F5 /* BDKeyPadViewController_iPad.xib in Resources */,
-				EC5FACD115EECB88003768F5 /* BDKeyPadViewController_iPhone.xib in Resources */,
-				EC5FACD215EECB88003768F5 /* backSpace.png in Resources */,
-				EC5FACD315EECB88003768F5 /* backSpacePressed.png in Resources */,
-				EC5FACD415EECB88003768F5 /* buttonStateDown.png in Resources */,
-				EC5FACD515EECB88003768F5 /* buttonStateUp.png in Resources */,
-				EC5FACD615EECB88003768F5 /* doneButtonStateUp.png in Resources */,
-				EC5FACD715EECB88003768F5 /* focusIndicator.png in Resources */,
-				EC5FACDA15EECB88003768F5 /* BDPickerViewController_iPad.xib in Resources */,
-				EC5FACDB15EECB88003768F5 /* BDPickerViewController_iPhone.xib in Resources */,
+				EC5FAD1715EECF69003768F5 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,7 +409,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"BDApplicationHelpers\" \\\n--project-company \"Big Diggy SW\" \\\n--company-id com.bigdiggy \\\n--output ~/help \\\n--logformat xcode \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--exit-threshold 2 \\\n--ignore .m \\\n--ignore AppDelegate.h \\\n--ignore BDImageView.h \\\n--ignore BDLowerToolBarView.h \\\n--ignore UnitTest \\\n--no-repeat-first-par \\\n\"${PROJECT_DIR}/BDApplicationHelpers\"";
 		};
-		EC5FAC8015EECB39003768F5 /* ShellScript */ = {
+		EC5FAD0815EECF68003768F5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -603,7 +422,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n  ([[ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]] || \\\n    ([[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n     [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n     [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n    )\n  )\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n\nif [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nfi\n";
 		};
-		EC5FAC8515EECB39003768F5 /* ShellScript */ = {
+		EC5FAD0D15EECF68003768F5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -616,7 +435,7 @@
 			shellPath = /bin/sh;
 			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
 		};
-		EC5FAC8615EECB39003768F5 /* ShellScript */ = {
+		EC5FAD0E15EECF68003768F5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -632,19 +451,10 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EC5FAC8115EECB39003768F5 /* Sources */ = {
+		EC5FAD0915EECF68003768F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC5FACC215EECB88003768F5 /* BDDateTimeNumberFormatter.m in Sources */,
-				EC5FACC415EECB88003768F5 /* BDHelpViewController.m in Sources */,
-				EC5FACC815EECB88003768F5 /* BDIconImageView.m in Sources */,
-				EC5FACCA15EECB88003768F5 /* BDLowerToolBarView.m in Sources */,
-				EC5FACCC15EECB88003768F5 /* BDInputViewController.m in Sources */,
-				EC5FACCF15EECB88003768F5 /* BDKeyPadViewController.m in Sources */,
-				EC5FACD915EECB88003768F5 /* BDPickerViewController.m in Sources */,
-				EC5FACDD15EECB88003768F5 /* BDPickerViewControllerViewForRow.m in Sources */,
-				EC5FACDF15EECB88003768F5 /* BDTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +480,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EC5FAD1515EECF69003768F5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC5FAD1615EECF69003768F5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		EC65746A144B4AF9002F66FC /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -711,7 +529,7 @@
 			};
 			name = Release;
 		};
-		EC5FAC9215EECB3A003768F5 /* Debug */ = {
+		EC5FAD1A15EECF69003768F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = (
@@ -734,7 +552,7 @@
 			};
 			name = Debug;
 		};
-		EC5FAC9315EECB3A003768F5 /* Release */ = {
+		EC5FAD1B15EECF69003768F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = (
@@ -864,11 +682,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC5FAC9115EECB3A003768F5 /* Build configuration list for PBXNativeTarget "BDApplicationHelpers" */ = {
+		EC5FAD1915EECF69003768F5 /* Build configuration list for PBXNativeTarget "BDApplicationHelpers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EC5FAC9215EECB3A003768F5 /* Debug */,
-				EC5FAC9315EECB3A003768F5 /* Release */,
+				EC5FAD1A15EECF69003768F5 /* Debug */,
+				EC5FAD1B15EECF69003768F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
