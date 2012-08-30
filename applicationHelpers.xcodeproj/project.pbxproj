@@ -121,6 +121,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EC5FAE5D15EED434003768F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC657454144B4AF9002F66FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC5FADEC15EED277003768F5;
+			remoteInfo = BDApplicationHelpers;
+		};
 		EC713AEC14FB76F200716D06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC657454144B4AF9002F66FC /* Project object */;
@@ -528,6 +535,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				EC5FAE5E15EED434003768F5 /* PBXTargetDependency */,
 			);
 			name = applicationHelpers;
 			productName = applicationHelpers;
@@ -720,6 +728,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EC5FAE5E15EED434003768F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC5FADEC15EED277003768F5 /* BDApplicationHelpers */;
+			targetProxy = EC5FAE5D15EED434003768F5 /* PBXContainerItemProxy */;
+		};
 		EC713AED14FB76F200716D06 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EC56AC55144B7E9700D0E183 /* Documentation */;
@@ -875,10 +888,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/applicationHelpers-bzlgxfckcftymiecgskefskxlpkx/Build/Products/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/applicationHelpers-bzlgxfckcftymiecgskefskxlpkx/Build/Products/Debug-iphoneos/BDApplicationHelpers.embeddedframework\"",
 					"\"$(SRCROOT)/applicationHelpers/BDApplicationHelpers.embeddedframework\"",
-					"\"$(SRCROOT)/BDApplicationHelpers.embeddedframework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "applicationHelpers/applicationHelpers-Prefix.pch";
@@ -893,10 +903,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/applicationHelpers-bzlgxfckcftymiecgskefskxlpkx/Build/Products/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/applicationHelpers-bzlgxfckcftymiecgskefskxlpkx/Build/Products/Debug-iphoneos/BDApplicationHelpers.embeddedframework\"",
 					"\"$(SRCROOT)/applicationHelpers/BDApplicationHelpers.embeddedframework\"",
-					"\"$(SRCROOT)/BDApplicationHelpers.embeddedframework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "applicationHelpers/applicationHelpers-Prefix.pch";
@@ -939,6 +946,7 @@
 				EC5FADF815EED277003768F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC657457144B4AF9002F66FC /* Build configuration list for PBXProject "applicationHelpers" */ = {
 			isa = XCConfigurationList;
