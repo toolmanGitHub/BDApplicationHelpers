@@ -124,6 +124,11 @@
 
 -(void)slideIntoPlaceInputViewController:(UIViewController *)viewController
 {
+    
+    [self.childViewControllers enumerateObjectsUsingBlock:^(UIViewController *aViewController, NSUInteger idx, BOOL *stop) {
+        [self slideOutOfPlaceInputViewController:aViewController];
+    }];
+    
     __weak __block ViewController *weakSelf=self;
     __weak __block UIViewController *weakViewController=viewController;
     [((BDInputViewController *)viewController) setDismissViewControllerCallbackBlock:^{
