@@ -886,10 +886,7 @@
 		EC65747F144B4AF9002F66FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/applicationHelpers/BDApplicationHelpers.embeddedframework\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "applicationHelpers/applicationHelpers-Prefix.pch";
 				INFOPLIST_FILE = "applicationHelpers/applicationHelpers-Info.plist";
@@ -901,10 +898,7 @@
 		EC657480144B4AF9002F66FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/applicationHelpers/BDApplicationHelpers.embeddedframework\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "applicationHelpers/applicationHelpers-Prefix.pch";
 				INFOPLIST_FILE = "applicationHelpers/applicationHelpers-Info.plist";
