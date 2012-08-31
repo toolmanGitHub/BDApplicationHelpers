@@ -7,7 +7,9 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
-
-@interface BDCalculatorInputTests : SenTestCase
+#import "BDCalculatorInput.h"
+@interface BDCalculatorInputTests : SenTestCase{
+    BDCalculatorInput *calculatorInput;
+}
 
 @end

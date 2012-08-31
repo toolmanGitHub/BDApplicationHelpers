@@ -46,8 +46,14 @@
  */
 
 @interface BDDateTimeNumberFormatter : NSObject {
+
 	
 }
+
+/** An instance of NSDateFormatter which will format the time with the UTC Time zone.
+ 
+ */
+- (NSDateFormatter *)dateFormatterUTCTimeZone;
 /** Provides a NSDateFormatter.
  
  @return Returns an NSDateFormatter formatted with the NSDateFormatterShortStyle style

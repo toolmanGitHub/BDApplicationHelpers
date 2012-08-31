@@ -49,6 +49,16 @@
 #pragma mark -
 #pragma mark Date and Decimal Formatter
 
+- (NSDateFormatter *)dateFormatterUTCTimeZone {
+	static NSDateFormatter *dateFormatterUTCTimeZone=nil;
+	if (dateFormatterUTCTimeZone == nil) {
+		dateFormatterUTCTimeZone=[[NSDateFormatter alloc] init];
+        [dateFormatterUTCTimeZone setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
+        [dateFormatterUTCTimeZone setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
+    }
+	return dateFormatterUTCTimeZone;
+}
+
 + (NSDateFormatter *)dateFormatter {
 	static NSDateFormatter *dateFormatter=nil;
 	if (dateFormatter == nil) {
@@ -110,6 +120,7 @@
         [currencyFormatter setAlwaysShowsDecimalSeparator:NO];
     else
         [currencyFormatter setAlwaysShowsDecimalSeparator:YES];
+    [currencyFormatter setRoundingMode:NSRoundDown];
     
     return currencyFormatter;
 }
@@ -127,7 +138,7 @@
         [percentageFormatter setGeneratesDecimalNumbers:YES];
         [percentageFormatter setRoundingMode:NSNumberFormatterRoundDown];
 	}
-    NSLocale *locale=[NSLocale autoupdatingCurrentLocale];
+    NSLocale *locale=[NSLocale currentLocale];
     [percentageFormatter setLocale:locale];
  	[percentageFormatter setMaximumFractionDigits:numDigits];
 	[percentageFormatter setMinimumFractionDigits:numDigits];

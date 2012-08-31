@@ -43,6 +43,7 @@
 
 #import "BDKeyPadViewController.h"
 #import "BDDateTimeNumberFormatter.h"
+#import "BDCalculatorInput.h"
 
 #define ANIMATIONDURATION 0.5
 #define FOCUS_INDICATOR_NORMAL_POSITION_IPHONE 295.0
@@ -57,6 +58,8 @@ enum  {
 typedef NSInteger BDKeyPadButtonIdentifier;
 
 @interface BDKeyPadViewController ()
+@property (nonatomic,strong) BDCalculatorInput *calculatorInput;
+
 @property (nonatomic,strong) IBOutlet UITextField *popoverTextField;
 @property (nonatomic,strong) IBOutlet UIImageView *focusIndicator;
 
@@ -82,6 +85,7 @@ typedef NSInteger BDKeyPadButtonIdentifier;
 @implementation BDKeyPadViewController
 
 // Private
+@synthesize calculatorInput = _calculatorInput;
 @synthesize popoverTextField;
 @synthesize focusIndicator;
 @synthesize keyStrokeTimer;
@@ -415,46 +419,19 @@ typedef NSInteger BDKeyPadButtonIdentifier;
 }
 */
 - (NSString *)stringByAppendingCharacters:(NSString *)aCharacters toText:(NSString *)text characterLimit:(int)characterLimit{
-	
-	NSInteger numberOfDecimalPlaces=numberDecimalPlaces_;
-	
-	// Assume currency is going to be the number formatter
-	NSNumberFormatter *numberFormatter=[BDDateTimeNumberFormatter currencyDecimalFormatterWithLocal:[NSLocale currentLocale]];
-    NSDecimalNumberHandler *roundingBehavior = nil;
-    switch (self.numberFormatType){
-        case BDNumberFormatterTypePercentage:
-            numberFormatter=[BDDateTimeNumberFormatter percentageDecimalFormatterWithNumberOfFractionalDigits:2];
-            roundingBehavior =[[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundPlain scale:(numberOfDecimalPlaces+1) raiseOnExactness:YES raiseOnOverflow:YES raiseOnUnderflow:YES raiseOnDivideByZero:NO];
-            break;
-        case BDNumberFormatterTypeDecimal:
-            numberFormatter=[BDDateTimeNumberFormatter plainDecimalFormatterWithNumberOfFractionalDigits:numberOfDecimalPlaces];
-           roundingBehavior = [[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundDown scale:(numberOfDecimalPlaces+1) raiseOnExactness:YES raiseOnOverflow:YES raiseOnUnderflow:YES raiseOnDivideByZero:NO];
-            
-            break;
-        case BDNumberFormatterTypeCurrency:
-            // we need to check to see if the currency has decimals, like Japan and the Yen which does not have decimals. 
-            // the following line of code ensures we don't have that problem.
-            
-            numberOfDecimalPlaces=[numberFormatter maximumFractionDigits];
-                        
-            roundingBehavior =[[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundDown scale:(numberOfDecimalPlaces) raiseOnExactness:YES raiseOnOverflow:YES raiseOnUnderflow:YES raiseOnDivideByZero:NO];
-            break;
-    }
-   
-    NSNumber *numberFromText=[numberFormatter numberFromString:text];
     
-    NSDecimalNumber *decimalFromText=[NSDecimalNumber decimalNumberWithDecimal:[numberFromText decimalValue]];
+    self.calculatorInput.numberFormatterType=self.numberFormatType;
+    self.calculatorInput.numberOfDecimalPlaces=[NSNumber numberWithInteger:numberDecimalPlaces_];
+    
+    return [self.calculatorInput calculatorInputStringByAppendingCharacters:aCharacters toText:text];
+	
+}
 
-    NSDecimalNumber *returnDecimal=nil;
-    if ([aCharacters compare:@""]==NSOrderedSame){
-        returnDecimal=[decimalFromText decimalNumberByMultiplyingByPowerOf10:-1 withBehavior:roundingBehavior];
-    }else{
-        NSDecimalNumber *leftOperandDecimal=[decimalFromText decimalNumberByMultiplyingByPowerOf10:1];
-        NSDecimalNumber *newDecimal=[NSDecimalNumber decimalNumberWithString:aCharacters];
-        NSDecimalNumber *rightOperandDecimal=[newDecimal decimalNumberByMultiplyingByPowerOf10:-numberOfDecimalPlaces];
-       
-        returnDecimal=[rightOperandDecimal decimalNumberByAdding:leftOperandDecimal];
+-(BDCalculatorInput *)calculatorInput{
+    if (_calculatorInput) {
+        return _calculatorInput;
     }
-    return [numberFormatter stringFromNumber:returnDecimal];
+    _calculatorInput=[[BDCalculatorInput alloc] init];
+    return _calculatorInput;
 }
 @end

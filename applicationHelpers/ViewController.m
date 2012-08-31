@@ -41,8 +41,7 @@
  */
 
 #import "ViewController.h"
-#import <BDApplicationHelpers/BDApplicationHelpers.h>
-#import <BDApplicationHelpers/BDDateTimeNumberFormatter.h>
+#import "BDApplicationHelpers.h"
 #import "BDPickerViewRowView.h"
 
 @implementation ViewController

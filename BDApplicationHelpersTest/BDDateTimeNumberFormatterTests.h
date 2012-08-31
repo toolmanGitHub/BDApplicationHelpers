@@ -7,7 +7,10 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "BDDatetimeNumberFormatter.h"
 
-@interface BDDateTimeNumberFormatterTests : SenTestCase
+@interface BDDateTimeNumberFormatterTests : SenTestCase{
+    BDDateTimeNumberFormatter *dateTimeNumberFormatter;
+}
 
 @end

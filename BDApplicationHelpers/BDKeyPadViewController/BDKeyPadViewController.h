@@ -44,14 +44,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BDInputViewController.h"
-
-enum  {
-	BDNumberFormatterTypeNothing=-100,
-	BDNumberFormatterTypeDecimal=100,
-	BDNumberFormatterTypeCurrency,
-	BDNumberFormatterTypePercentage,
-};
-typedef NSInteger BDNumberFormatterType;
+#import "BDCalculatorInput.h"
 
 /** A View Controller that provides a calculator like keypad useful for data entry.  When used on an iPhone or iPod touch, the keypad will have a done button in place of the double zero.  Swiping left or right over the number field applies the +/- operator.
  
