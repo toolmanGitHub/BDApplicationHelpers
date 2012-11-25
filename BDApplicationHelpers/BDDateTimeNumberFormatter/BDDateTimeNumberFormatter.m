@@ -138,8 +138,8 @@
         [percentageFormatter setGeneratesDecimalNumbers:YES];
         [percentageFormatter setRoundingMode:NSNumberFormatterRoundDown];
 	}
-    NSLocale *locale=[NSLocale currentLocale];
-    [percentageFormatter setLocale:locale];
+//    NSLocale *locale=[NSLocale currentLocale];
+//    [percentageFormatter setLocale:locale];
  	[percentageFormatter setMaximumFractionDigits:numDigits];
 	[percentageFormatter setMinimumFractionDigits:numDigits];
     //	/NSLog(@"	percentageDecimal Formatter:  %@",[percentageFormatter description]);
@@ -158,11 +158,11 @@
 		[plainDecimalFormatter setAlwaysShowsDecimalSeparator:NO];
         [plainDecimalFormatter setGeneratesDecimalNumbers:YES];
         [plainDecimalFormatter setRoundingMode:NSNumberFormatterRoundDown];
-        //		[plainDecimalFormatter setRoundingMode:NSNumberFormatterRoundHalfUp];
+//        [plainDecimalFormatter setRoundingMode:NSNumberFormatterRoundHalfUp];
 	}
 	//	NSLog(@"decimalNumberFormatter being used");
-	NSLocale *locale=[NSLocale autoupdatingCurrentLocale];
-    [plainDecimalFormatter setLocale:locale];
+//	NSLocale *locale=[NSLocale autoupdatingCurrentLocale];
+//    [plainDecimalFormatter setLocale:locale];
 	[plainDecimalFormatter setMaximumFractionDigits:numDigits];
 	[plainDecimalFormatter setMinimumFractionDigits:numDigits];
 	return plainDecimalFormatter;
@@ -202,7 +202,7 @@
 		[sciFiFormatter setRoundingMode:NSNumberFormatterRoundDown];
 	}
     //	NSLog(@"decimalNumberFormatter being used");
-    [sciFiFormatter setLocale:[NSLocale autoupdatingCurrentLocale]];
+//    [sciFiFormatter setLocale:[NSLocale autoupdatingCurrentLocale]];
 	[sciFiFormatter setMaximumFractionDigits:numDigits];
     [sciFiFormatter setMinimumFractionDigits:numDigits];
 	return sciFiFormatter;
