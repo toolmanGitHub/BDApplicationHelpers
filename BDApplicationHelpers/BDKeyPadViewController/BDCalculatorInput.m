@@ -14,76 +14,110 @@
 @synthesize numberFormatterType = _numberFormatterType;
 @synthesize currentLocale = _currentLocale;
 
-
 - (NSString *)calculatorInputStringByAppendingCharacters:(NSString *)aCharacters toText:(NSString *)text{
+    NSString *resultString;
+    switch (self.numberFormatterType) {
+        case BDNumberFormatterTypePercentage:
+            resultString=[self percentageInputStringByAppendingCharacters:aCharacters toText:text];
+            break;
+        case BDNumberFormatterTypeDecimal:
+            resultString=[self decimalInputStringByAppendingCharacters:aCharacters toText:text];
+            break;
+        case BDNumberFormatterTypeCurrency:
+            resultString=[self currencyInputStringByAppendingCharacters:aCharacters toText:text];
+            break;
+    }
+    return resultString;
+}
+
+-(NSString *)currencyInputStringByAppendingCharacters:(NSString *)aCharacters toText:(NSString *)text{
+    NSNumberFormatter *numberFormatter=[BDDateTimeNumberFormatter currencyDecimalFormatterWithLocal:self.currentLocale];
     
-    NSNumberFormatter *numberFormatter=nil;
+    NSDecimalNumberHandler *decimalNumberHandler=[[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundDown scale:numberFormatter.maximumFractionDigits raiseOnExactness:YES raiseOnOverflow:YES raiseOnUnderflow:YES raiseOnDivideByZero:NO];
+    
+    NSNumber *numberFromText=[numberFormatter numberFromString:text];
+    NSDecimalNumber *decimalNumberFromText=[NSDecimalNumber decimalNumberWithDecimal:[numberFromText decimalValue]];
+    
+    NSDecimalNumber *resultDecimalNumber;
+    if ([aCharacters isEqualToString:@""]) {
+        resultDecimalNumber=[decimalNumberFromText decimalNumberByMultiplyingByPowerOf10:-1 withBehavior:decimalNumberHandler];
+    }else{
+        NSDecimal addendOne=[[decimalNumberFromText decimalNumberByMultiplyingByPowerOf10:1 withBehavior:decimalNumberHandler] decimalValue];
+        NSDecimal addendTwo=[[[NSDecimalNumber decimalNumberWithString:aCharacters] decimalNumberByMultiplyingByPowerOf10:-(numberFormatter.maximumFractionDigits) withBehavior:decimalNumberHandler] decimalValue];
+        resultDecimalNumber=[NSDecimalNumber decimalNumberWithString:@"31.45"];
+        NSDecimal result;
+        NSDecimalAdd(&result, &addendOne, &addendTwo, NSRoundDown);
+        resultDecimalNumber=[NSDecimalNumber decimalNumberWithDecimal:result];
+    }
+    
+    return [numberFormatter stringFromNumber:resultDecimalNumber];
+    
+}
+
+
+
+-(NSString *)decimalInputStringByAppendingCharacters:(NSString *)aCharacters toText:(NSString *)text{
     
     NSInteger numberOfDecimalPlaces=self.numberOfDecimalPlaces.integerValue;
+    NSNumberFormatter *numberFormatter=[BDDateTimeNumberFormatter plainDecimalFormatterWithNumberOfFractionalDigits:numberOfDecimalPlaces];
+    numberFormatter.locale=self.currentLocale;
     
-    NSDecimalNumberHandler *roundingBehavior = nil;
-    
-    NSInteger calculationNumberOfDecimalPlaces=numberOfDecimalPlaces;
-    
-    switch (self.numberFormatterType) {
-        case BDNumberFormatterTypePercentage:{
-            calculationNumberOfDecimalPlaces=numberOfDecimalPlaces+2;
-            
-            numberFormatter=[BDDateTimeNumberFormatter percentageDecimalFormatterWithNumberOfFractionalDigits:numberOfDecimalPlaces];
-            
-//            roundingBehavior =[[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundPlain scale:(numberOfDecimalPlaces+2) raiseOnExactness:YES raiseOnOverflow:YES raiseOnUnderflow:YES raiseOnDivideByZero:NO];
-            break;
-        }
-        case BDNumberFormatterTypeDecimal:{
-            numberFormatter=[BDDateTimeNumberFormatter plainDecimalFormatterWithNumberOfFractionalDigits:numberOfDecimalPlaces];
-            roundingBehavior = [[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundDown scale:(numberOfDecimalPlaces+1) raiseOnExactness:YES raiseOnOverflow:YES raiseOnUnderflow:YES raiseOnDivideByZero:NO];
-            break;
-        }
-        case BDNumberFormatterTypeCurrency:{
-            numberFormatter=[BDDateTimeNumberFormatter currencyDecimalFormatterWithLocal:self.currentLocale];
-            calculationNumberOfDecimalPlaces=[numberFormatter maximumFractionDigits];
-            
-            roundingBehavior =[[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundDown scale:-(numberOfDecimalPlaces) raiseOnExactness:YES raiseOnOverflow:YES raiseOnUnderflow:YES raiseOnDivideByZero:NO];
-            
-            break;
-        }
-        default:
-            break;
-    }
-    NSLog(@"numberFormatter:  %@",numberFormatter);
-    NSNumber *numberFromText=[numberFormatter numberFromString:text];
-    
-    NSDecimalNumber *decimalFromText=[NSDecimalNumber decimalNumberWithDecimal:[numberFromText decimalValue]];
-    
-    NSLog(@"get ready");
-    NSLog(@"max fractional digits:  %d",[numberFormatter maximumFractionDigits]);
-    NSLog(@"min fractional digits:  %d",[numberFormatter minimumFractionDigits]);
-    NSLog(@"original text=%@",text);
-    NSLog(@"original NSNumber utext=%@",numberFromText);
-    NSLog(@"original Decimal Text=%@",decimalFromText);
-    NSDecimalNumber *returnDecimal=nil;
+    NSDecimal addendOne;
+    NSDecimal addendTwo;
+    NSScanner *scanner =[NSScanner scannerWithString:text];
+    scanner.locale=self.currentLocale;
+    NSDecimal decimalFromText;
+    NSDecimal result;
+    [scanner scanDecimal:&decimalFromText];
     if ([aCharacters isEqualToString:@""]) {
-//        if (self.numberFormatterType==BDNumberFormatterTypeCurrency) {
-//            returnDecimal = [decimalFromText decimalNumberByMultiplyingByPowerOf10:-1 withBehavior:roundingBehavior];
-//            NSLog(@"roundingBehavior:  %@",roundingBehavior);
-//        }else{
-//            returnDecimal = [decimalFromText decimalNumberByMultiplyingByPowerOf10:-1];
-//        }       
-        returnDecimal = [decimalFromText decimalNumberByMultiplyingByPowerOf10:-1];
-        NSLog(@"returnDecimal=%@",returnDecimal);
+        result=[[[NSDecimalNumber decimalNumberWithDecimal:decimalFromText] decimalNumberByMultiplyingByPowerOf10:-1] decimalValue];
     }else{
-        NSDecimalNumber *leftOperandDecimal=[decimalFromText decimalNumberByMultiplyingByPowerOf10:1];
-        NSLog(@"leftOperandDecimal=%@",leftOperandDecimal);
-        NSDecimalNumber *newDecimal=[NSDecimalNumber decimalNumberWithString:aCharacters];
-        NSLog(@"newDecimal=%@",newDecimal);
-        NSDecimalNumber *rightOperandDecimal=[newDecimal decimalNumberByMultiplyingByPowerOf10:-calculationNumberOfDecimalPlaces];
-        NSLog(@"newDecimal=%@",rightOperandDecimal);
-        
-        returnDecimal=[rightOperandDecimal decimalNumberByAdding:leftOperandDecimal];
+        addendOne=[[[NSDecimalNumber decimalNumberWithDecimal:decimalFromText] decimalNumberByMultiplyingByPowerOf10:1] decimalValue];
+        addendTwo=[[[NSDecimalNumber decimalNumberWithString:aCharacters] decimalNumberByMultiplyingByPowerOf10:-numberOfDecimalPlaces] decimalValue];
+        NSDecimalAdd(&result, &addendOne, &addendTwo, NSRoundPlain);
     }
     
-    return [numberFormatter stringFromNumber:returnDecimal];
+    NSLog(@"result:  %@",[NSDecimalNumber decimalNumberWithDecimal:result]);
     
+    return [numberFormatter stringFromNumber:[NSDecimalNumber decimalNumberWithDecimal:result]];
+}
+
+-(NSString *)percentageInputStringByAppendingCharacters:(NSString *)aCharacters toText:(NSString *)text{
+    NSNumberFormatter *numberFormatter=nil;
+    NSInteger numberOfDecimalPlaces=self.numberOfDecimalPlaces.integerValue;
+    
+    NSScanner *scanner=[NSScanner scannerWithString:text];
+    scanner.locale=self.currentLocale;
+    
+    NSDecimal decimal;
+    NSDecimal result;
+    [scanner scanDecimal:&decimal];
+    
+    NSDecimal rightOperand;
+    NSDecimalNumber *resultNumber;
+    if ([aCharacters isEqualToString:@""]) {
+  
+        rightOperand=[[NSDecimalNumber decimalNumberWithString:@"1000"] decimalValue];
+        NSDecimalDivide(&result, &decimal, &rightOperand, NSRoundPlain);
+        resultNumber=[NSDecimalNumber decimalNumberWithDecimal:result];
+    }else{
+        rightOperand=[[NSDecimalNumber decimalNumberWithString:@"10"] decimalValue];
+        NSDecimalDivide(&result, &decimal, &rightOperand, NSRoundPlain);
+        NSDecimal addIn;
+        NSDecimal leftOperand2=[[NSDecimalNumber decimalNumberWithString:aCharacters] decimalValue];
+        NSDecimal rightOperand2=[[[NSDecimalNumber decimalNumberWithString:@"1"] decimalNumberByMultiplyingByPowerOf10:(numberOfDecimalPlaces+2)] decimalValue];
+        NSDecimalDivide(&addIn, &leftOperand2, &rightOperand2, NSRoundPlain);
+        NSDecimal result2;
+        NSDecimalAdd(&result2, &result, &addIn, NSRoundPlain);
+        resultNumber=[NSDecimalNumber decimalNumberWithDecimal:result2];
+        
+    }
+    
+    numberFormatter=[BDDateTimeNumberFormatter percentageDecimalFormatterWithNumberOfFractionalDigits:numberOfDecimalPlaces];
+    numberFormatter.locale=self.currentLocale;
+    
+    return [numberFormatter stringFromNumber:resultNumber];
+
 }
 
 -(NSLocale *)currentLocale{
