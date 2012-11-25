@@ -541,6 +541,7 @@
 				EC5FADE915EED277003768F5 /* Resources */,
 				EC5FADEA15EED277003768F5 /* ShellScript */,
 				EC5FADEB15EED277003768F5 /* ShellScript */,
+				BD999E041662BB970055EFB5 /* Copy Framework to Correct Directory */,
 			);
 			buildRules = (
 			);
@@ -593,7 +594,7 @@
 		EC657454144B4AF9002F66FC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = EC657457144B4AF9002F66FC /* Build configuration list for PBXProject "applicationHelpers" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -697,6 +698,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		BD999E041662BB970055EFB5 /* Copy Framework to Correct Directory */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Framework to Correct Directory";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo rm -rf \"${PROJECT_DIR}/build/\"\nrm -rf \"${PROJECT_DIR}/build/\"\nmkdir -p \"${PROJECT_DIR}/build/\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\" \"${PROJECT_DIR}/build/${PRODUCT_NAME}.embeddedframework\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\" \"${PROJECT_DIR}/build/${PRODUCT_NAME}.framework\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\" \"${PROJECT_DIR}/build/${PRODUCT_NAME}.embeddedframework\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\" \"${PROJECT_DIR}/build/${PRODUCT_NAME}.framework\"";
+		};
 		EC56AC59144B7E9A00D0E183 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -896,6 +911,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BDApplicationHelpers/BDApplicationHelpers-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "BDApplicationHelpers/BDApplicationHelpers-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
@@ -919,6 +935,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BDApplicationHelpers/BDApplicationHelpers-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "BDApplicationHelpers/BDApplicationHelpers-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
@@ -978,11 +995,13 @@
 		EC65747F144B4AF9002F66FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Taylor (AZWRV2974V)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "applicationHelpers/applicationHelpers-Prefix.pch";
 				INFOPLIST_FILE = "applicationHelpers/applicationHelpers-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B90022B8-BC3B-4B2B-887C-7F4824E19AD4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -990,11 +1009,15 @@
 		EC657480144B4AF9002F66FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Taylor (AZWRV2974V)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Taylor (AZWRV2974V)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "applicationHelpers/applicationHelpers-Prefix.pch";
 				INFOPLIST_FILE = "applicationHelpers/applicationHelpers-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B90022B8-BC3B-4B2B-887C-7F4824E19AD4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B90022B8-BC3B-4B2B-887C-7F4824E19AD4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
